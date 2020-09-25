@@ -16,6 +16,7 @@
 		68AD7212251D9868000C89C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7211251D9868000C89C5 /* main.m */; };
 		68AD721C251D9868000C89C5 /* KJBaseHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD721B251D9868000C89C5 /* KJBaseHandlerTests.m */; };
 		68AD7227251D9868000C89C5 /* KJBaseHandlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7226251D9868000C89C5 /* KJBaseHandlerUITests.m */; };
+		68AD7245251D98FA000C89C5 /* KJRunloopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7244251D98FA000C89C5 /* KJRunloopManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		68AD7222251D9868000C89C5 /* KJBaseHandlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJBaseHandlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AD7226251D9868000C89C5 /* KJBaseHandlerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseHandlerUITests.m; sourceTree = "<group>"; };
 		68AD7228251D9868000C89C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68AD7243251D98FA000C89C5 /* KJRunloopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJRunloopManager.h; sourceTree = "<group>"; };
+		68AD7244251D98FA000C89C5 /* KJRunloopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJRunloopManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		68AD71FE251D9867000C89C5 /* KJBaseHandler */ = {
 			isa = PBXGroup;
 			children = (
+				68AD7242251D98FA000C89C5 /* Tools */,
 				68AD71FF251D9867000C89C5 /* AppDelegate.h */,
 				68AD7200251D9867000C89C5 /* AppDelegate.m */,
 				68AD7202251D9867000C89C5 /* SceneDelegate.h */,
@@ -135,6 +139,15 @@
 				68AD7228251D9868000C89C5 /* Info.plist */,
 			);
 			path = KJBaseHandlerUITests;
+			sourceTree = "<group>";
+		};
+		68AD7242251D98FA000C89C5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				68AD7243251D98FA000C89C5 /* KJRunloopManager.h */,
+				68AD7244251D98FA000C89C5 /* KJRunloopManager.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AD7245251D98FA000C89C5 /* KJRunloopManager.m in Sources */,
 				68AD7207251D9867000C89C5 /* ViewController.m in Sources */,
 				68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */,
 				68AD7212251D9868000C89C5 /* main.m in Sources */,
