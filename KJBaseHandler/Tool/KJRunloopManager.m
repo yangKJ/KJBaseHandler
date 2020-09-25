@@ -2,12 +2,11 @@
 //  KJRunloopManager.m
 //  KJBaseHandler
 //
-//  Created by 杨科军 on 2020/9/24.
+//  Created by 杨科军 on 2020/9/25.
 //  Copyright © 2020 杨科军. All rights reserved.
 //
 
 #import "KJRunloopManager.h"
-#import "_KJINLINE.h"
 @interface KJRunloopManager()
 @property(nonatomic,strong)NSMutableArray *temps;
 @end

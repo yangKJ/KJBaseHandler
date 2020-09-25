@@ -1,0 +1,6 @@
+framework module KJExtensionHandler {
+  umbrella header "KJExtensionHandler-umbrella.h"
+
+  export *
+  module * { export * }
+}

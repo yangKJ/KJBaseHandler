@@ -1,0 +1,1341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007CBE6951A511842219944B09E4EB72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		039D1A90A491657796F411EC2A047347 /* UIButton+KJCountDown.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3482DA358F96FBAD85B68788E7FD6E /* UIButton+KJCountDown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0589A88FB73421B8C11400784BD9295E /* UIImage+KJRemoteSize.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C3E5B9D8AA9DD64CB1A827623F2BEE /* UIImage+KJRemoteSize.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0684746C7D31F3BB053E58F264B14815 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA807F5150DFFAA7CA6E6A8AA17A6C7 /* Accelerate.framework */; };
+		074A46EF9AC260538D359B1F5C49907A /* UILabel+KJCreate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1901C8A357D8BE2B4F64E51EDD334BE5 /* UILabel+KJCreate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08281879615BD8531A8D4C40BF36557F /* UIButton+KJEnlargeTouchArea.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E7ACE3A48AA671DA148F6BE53B59AD /* UIButton+KJEnlargeTouchArea.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08405A68BBF6DC0797FED2CC615162D3 /* UILabel+KJCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E4FE03E4A9552DBB8FAFE53E026F3C /* UILabel+KJCreate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		090164A825042264E67029C3F92A4574 /* UIButton+KJButtonContentLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF05B391F9573B30B68A7E7542CA17D /* UIButton+KJButtonContentLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CFD5CCF51BFE399EA166DB8A5BEE84 /* UIButton+KJEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F4CAF9B828FAD0AB363E11869A9D0 /* UIButton+KJEmitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0EC9F567F4A91633DDC449CD38DB236C /* UIButton+KJIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D88938C2955B49291C108B1B0D0C9D /* UIButton+KJIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1018CF78487B12DD96E1A2DCCD8F9DFC /* UIButton+KJEnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = E31D09380E1EC91B7C25F9A86E1A8931 /* UIButton+KJEnlargeTouchArea.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		11901C6093D3021FBB079DF2EB18F2AF /* UIImage+KJFloodFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D57E7569C31CF48159417C65FA4FBB7 /* UIImage+KJFloodFill.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17526C6E749A70BFC88F673315B25EA5 /* UIBarButtonItem+KJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1295D38E5A6C7B02A0A903391EFD9D43 /* UIBarButtonItem+KJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18A69DB6745884251E37F36DE30CE303 /* Pods-KJBaseHandler-KJBaseHandlerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2102C88236EC337D186D7E2B65FA31 /* Pods-KJBaseHandler-KJBaseHandlerUITests-dummy.m */; };
+		22AD3D077C85967C332A1C95A5A3F8DA /* UIButton+KJIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FE2AE93CFDCED3E3EBEB8EFA38E9B1 /* UIButton+KJIndicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		23C2D48058C13D31C309117150F3FDAB /* UIImage+KJAccelerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D7B34F6A36B1D084768FE1819E077 /* UIImage+KJAccelerate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		246354C6C0CB9BC62C4019AAF95DD404 /* KJExtensionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 50CB8DC870DB06B86142F234ED018EAB /* KJExtensionHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D9E125C7A5308F6C8E484B9CD2F31C2 /* UILabel+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 532716D1A21893E3B919DCFBED01DAF2 /* UILabel+KJExtension.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		30789866ABE564C4002CDBCAD94D7861 /* UICollectionView+KJTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A5D87536781C2C8EFE61CF7CF9DB5B /* UICollectionView+KJTouch.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		31797DA22C2E42D40EEABEA7B01E305D /* UITextView+KJHyperlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 046671D9E7A5F49A4EA26A85A06D7154 /* UITextView+KJHyperlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3330D53ED8BB1F07F84E30DA7BCC06A6 /* UIImage+KJMask.m in Sources */ = {isa = PBXBuildFile; fileRef = A79CEA5B035F14AEEA9CBDB211BECFF6 /* UIImage+KJMask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3699E1B9C4D2D972C9B463CBEB41AF92 /* UIView+KJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D28D9F3C49244A19DC4A1A4EAAC9668C /* UIView+KJFrame.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3830AD1796BE53394463AAE308414442 /* UIView+KJRectCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B89BB2FAED0E12329A591AEAC4FEC0 /* UIView+KJRectCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		386F471EAC311B3B31D80FF605E7A8A0 /* UISlider+KJTapValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB48C19452DD5BEE90597A99FEED88 /* UISlider+KJTapValue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		39882C3E0C1237A1B4799BC1DF4FFBF1 /* UIImage+KJPhotoshop.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A46C850C88C82A72216A5EA219C873 /* UIImage+KJPhotoshop.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3A55AF2EEC48A22FCBC5395F77D43CFF /* KJShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BAAC2A1126711DD0C44374CEAA005C /* KJShadowLayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3AB13D2ED640807AB8B28B391C1273D3 /* UIButton+KJBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FBA5FFE7D4AB1755F641F0601C16DA /* UIButton+KJBlock.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3B3F426CFA0B786A1721B2255695F617 /* UIView+KJAppointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B58685A1EBA04F54C946A022F22FC /* UIView+KJAppointView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3CEA6F0770954848113DDBFE82D932D6 /* Pods-KJBaseHandlerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 222EE9E354C1A864209984DDF7D7A142 /* Pods-KJBaseHandlerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DF8DF241326FA4AEA4020165C38F8AC /* UIImage+KJFloodFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0000A3DFEAEADCB8C79A8434DD7AB6 /* UIImage+KJFloodFill.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3F38073DDE97E8CE84CCB5A84E0D4244 /* UIView+KJGestureBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 91E518D7BB0B2AB0AF8164E2330F3261 /* UIView+KJGestureBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40922C2B063217D4BCB66DA80F77B485 /* Pods-KJBaseHandler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DD57FDA92F475B2CDB83E1FA4D8697 /* Pods-KJBaseHandler-dummy.m */; };
+		471333DFBE32EFA30E9A586CA2C138F4 /* UIScrollView+KJGestureConflict.h in Headers */ = {isa = PBXBuildFile; fileRef = A139C1C381B2E1FB34A996718E2810C7 /* UIScrollView+KJGestureConflict.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A7EC01EA20C7D8D2B1DAAA4078A01B4 /* UIColor+KJExtension2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC0D5400C7A14FCF76B0CC44C87C67D /* UIColor+KJExtension2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD67719314DFF949FF125AEC9643784 /* UINavigationBar+KJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E163E5494181A206D25A47ABE4E794C /* UINavigationBar+KJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DABCFCEC45E8B7EB26E73B39E0DCB0C /* UILabel+KJAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E3C611E0ED293C301872C2E15C5C95 /* UILabel+KJAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EAF7F846EA011FE3BD0E74604EB2C40 /* UISegmentedControl+KJCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBFD0F60BDDF63E682B356839EFDDB6 /* UISegmentedControl+KJCustom.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4F134BB0181B6CB3610A62BD152C14A4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDB7FCABBEE78DA0D0BF547855B327AB /* README.md */; };
+		5396BE4EEBCEF759C8B5CDB9F0A669A1 /* UITextView+KJPlaceHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F651DAD959597EA8F64F060AF5C8BA3 /* UITextView+KJPlaceHolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55ED66BEF6991BAFD198419FA02E1FF5 /* UIImage+KJCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 273680C252483276E58868285621BA5D /* UIImage+KJCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5A5E45A42CE90426AFD504E5B83398CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		5A9548B89C6F0EC81A2731919CA320BC /* UIView+KJGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F275C71435F726A7726EC06E9C5681 /* UIView+KJGradient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5CE812C53F15AC80D6662CEB188B9C96 /* UIBarButtonItem+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5B7AF884B9400812499E1FC63F20C /* UIBarButtonItem+KJExtension.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5D6ACDC39EEEA2C29D093AAB1C339450 /* _KJINLINE.h in Headers */ = {isa = PBXBuildFile; fileRef = 499A44D648E781A8C13FDAC9CD83E46F /* _KJINLINE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DF2AC98F454EDA3E9A00A279B21E34C /* UIScrollView+KJGestureConflict.m in Sources */ = {isa = PBXBuildFile; fileRef = FE035D14A8A6DFB8A4B44E78735E73FC /* UIScrollView+KJGestureConflict.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5E3A2F4C41FE0391DBC64A66F7C410F4 /* UIImage+KJMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 66307FE0491E3F34FC2E87A517D3F068 /* UIImage+KJMask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64DC7E7C556D4E49DB479BAA6E0608ED /* UIButton+KJBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 723215C5BB93AAC59319EFF43C64B3C6 /* UIButton+KJBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66CD0D57928A286076CFC3ADD4757C78 /* UILabel+KJAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D457FFF8264A0D963B3ABA00F6B219 /* UILabel+KJAttributedString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6BD257A890CCD135AA2CA3AC172D275F /* UINavigationBar+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3A1BDD3E8438FE9185EBA73E2FEE6 /* UINavigationBar+KJExtension.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6C02344D346AB72664915D311D42E49C /* UIImage+KJCoreImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73642680BBDF3665A8726F5ECE88E3 /* UIImage+KJCoreImage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6CA58C2374EE418E2071C2DB23AAF82E /* KJColorSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F17FAA0C6F3DA7C0A6BED033B9C42E1 /* KJColorSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EEF7087028DA90FD610084EA666CEC1 /* UIButton+KJCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E5604DD911AE2A3B945AC43BBBCE0D /* UIButton+KJCountDown.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6FD3ED536869A6C10A6808C7582E5594 /* UIViewController+KJFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BEFB75D0F6DEA16B0678938CAD5EE3 /* UIViewController+KJFullScreen.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		70553EC50CC361EE6EE664826A1A4356 /* UITextView+KJPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A2CC38AD1A9249BF6017082F75291 /* UITextView+KJPlaceHolder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		716CD73B9E46DA4410AD460A61B7AC5B /* UISegmentedControl+KJCustom.h in Headers */ = {isa = PBXBuildFile; fileRef = 48B46C52C7C0ACA1F8011BB67E720B4B /* UISegmentedControl+KJCustom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		791E9D08E23607B178DFBBE3B6DEF6CD /* UIButton+KJButtonContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6E6543B5DF4F1B63D77A54263B56 /* UIButton+KJButtonContentLayout.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B5B836FB01A4DCEA9DF5E82642F6708 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8C564CEF5B808D8A2DDAD1A29BC976 /* UIKit.framework */; };
+		7E648C2403DFD2CDFC4737792869F7EE /* UIImage+KJCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F38F1D6C86F50BF13E20D7806F72D3 /* UIImage+KJCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82DEF76AA9599E3439DD50294C1C9215 /* UIImage+KJPhotoshop.h in Headers */ = {isa = PBXBuildFile; fileRef = D9272DFF42AA59AD9D9DF4689BA6C2F1 /* UIImage+KJPhotoshop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83CCD52ED28BD8626C1CD5AA40C952B3 /* Pods-KJBaseHandler-KJBaseHandlerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BB9878A2388530419832664F845C05 /* Pods-KJBaseHandler-KJBaseHandlerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89CC5FBA81BD9C266F9D5A7E02F92A8B /* UITextView+KJLimitCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4FED27DFA5B00BF634FEEC48AFD638 /* UITextView+KJLimitCounter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8B100543AFFA02B89BC85F8516BBCC72 /* UIButton+KJCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = B76F66283D0BFC4C2007C65717BB57D8 /* UIButton+KJCreate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8E9AD9A6C6F262ABB8DBB76EA7BE0D85 /* UIButton+KJEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE9B63D8CA1007FDE17ACE44D821AF1 /* UIButton+KJEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92231A535913B6254B1ADAA27EA277FD /* UIColor+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 866EA41B76F7C2D9CBFA481A86F2B23E /* UIColor+KJExtension.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		923DFA909D158145AE79905CB762311E /* KJExtensionHandler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A98F2FC0B09D6B6856A2CC9EF1A3CD /* KJExtensionHandler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		949A299DD4051251118705267D36ED0B /* UIColor+KJExtension2.m in Sources */ = {isa = PBXBuildFile; fileRef = 828921BA33833FD2BEF9C83F2F5AD75B /* UIColor+KJExtension2.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9723848E98D54AF5DDBEBCE4DEED9DFC /* UIImage+KJFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB943BF9495B5B82F0D50CE63E94FB6 /* UIImage+KJFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97CD9DF5CD3E3A9F62DA7AA32BE15155 /* UIView+KJGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D78786B8515607D200064A92B9800F /* UIView+KJGestureBlock.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9BFC85A92A7051693005EDBBF4CEC70E /* Pods-KJBaseHandlerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6B2FDC934C5B2B5D71BA049ED997F /* Pods-KJBaseHandlerTests-dummy.m */; };
+		A12994E83641390EDBE51BBA8F0EF53F /* UISlider+KJTapValue.h in Headers */ = {isa = PBXBuildFile; fileRef = D2524976BC07953F9F887F3C081FF435 /* UISlider+KJTapValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A56A54B85F8F4A21A74689B5EDFA55 /* UIView+KJFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = B78238BD560DC560D5B41F9889EDF076 /* UIView+KJFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A7E61E4D44FFEA0008A1C9152DD2D3 /* UIImage+KJReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 455B9E9AC72CAAFEAF3CE50956287E30 /* UIImage+KJReflection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AB1BE557D4F35F1C51D329C7F3D4813C /* UIView+KJXib.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7DFE56AFB0FFAB0C5BA49DF9D5EF9A /* UIView+KJXib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B41F939214291F4574ABC55ECF1C2AEA /* _KJMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A1300396E838732E1EA3D1C07B2AF9 /* _KJMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6057C70D0935F59CE3DCFCE1DE44B1A /* UIView+KJRectCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F895F47E73D24311080F8924A7C88 /* UIView+KJRectCorner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B9DA971CC5E345DDDFE4C16738E348E6 /* UITextView+KJLimitCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAA8468358A68E49FB10747F7701E2C /* UITextView+KJLimitCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA4987A7EB598C0793FD0DB51069001A /* KJExtensionHandler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBD595CFDDFEC6DD72D9E044EC39A43 /* KJExtensionHandler-dummy.m */; };
+		BE3B2614B5905033C4C4CF663018380C /* UIImage+KJCoreImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DEE931D62886813606563A953EE8BA /* UIImage+KJCoreImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF78C05BDD635EE39CB38C60518FCA5B /* UIImage+KJScale.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D157AA7092CF06C4AF902FBB022112A /* UIImage+KJScale.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3AC298769AD9F2B5D870D54CEB869C5 /* Pods-KJBaseHandler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B34DE8828FB7EB86402C11FF1FF10502 /* Pods-KJBaseHandler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4048C4EA794DC7BD390B5152F6A98FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		C8EDB57B1367337E160DDF1F8A7058A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		CA8817A2901C0F7E712917EAA799D39F /* UIImage+KJAccelerate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9626566CDED922CF192DEE263112D5D3 /* UIImage+KJAccelerate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC1DFB3DF47B7C882AD428325B8BC65A /* UIView+KJXib.m in Sources */ = {isa = PBXBuildFile; fileRef = C36E31FE3DF9EAD961B616C3E2E23E61 /* UIView+KJXib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CC42F0A3863E8AA8D10E0739D79DB4E4 /* UIImage+KJCompress.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D880C250B6A3AF60062D4A65A1CEAE /* UIImage+KJCompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE4E2488FB4137A52C43B6C711E0A43B /* UIImage+KJCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE9306985EB869DC9FE0E706FC3284 /* UIImage+KJCompress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D3FB9C31998E2539578931A101217E55 /* UICollectionView+KJTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A0FBFA72CF9A53F65BE46F705413A86 /* UICollectionView+KJTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4B0499A78FB9AC738B925995D3798A3 /* UIImage+KJFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C0B22C0570ABDD5821DFAED144454 /* UIImage+KJFilter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB3D5B1A30BB472C9B92EDBBD127E075 /* UITextView+KJHyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E9486E8BF02FF3E36E5F63B86FEAF9 /* UITextView+KJHyperlink.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E0F81F7F9B4DB83E04F3C08CCFA9CEB4 /* UIViewController+KJFullScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA248CFF1CE9168FB8F80D14D23A31E /* UIViewController+KJFullScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E382DC27158EC54C1C49DC4B803FAA66 /* UIButton+KJCreate.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A70EE146974AFF5CB6E950999A273A /* UIButton+KJCreate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9FFE0DEAC6BC06C3F106338213A0F21 /* UIImage+KJRemoteSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FBB6CAE80515DAB31D2719144771B87 /* UIImage+KJRemoteSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA5FEF306AD724399E5F2F513CF585EA /* UILabel+KJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 854C4E77C3A6832955A7DF8311573AFD /* UILabel+KJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F02B1C5A50DF998425CFB77376825834 /* UIColor+KJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 179471D6072CFCB1C20B6D0C0C1A008B /* UIColor+KJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0DB429BC9C5759B2882FDA65A119635 /* UIImage+KJReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A132F02F40A45CB4E755F66059888D /* UIImage+KJReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F13F0FBDDD9DBA65CC8EE6E471199882 /* UIView+KJGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = A91E6279CD57D3B39B52D4FE0F697526 /* UIView+KJGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F263A84F059A48A217B4DDF9CC3F08B7 /* CALayer+KJReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E81B9831CF5145C9D71551E82B3894 /* CALayer+KJReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F458BE945FCBB0FF10ADB01244CB3901 /* CALayer+KJReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE5E04D584A34BD309E4C3DB2F30FF /* CALayer+KJReflection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F4D65549A3C8346A9B6FA2F398528034 /* KJColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6C9F307C3146131A1E65259C37DFC6 /* KJColorSlider.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F760CFF794FC289F820D20E30D91491B /* UIImage+KJScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB4F39438ACED74AA7EA0B1B3D7C7C /* UIImage+KJScale.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F8C48FA97FD5C2D57E9202295008911D /* UIView+KJAppointView.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3C5D1A4F68C0C34778C41D946F775 /* UIView+KJAppointView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAA457F9D33B56BE77454147AACC6F97 /* KJShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D25A21D643A943F417245A1FD4B1C91 /* KJShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A81416574B4AE9D92E9F082F9C28DDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D35678AF0A88F0E11C5A31E23A0C97B;
+			remoteInfo = KJExtensionHandler;
+		};
+		44FA754B6F295D9CA1EBF1F05418FC98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E63FEA1ED8BD74F840A0F707718FEBC3;
+			remoteInfo = "Pods-KJBaseHandler";
+		};
+		69E117A37B8DB481228092FAE7874034 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D35678AF0A88F0E11C5A31E23A0C97B;
+			remoteInfo = KJExtensionHandler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002F4CAF9B828FAD0AB363E11869A9D0 /* UIButton+KJEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJEmitter.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJEmitter.m"; sourceTree = "<group>"; };
+		03B6B2FDC934C5B2B5D71BA049ED997F /* Pods-KJBaseHandlerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KJBaseHandlerTests-dummy.m"; sourceTree = "<group>"; };
+		03DEE931D62886813606563A953EE8BA /* UIImage+KJCoreImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJCoreImage.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJCoreImage.h"; sourceTree = "<group>"; };
+		046671D9E7A5F49A4EA26A85A06D7154 /* UITextView+KJHyperlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+KJHyperlink.h"; path = "KJExtensionHandler/Kit/UITextView/UITextView+KJHyperlink.h"; sourceTree = "<group>"; };
+		0CFF7616203C2DC07FC74FB6A5E65831 /* Pods-KJBaseHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJBaseHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F6C9F307C3146131A1E65259C37DFC6 /* KJColorSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJColorSlider.m; path = KJExtensionHandler/Kit/UISlider/KJColorSlider.m; sourceTree = "<group>"; };
+		0FBB6CAE80515DAB31D2719144771B87 /* UIImage+KJRemoteSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJRemoteSize.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJRemoteSize.h"; sourceTree = "<group>"; };
+		1295D38E5A6C7B02A0A903391EFD9D43 /* UIBarButtonItem+KJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+KJExtension.h"; path = "KJExtensionHandler/Kit/UIBarButtonItem/UIBarButtonItem+KJExtension.h"; sourceTree = "<group>"; };
+		179471D6072CFCB1C20B6D0C0C1A008B /* UIColor+KJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KJExtension.h"; path = "KJExtensionHandler/Kit/UIColor/UIColor+KJExtension.h"; sourceTree = "<group>"; };
+		1901C8A357D8BE2B4F64E51EDD334BE5 /* UILabel+KJCreate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+KJCreate.h"; path = "KJExtensionHandler/Kit/UILabel/UILabel+KJCreate.h"; sourceTree = "<group>"; };
+		19BB9878A2388530419832664F845C05 /* Pods-KJBaseHandler-KJBaseHandlerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KJBaseHandler-KJBaseHandlerUITests-umbrella.h"; sourceTree = "<group>"; };
+		1BA807F5150DFFAA7CA6E6A8AA17A6C7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		1C0000A3DFEAEADCB8C79A8434DD7AB6 /* UIImage+KJFloodFill.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJFloodFill.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJFloodFill.m"; sourceTree = "<group>"; };
+		1CDB84A8F17003B64172FD58641038E1 /* Pods-KJBaseHandler-KJBaseHandlerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJBaseHandler-KJBaseHandlerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		1EEDA3786057CEFB2D6127E2123BE869 /* KJExtensionHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KJExtensionHandler.release.xcconfig; sourceTree = "<group>"; };
+		21F38F1D6C86F50BF13E20D7806F72D3 /* UIImage+KJCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJCapture.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJCapture.h"; sourceTree = "<group>"; };
+		222EE9E354C1A864209984DDF7D7A142 /* Pods-KJBaseHandlerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KJBaseHandlerTests-umbrella.h"; sourceTree = "<group>"; };
+		22DD57FDA92F475B2CDB83E1FA4D8697 /* Pods-KJBaseHandler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KJBaseHandler-dummy.m"; sourceTree = "<group>"; };
+		2676690E383CDF9555EE34E165E59B8F /* Pods-KJBaseHandler-KJBaseHandlerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KJBaseHandler-KJBaseHandlerUITests.modulemap"; sourceTree = "<group>"; };
+		273680C252483276E58868285621BA5D /* UIImage+KJCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJCapture.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJCapture.m"; sourceTree = "<group>"; };
+		2E163E5494181A206D25A47ABE4E794C /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+KJExtension.h"; path = "KJExtensionHandler/Kit/UINavigationBar/UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
+		2E291780FEB0C25555EE491DB87974C9 /* Pods-KJBaseHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJBaseHandler.release.xcconfig"; sourceTree = "<group>"; };
+		32B89BB2FAED0E12329A591AEAC4FEC0 /* UIView+KJRectCorner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KJRectCorner.h"; path = "KJExtensionHandler/Kit/UIView/UIView+KJRectCorner.h"; sourceTree = "<group>"; };
+		39A132F02F40A45CB4E755F66059888D /* UIImage+KJReflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJReflection.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJReflection.h"; sourceTree = "<group>"; };
+		3C7D7B34F6A36B1D084768FE1819E077 /* UIImage+KJAccelerate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJAccelerate.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJAccelerate.m"; sourceTree = "<group>"; };
+		3F651DAD959597EA8F64F060AF5C8BA3 /* UITextView+KJPlaceHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+KJPlaceHolder.h"; path = "KJExtensionHandler/Kit/UITextView/UITextView+KJPlaceHolder.h"; sourceTree = "<group>"; };
+		41E3C611E0ED293C301872C2E15C5C95 /* UILabel+KJAttributedString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+KJAttributedString.h"; path = "KJExtensionHandler/Kit/UILabel/UILabel+KJAttributedString.h"; sourceTree = "<group>"; };
+		455B9E9AC72CAAFEAF3CE50956287E30 /* UIImage+KJReflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJReflection.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJReflection.m"; sourceTree = "<group>"; };
+		47BD078513E923EB1D54E57E9D4D2914 /* Pods-KJBaseHandler-KJBaseHandlerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJBaseHandler-KJBaseHandlerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		48B46C52C7C0ACA1F8011BB67E720B4B /* UISegmentedControl+KJCustom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISegmentedControl+KJCustom.h"; path = "KJExtensionHandler/Kit/UISegmentedControl/UISegmentedControl+KJCustom.h"; sourceTree = "<group>"; };
+		499A44D648E781A8C13FDAC9CD83E46F /* _KJINLINE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _KJINLINE.h; path = KJExtensionHandler/Kit/KJMacros/_KJINLINE.h; sourceTree = "<group>"; };
+		4BFE9306985EB869DC9FE0E706FC3284 /* UIImage+KJCompress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJCompress.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJCompress.m"; sourceTree = "<group>"; };
+		4C5EE9D290FB58C7AC1091E599C915C6 /* Pods-KJBaseHandlerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KJBaseHandlerTests.modulemap"; sourceTree = "<group>"; };
+		4F17FAA0C6F3DA7C0A6BED033B9C42E1 /* KJColorSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJColorSlider.h; path = KJExtensionHandler/Kit/UISlider/KJColorSlider.h; sourceTree = "<group>"; };
+		50CB8DC870DB06B86142F234ED018EAB /* KJExtensionHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJExtensionHeader.h; path = KJExtensionHandler/KJExtensionHeader.h; sourceTree = "<group>"; };
+		51E5604DD911AE2A3B945AC43BBBCE0D /* UIButton+KJCountDown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJCountDown.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJCountDown.m"; sourceTree = "<group>"; };
+		527D6D7BA75EE3AE6194F300321AE663 /* Pods-KJBaseHandlerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJBaseHandlerTests-Info.plist"; sourceTree = "<group>"; };
+		532716D1A21893E3B919DCFBED01DAF2 /* UILabel+KJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+KJExtension.m"; path = "KJExtensionHandler/Kit/UILabel/UILabel+KJExtension.m"; sourceTree = "<group>"; };
+		55A70EE146974AFF5CB6E950999A273A /* UIButton+KJCreate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJCreate.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJCreate.h"; sourceTree = "<group>"; };
+		5906E7745C945F3A73F9490C676C37A2 /* Pods-KJBaseHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJBaseHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A73642680BBDF3665A8726F5ECE88E3 /* UIImage+KJCoreImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJCoreImage.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJCoreImage.m"; sourceTree = "<group>"; };
+		5A9A6E6543B5DF4F1B63D77A54263B56 /* UIButton+KJButtonContentLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJButtonContentLayout.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJButtonContentLayout.m"; sourceTree = "<group>"; };
+		5AA5B7AF884B9400812499E1FC63F20C /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+KJExtension.m"; path = "KJExtensionHandler/Kit/UIBarButtonItem/UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
+		60D88938C2955B49291C108B1B0D0C9D /* UIButton+KJIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJIndicator.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJIndicator.h"; sourceTree = "<group>"; };
+		61D09220D9809BEEE0803D88D5F6D779 /* KJExtensionHandler-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KJExtensionHandler-Info.plist"; sourceTree = "<group>"; };
+		64FBA5FFE7D4AB1755F641F0601C16DA /* UIButton+KJBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJBlock.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJBlock.m"; sourceTree = "<group>"; };
+		65F335FC9CE31E00C35311A70701C84A /* Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		66307FE0491E3F34FC2E87A517D3F068 /* UIImage+KJMask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJMask.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJMask.h"; sourceTree = "<group>"; };
+		67D78786B8515607D200064A92B9800F /* UIView+KJGestureBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KJGestureBlock.m"; path = "KJExtensionHandler/Kit/UIView/UIView+KJGestureBlock.m"; sourceTree = "<group>"; };
+		6BCB4F39438ACED74AA7EA0B1B3D7C7C /* UIImage+KJScale.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJScale.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJScale.m"; sourceTree = "<group>"; };
+		6CC0D5400C7A14FCF76B0CC44C87C67D /* UIColor+KJExtension2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KJExtension2.h"; path = "KJExtensionHandler/Kit/UIColor/UIColor+KJExtension2.h"; sourceTree = "<group>"; };
+		723215C5BB93AAC59319EFF43C64B3C6 /* UIButton+KJBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJBlock.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJBlock.h"; sourceTree = "<group>"; };
+		72F3C5D1A4F68C0C34778C41D946F775 /* UIView+KJAppointView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KJAppointView.h"; path = "KJExtensionHandler/Kit/UIView/UIView+KJAppointView.h"; sourceTree = "<group>"; };
+		75F275C71435F726A7726EC06E9C5681 /* UIView+KJGradient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KJGradient.m"; path = "KJExtensionHandler/Kit/UIView/UIView+KJGradient.m"; sourceTree = "<group>"; };
+		79BAAC2A1126711DD0C44374CEAA005C /* KJShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJShadowLayer.m; path = KJExtensionHandler/Kit/CALayer/KJShadowLayer.m; sourceTree = "<group>"; };
+		7A0FBFA72CF9A53F65BE46F705413A86 /* UICollectionView+KJTouch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+KJTouch.h"; path = "KJExtensionHandler/Kit/UICollectionView/UICollectionView+KJTouch.h"; sourceTree = "<group>"; };
+		7D25A21D643A943F417245A1FD4B1C91 /* KJShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJShadowLayer.h; path = KJExtensionHandler/Kit/CALayer/KJShadowLayer.h; sourceTree = "<group>"; };
+		7F0C0B22C0570ABDD5821DFAED144454 /* UIImage+KJFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJFilter.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJFilter.m"; sourceTree = "<group>"; };
+		7F8E8A412328EBF9DF4350524E43C578 /* KJExtensionHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KJExtensionHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		807827C7ED3D4B2BAF4444B34E0242EE /* Pods_KJBaseHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJBaseHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		826DD322C1ED15ECAC52834DAE485730 /* Pods-KJBaseHandler-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJBaseHandler-frameworks.sh"; sourceTree = "<group>"; };
+		828921BA33833FD2BEF9C83F2F5AD75B /* UIColor+KJExtension2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KJExtension2.m"; path = "KJExtensionHandler/Kit/UIColor/UIColor+KJExtension2.m"; sourceTree = "<group>"; };
+		83E9486E8BF02FF3E36E5F63B86FEAF9 /* UITextView+KJHyperlink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+KJHyperlink.m"; path = "KJExtensionHandler/Kit/UITextView/UITextView+KJHyperlink.m"; sourceTree = "<group>"; };
+		854C4E77C3A6832955A7DF8311573AFD /* UILabel+KJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+KJExtension.h"; path = "KJExtensionHandler/Kit/UILabel/UILabel+KJExtension.h"; sourceTree = "<group>"; };
+		8616E47EAC4A392B7C363133B1DC6EFC /* Pods-KJBaseHandler-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJBaseHandler-acknowledgements.plist"; sourceTree = "<group>"; };
+		866EA41B76F7C2D9CBFA481A86F2B23E /* UIColor+KJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KJExtension.m"; path = "KJExtensionHandler/Kit/UIColor/UIColor+KJExtension.m"; sourceTree = "<group>"; };
+		89D457FFF8264A0D963B3ABA00F6B219 /* UILabel+KJAttributedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+KJAttributedString.m"; path = "KJExtensionHandler/Kit/UILabel/UILabel+KJAttributedString.m"; sourceTree = "<group>"; };
+		8BAA8468358A68E49FB10747F7701E2C /* UITextView+KJLimitCounter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+KJLimitCounter.h"; path = "KJExtensionHandler/Kit/UITextView/UITextView+KJLimitCounter.h"; sourceTree = "<group>"; };
+		8BB943BF9495B5B82F0D50CE63E94FB6 /* UIImage+KJFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJFilter.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJFilter.h"; sourceTree = "<group>"; };
+		8C9B58685A1EBA04F54C946A022F22FC /* UIView+KJAppointView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KJAppointView.m"; path = "KJExtensionHandler/Kit/UIView/UIView+KJAppointView.m"; sourceTree = "<group>"; };
+		8D57E7569C31CF48159417C65FA4FBB7 /* UIImage+KJFloodFill.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJFloodFill.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJFloodFill.h"; sourceTree = "<group>"; };
+		8D9585AEBF34A300DE3756FABA3C1110 /* Pods_KJBaseHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJBaseHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		91A46C850C88C82A72216A5EA219C873 /* UIImage+KJPhotoshop.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJPhotoshop.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJPhotoshop.m"; sourceTree = "<group>"; };
+		91E518D7BB0B2AB0AF8164E2330F3261 /* UIView+KJGestureBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KJGestureBlock.h"; path = "KJExtensionHandler/Kit/UIView/UIView+KJGestureBlock.h"; sourceTree = "<group>"; };
+		93E3A1BDD3E8438FE9185EBA73E2FEE6 /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+KJExtension.m"; path = "KJExtensionHandler/Kit/UINavigationBar/UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
+		9626566CDED922CF192DEE263112D5D3 /* UIImage+KJAccelerate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJAccelerate.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJAccelerate.h"; sourceTree = "<group>"; };
+		96AE5E04D584A34BD309E4C3DB2F30FF /* CALayer+KJReflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+KJReflection.m"; path = "KJExtensionHandler/Kit/CALayer/CALayer+KJReflection.m"; sourceTree = "<group>"; };
+		99A98F2FC0B09D6B6856A2CC9EF1A3CD /* KJExtensionHandler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExtensionHandler-umbrella.h"; sourceTree = "<group>"; };
+		9D157AA7092CF06C4AF902FBB022112A /* UIImage+KJScale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJScale.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJScale.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A139C1C381B2E1FB34A996718E2810C7 /* UIScrollView+KJGestureConflict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+KJGestureConflict.h"; path = "KJExtensionHandler/Kit/UIScrollView/UIScrollView+KJGestureConflict.h"; sourceTree = "<group>"; };
+		A1E81B9831CF5145C9D71551E82B3894 /* CALayer+KJReflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+KJReflection.h"; path = "KJExtensionHandler/Kit/CALayer/CALayer+KJReflection.h"; sourceTree = "<group>"; };
+		A475293D69AA4DFC11C821063A9294D8 /* Pods-KJBaseHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJBaseHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		A79CEA5B035F14AEEA9CBDB211BECFF6 /* UIImage+KJMask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJMask.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJMask.m"; sourceTree = "<group>"; };
+		A91E6279CD57D3B39B52D4FE0F697526 /* UIView+KJGradient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KJGradient.h"; path = "KJExtensionHandler/Kit/UIView/UIView+KJGradient.h"; sourceTree = "<group>"; };
+		AA7DFE56AFB0FFAB0C5BA49DF9D5EF9A /* UIView+KJXib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KJXib.h"; path = "KJExtensionHandler/Kit/UIView/UIView+KJXib.h"; sourceTree = "<group>"; };
+		AE3482DA358F96FBAD85B68788E7FD6E /* UIButton+KJCountDown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJCountDown.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJCountDown.h"; sourceTree = "<group>"; };
+		B34DE8828FB7EB86402C11FF1FF10502 /* Pods-KJBaseHandler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KJBaseHandler-umbrella.h"; sourceTree = "<group>"; };
+		B3C3E5B9D8AA9DD64CB1A827623F2BEE /* UIImage+KJRemoteSize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KJRemoteSize.m"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJRemoteSize.m"; sourceTree = "<group>"; };
+		B76F66283D0BFC4C2007C65717BB57D8 /* UIButton+KJCreate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJCreate.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJCreate.m"; sourceTree = "<group>"; };
+		B78238BD560DC560D5B41F9889EDF076 /* UIView+KJFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KJFrame.h"; path = "KJExtensionHandler/Kit/UIView/UIView+KJFrame.h"; sourceTree = "<group>"; };
+		B7E7ACE3A48AA671DA148F6BE53B59AD /* UIButton+KJEnlargeTouchArea.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJEnlargeTouchArea.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJEnlargeTouchArea.h"; sourceTree = "<group>"; };
+		B881B68ABB1C795241A178426DE4235F /* KJExtensionHandler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExtensionHandler-prefix.pch"; sourceTree = "<group>"; };
+		BAF05B391F9573B30B68A7E7542CA17D /* UIButton+KJButtonContentLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJButtonContentLayout.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJButtonContentLayout.h"; sourceTree = "<group>"; };
+		BCB514426E5CEF5A9B180279ED28C179 /* Pods_KJBaseHandler_KJBaseHandlerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJBaseHandler_KJBaseHandlerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBD595CFDDFEC6DD72D9E044EC39A43 /* KJExtensionHandler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KJExtensionHandler-dummy.m"; sourceTree = "<group>"; };
+		C0911CD860837757DB5B7878171BEC6B /* Pods-KJBaseHandler-KJBaseHandlerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJBaseHandler-KJBaseHandlerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C2BB48C19452DD5BEE90597A99FEED88 /* UISlider+KJTapValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISlider+KJTapValue.m"; path = "KJExtensionHandler/Kit/UISlider/UISlider+KJTapValue.m"; sourceTree = "<group>"; };
+		C2F022EFF5614157D7B2CD432BEDF87B /* Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C36E31FE3DF9EAD961B616C3E2E23E61 /* UIView+KJXib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KJXib.m"; path = "KJExtensionHandler/Kit/UIView/UIView+KJXib.m"; sourceTree = "<group>"; };
+		C70F895F47E73D24311080F8924A7C88 /* UIView+KJRectCorner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KJRectCorner.m"; path = "KJExtensionHandler/Kit/UIView/UIView+KJRectCorner.m"; sourceTree = "<group>"; };
+		CDA1C8250465AF7FC64FFD25461E382F /* KJExtensionHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KJExtensionHandler.debug.xcconfig; sourceTree = "<group>"; };
+		D0E4FE03E4A9552DBB8FAFE53E026F3C /* UILabel+KJCreate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+KJCreate.m"; path = "KJExtensionHandler/Kit/UILabel/UILabel+KJCreate.m"; sourceTree = "<group>"; };
+		D2524976BC07953F9F887F3C081FF435 /* UISlider+KJTapValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISlider+KJTapValue.h"; path = "KJExtensionHandler/Kit/UISlider/UISlider+KJTapValue.h"; sourceTree = "<group>"; };
+		D28D9F3C49244A19DC4A1A4EAAC9668C /* UIView+KJFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KJFrame.m"; path = "KJExtensionHandler/Kit/UIView/UIView+KJFrame.m"; sourceTree = "<group>"; };
+		D7D880C250B6A3AF60062D4A65A1CEAE /* UIImage+KJCompress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJCompress.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJCompress.h"; sourceTree = "<group>"; };
+		D9272DFF42AA59AD9D9DF4689BA6C2F1 /* UIImage+KJPhotoshop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KJPhotoshop.h"; path = "KJExtensionHandler/Kit/UIImage/UIImage+KJPhotoshop.h"; sourceTree = "<group>"; };
+		DD45B65F66B4F310323AB88D06FE900D /* Pods-KJBaseHandler-KJBaseHandlerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJBaseHandler-KJBaseHandlerUITests-Info.plist"; sourceTree = "<group>"; };
+		DDB7FCABBEE78DA0D0BF547855B327AB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DF620AD345625BCEB6D6D527C1B0EE39 /* Pods-KJBaseHandler-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJBaseHandler-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E2FE2AE93CFDCED3E3EBEB8EFA38E9B1 /* UIButton+KJIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJIndicator.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJIndicator.m"; sourceTree = "<group>"; };
+		E31D09380E1EC91B7C25F9A86E1A8931 /* UIButton+KJEnlargeTouchArea.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+KJEnlargeTouchArea.m"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJEnlargeTouchArea.m"; sourceTree = "<group>"; };
+		E4230BD2D633866128D1A8DF3E0E64F1 /* Pods-KJBaseHandlerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJBaseHandlerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E77716DDE58CDD7DCCF332FB7D0625D9 /* Pods-KJBaseHandler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KJBaseHandler.modulemap"; sourceTree = "<group>"; };
+		EBA248CFF1CE9168FB8F80D14D23A31E /* UIViewController+KJFullScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KJFullScreen.h"; path = "KJExtensionHandler/Kit/UIViewController/UIViewController+KJFullScreen.h"; sourceTree = "<group>"; };
+		ED4FED27DFA5B00BF634FEEC48AFD638 /* UITextView+KJLimitCounter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+KJLimitCounter.m"; path = "KJExtensionHandler/Kit/UITextView/UITextView+KJLimitCounter.m"; sourceTree = "<group>"; };
+		EE2102C88236EC337D186D7E2B65FA31 /* Pods-KJBaseHandler-KJBaseHandlerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KJBaseHandler-KJBaseHandlerUITests-dummy.m"; sourceTree = "<group>"; };
+		EF6A2CC38AD1A9249BF6017082F75291 /* UITextView+KJPlaceHolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+KJPlaceHolder.m"; path = "KJExtensionHandler/Kit/UITextView/UITextView+KJPlaceHolder.m"; sourceTree = "<group>"; };
+		F147FFA5C6CC305EA17C9DF24B70493A /* KJExtensionHandler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KJExtensionHandler.modulemap; sourceTree = "<group>"; };
+		F271B42D677A2A5F00B53CE2CA05BFA3 /* Pods-KJBaseHandler-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJBaseHandler-Info.plist"; sourceTree = "<group>"; };
+		F5A1300396E838732E1EA3D1C07B2AF9 /* _KJMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _KJMacros.h; path = KJExtensionHandler/Kit/KJMacros/_KJMacros.h; sourceTree = "<group>"; };
+		F8A5D87536781C2C8EFE61CF7CF9DB5B /* UICollectionView+KJTouch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+KJTouch.m"; path = "KJExtensionHandler/Kit/UICollectionView/UICollectionView+KJTouch.m"; sourceTree = "<group>"; };
+		F8BEFB75D0F6DEA16B0678938CAD5EE3 /* UIViewController+KJFullScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KJFullScreen.m"; path = "KJExtensionHandler/Kit/UIViewController/UIViewController+KJFullScreen.m"; sourceTree = "<group>"; };
+		FB8C564CEF5B808D8A2DDAD1A29BC976 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FCBFD0F60BDDF63E682B356839EFDDB6 /* UISegmentedControl+KJCustom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+KJCustom.m"; path = "KJExtensionHandler/Kit/UISegmentedControl/UISegmentedControl+KJCustom.m"; sourceTree = "<group>"; };
+		FE035D14A8A6DFB8A4B44E78735E73FC /* UIScrollView+KJGestureConflict.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+KJGestureConflict.m"; path = "KJExtensionHandler/Kit/UIScrollView/UIScrollView+KJGestureConflict.m"; sourceTree = "<group>"; };
+		FE2E4F845AF937287518D6CC8F958B40 /* Pods-KJBaseHandlerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJBaseHandlerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FEE9B63D8CA1007FDE17ACE44D821AF1 /* UIButton+KJEmitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KJEmitter.h"; path = "KJExtensionHandler/Kit/UIButton/UIButton+KJEmitter.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6597531AFF4E7E36105CFDEFE1D51192 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007CBE6951A511842219944B09E4EB72 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC611ABA4DF66588F76ED18C93BC207D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0684746C7D31F3BB053E58F264B14815 /* Accelerate.framework in Frameworks */,
+				C8EDB57B1367337E160DDF1F8A7058A7 /* Foundation.framework in Frameworks */,
+				7B5B836FB01A4DCEA9DF5E82642F6708 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C074B7C7F64A4FA5404B8C0D781CB568 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4048C4EA794DC7BD390B5152F6A98FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81BBD84504D2D9B8E3803A86EDE8EC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5E45A42CE90426AFD504E5B83398CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8D90B73987DD23BE048A90B4CDD9EBA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		480E30CD746A016DCED94A002B29F341 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F147FFA5C6CC305EA17C9DF24B70493A /* KJExtensionHandler.modulemap */,
+				BDBD595CFDDFEC6DD72D9E044EC39A43 /* KJExtensionHandler-dummy.m */,
+				61D09220D9809BEEE0803D88D5F6D779 /* KJExtensionHandler-Info.plist */,
+				B881B68ABB1C795241A178426DE4235F /* KJExtensionHandler-prefix.pch */,
+				99A98F2FC0B09D6B6856A2CC9EF1A3CD /* KJExtensionHandler-umbrella.h */,
+				CDA1C8250465AF7FC64FFD25461E382F /* KJExtensionHandler.debug.xcconfig */,
+				1EEDA3786057CEFB2D6127E2123BE869 /* KJExtensionHandler.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KJExtensionHandler";
+			sourceTree = "<group>";
+		};
+		57A7F5C3B263753D11BB73F091745850 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F8E8A412328EBF9DF4350524E43C578 /* KJExtensionHandler.framework */,
+				8D9585AEBF34A300DE3756FABA3C1110 /* Pods_KJBaseHandler.framework */,
+				BCB514426E5CEF5A9B180279ED28C179 /* Pods_KJBaseHandler_KJBaseHandlerUITests.framework */,
+				807827C7ED3D4B2BAF4444B34E0242EE /* Pods_KJBaseHandlerTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F2C6F412B7C9E037CFACB73AF634C98 /* Pods-KJBaseHandlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C5EE9D290FB58C7AC1091E599C915C6 /* Pods-KJBaseHandlerTests.modulemap */,
+				FE2E4F845AF937287518D6CC8F958B40 /* Pods-KJBaseHandlerTests-acknowledgements.markdown */,
+				E4230BD2D633866128D1A8DF3E0E64F1 /* Pods-KJBaseHandlerTests-acknowledgements.plist */,
+				03B6B2FDC934C5B2B5D71BA049ED997F /* Pods-KJBaseHandlerTests-dummy.m */,
+				527D6D7BA75EE3AE6194F300321AE663 /* Pods-KJBaseHandlerTests-Info.plist */,
+				222EE9E354C1A864209984DDF7D7A142 /* Pods-KJBaseHandlerTests-umbrella.h */,
+				0CFF7616203C2DC07FC74FB6A5E65831 /* Pods-KJBaseHandlerTests.debug.xcconfig */,
+				5906E7745C945F3A73F9490C676C37A2 /* Pods-KJBaseHandlerTests.release.xcconfig */,
+			);
+			name = "Pods-KJBaseHandlerTests";
+			path = "Target Support Files/Pods-KJBaseHandlerTests";
+			sourceTree = "<group>";
+		};
+		67D4D9384547ABB736E5AB56E04582E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7FCABBEE78DA0D0BF547855B327AB /* README.md */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6F8624B97CD2B4712059466403A860D9 /* Pods-KJBaseHandler-KJBaseHandlerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2676690E383CDF9555EE34E165E59B8F /* Pods-KJBaseHandler-KJBaseHandlerUITests.modulemap */,
+				C0911CD860837757DB5B7878171BEC6B /* Pods-KJBaseHandler-KJBaseHandlerUITests-acknowledgements.markdown */,
+				47BD078513E923EB1D54E57E9D4D2914 /* Pods-KJBaseHandler-KJBaseHandlerUITests-acknowledgements.plist */,
+				EE2102C88236EC337D186D7E2B65FA31 /* Pods-KJBaseHandler-KJBaseHandlerUITests-dummy.m */,
+				1CDB84A8F17003B64172FD58641038E1 /* Pods-KJBaseHandler-KJBaseHandlerUITests-frameworks.sh */,
+				DD45B65F66B4F310323AB88D06FE900D /* Pods-KJBaseHandler-KJBaseHandlerUITests-Info.plist */,
+				19BB9878A2388530419832664F845C05 /* Pods-KJBaseHandler-KJBaseHandlerUITests-umbrella.h */,
+				C2F022EFF5614157D7B2CD432BEDF87B /* Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig */,
+				65F335FC9CE31E00C35311A70701C84A /* Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig */,
+			);
+			name = "Pods-KJBaseHandler-KJBaseHandlerUITests";
+			path = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests";
+			sourceTree = "<group>";
+		};
+		96D39F345CAE3213C5E1A3E784EC8B50 /* Pods-KJBaseHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E77716DDE58CDD7DCCF332FB7D0625D9 /* Pods-KJBaseHandler.modulemap */,
+				DF620AD345625BCEB6D6D527C1B0EE39 /* Pods-KJBaseHandler-acknowledgements.markdown */,
+				8616E47EAC4A392B7C363133B1DC6EFC /* Pods-KJBaseHandler-acknowledgements.plist */,
+				22DD57FDA92F475B2CDB83E1FA4D8697 /* Pods-KJBaseHandler-dummy.m */,
+				826DD322C1ED15ECAC52834DAE485730 /* Pods-KJBaseHandler-frameworks.sh */,
+				F271B42D677A2A5F00B53CE2CA05BFA3 /* Pods-KJBaseHandler-Info.plist */,
+				B34DE8828FB7EB86402C11FF1FF10502 /* Pods-KJBaseHandler-umbrella.h */,
+				A475293D69AA4DFC11C821063A9294D8 /* Pods-KJBaseHandler.debug.xcconfig */,
+				2E291780FEB0C25555EE491DB87974C9 /* Pods-KJBaseHandler.release.xcconfig */,
+			);
+			name = "Pods-KJBaseHandler";
+			path = "Target Support Files/Pods-KJBaseHandler";
+			sourceTree = "<group>";
+		};
+		99914597B6FEC0CE00901376EE0ADBEB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96D39F345CAE3213C5E1A3E784EC8B50 /* Pods-KJBaseHandler */,
+				6F8624B97CD2B4712059466403A860D9 /* Pods-KJBaseHandler-KJBaseHandlerUITests */,
+				5F2C6F412B7C9E037CFACB73AF634C98 /* Pods-KJBaseHandlerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BB659941701788936E9D80480D80AB70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDC213AACA3293F89D56935ED1D3C26A /* KJExtensionHandler */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8D90B73987DD23BE048A90B4CDD9EBA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1BA807F5150DFFAA7CA6E6A8AA17A6C7 /* Accelerate.framework */,
+				901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */,
+				FB8C564CEF5B808D8A2DDAD1A29BC976 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CDC213AACA3293F89D56935ED1D3C26A /* KJExtensionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				50CB8DC870DB06B86142F234ED018EAB /* KJExtensionHeader.h */,
+				F2B1E1423BE405BC98A932E10F554D1D /* Kit */,
+				67D4D9384547ABB736E5AB56E04582E0 /* Resources */,
+				480E30CD746A016DCED94A002B29F341 /* Support Files */,
+			);
+			path = KJExtensionHandler;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				BB659941701788936E9D80480D80AB70 /* Pods */,
+				57A7F5C3B263753D11BB73F091745850 /* Products */,
+				99914597B6FEC0CE00901376EE0ADBEB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F2B1E1423BE405BC98A932E10F554D1D /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				499A44D648E781A8C13FDAC9CD83E46F /* _KJINLINE.h */,
+				F5A1300396E838732E1EA3D1C07B2AF9 /* _KJMacros.h */,
+				A1E81B9831CF5145C9D71551E82B3894 /* CALayer+KJReflection.h */,
+				96AE5E04D584A34BD309E4C3DB2F30FF /* CALayer+KJReflection.m */,
+				4F17FAA0C6F3DA7C0A6BED033B9C42E1 /* KJColorSlider.h */,
+				0F6C9F307C3146131A1E65259C37DFC6 /* KJColorSlider.m */,
+				7D25A21D643A943F417245A1FD4B1C91 /* KJShadowLayer.h */,
+				79BAAC2A1126711DD0C44374CEAA005C /* KJShadowLayer.m */,
+				1295D38E5A6C7B02A0A903391EFD9D43 /* UIBarButtonItem+KJExtension.h */,
+				5AA5B7AF884B9400812499E1FC63F20C /* UIBarButtonItem+KJExtension.m */,
+				723215C5BB93AAC59319EFF43C64B3C6 /* UIButton+KJBlock.h */,
+				64FBA5FFE7D4AB1755F641F0601C16DA /* UIButton+KJBlock.m */,
+				BAF05B391F9573B30B68A7E7542CA17D /* UIButton+KJButtonContentLayout.h */,
+				5A9A6E6543B5DF4F1B63D77A54263B56 /* UIButton+KJButtonContentLayout.m */,
+				AE3482DA358F96FBAD85B68788E7FD6E /* UIButton+KJCountDown.h */,
+				51E5604DD911AE2A3B945AC43BBBCE0D /* UIButton+KJCountDown.m */,
+				55A70EE146974AFF5CB6E950999A273A /* UIButton+KJCreate.h */,
+				B76F66283D0BFC4C2007C65717BB57D8 /* UIButton+KJCreate.m */,
+				FEE9B63D8CA1007FDE17ACE44D821AF1 /* UIButton+KJEmitter.h */,
+				002F4CAF9B828FAD0AB363E11869A9D0 /* UIButton+KJEmitter.m */,
+				B7E7ACE3A48AA671DA148F6BE53B59AD /* UIButton+KJEnlargeTouchArea.h */,
+				E31D09380E1EC91B7C25F9A86E1A8931 /* UIButton+KJEnlargeTouchArea.m */,
+				60D88938C2955B49291C108B1B0D0C9D /* UIButton+KJIndicator.h */,
+				E2FE2AE93CFDCED3E3EBEB8EFA38E9B1 /* UIButton+KJIndicator.m */,
+				7A0FBFA72CF9A53F65BE46F705413A86 /* UICollectionView+KJTouch.h */,
+				F8A5D87536781C2C8EFE61CF7CF9DB5B /* UICollectionView+KJTouch.m */,
+				179471D6072CFCB1C20B6D0C0C1A008B /* UIColor+KJExtension.h */,
+				866EA41B76F7C2D9CBFA481A86F2B23E /* UIColor+KJExtension.m */,
+				6CC0D5400C7A14FCF76B0CC44C87C67D /* UIColor+KJExtension2.h */,
+				828921BA33833FD2BEF9C83F2F5AD75B /* UIColor+KJExtension2.m */,
+				9626566CDED922CF192DEE263112D5D3 /* UIImage+KJAccelerate.h */,
+				3C7D7B34F6A36B1D084768FE1819E077 /* UIImage+KJAccelerate.m */,
+				21F38F1D6C86F50BF13E20D7806F72D3 /* UIImage+KJCapture.h */,
+				273680C252483276E58868285621BA5D /* UIImage+KJCapture.m */,
+				D7D880C250B6A3AF60062D4A65A1CEAE /* UIImage+KJCompress.h */,
+				4BFE9306985EB869DC9FE0E706FC3284 /* UIImage+KJCompress.m */,
+				03DEE931D62886813606563A953EE8BA /* UIImage+KJCoreImage.h */,
+				5A73642680BBDF3665A8726F5ECE88E3 /* UIImage+KJCoreImage.m */,
+				8BB943BF9495B5B82F0D50CE63E94FB6 /* UIImage+KJFilter.h */,
+				7F0C0B22C0570ABDD5821DFAED144454 /* UIImage+KJFilter.m */,
+				8D57E7569C31CF48159417C65FA4FBB7 /* UIImage+KJFloodFill.h */,
+				1C0000A3DFEAEADCB8C79A8434DD7AB6 /* UIImage+KJFloodFill.m */,
+				66307FE0491E3F34FC2E87A517D3F068 /* UIImage+KJMask.h */,
+				A79CEA5B035F14AEEA9CBDB211BECFF6 /* UIImage+KJMask.m */,
+				D9272DFF42AA59AD9D9DF4689BA6C2F1 /* UIImage+KJPhotoshop.h */,
+				91A46C850C88C82A72216A5EA219C873 /* UIImage+KJPhotoshop.m */,
+				39A132F02F40A45CB4E755F66059888D /* UIImage+KJReflection.h */,
+				455B9E9AC72CAAFEAF3CE50956287E30 /* UIImage+KJReflection.m */,
+				0FBB6CAE80515DAB31D2719144771B87 /* UIImage+KJRemoteSize.h */,
+				B3C3E5B9D8AA9DD64CB1A827623F2BEE /* UIImage+KJRemoteSize.m */,
+				9D157AA7092CF06C4AF902FBB022112A /* UIImage+KJScale.h */,
+				6BCB4F39438ACED74AA7EA0B1B3D7C7C /* UIImage+KJScale.m */,
+				41E3C611E0ED293C301872C2E15C5C95 /* UILabel+KJAttributedString.h */,
+				89D457FFF8264A0D963B3ABA00F6B219 /* UILabel+KJAttributedString.m */,
+				1901C8A357D8BE2B4F64E51EDD334BE5 /* UILabel+KJCreate.h */,
+				D0E4FE03E4A9552DBB8FAFE53E026F3C /* UILabel+KJCreate.m */,
+				854C4E77C3A6832955A7DF8311573AFD /* UILabel+KJExtension.h */,
+				532716D1A21893E3B919DCFBED01DAF2 /* UILabel+KJExtension.m */,
+				2E163E5494181A206D25A47ABE4E794C /* UINavigationBar+KJExtension.h */,
+				93E3A1BDD3E8438FE9185EBA73E2FEE6 /* UINavigationBar+KJExtension.m */,
+				A139C1C381B2E1FB34A996718E2810C7 /* UIScrollView+KJGestureConflict.h */,
+				FE035D14A8A6DFB8A4B44E78735E73FC /* UIScrollView+KJGestureConflict.m */,
+				48B46C52C7C0ACA1F8011BB67E720B4B /* UISegmentedControl+KJCustom.h */,
+				FCBFD0F60BDDF63E682B356839EFDDB6 /* UISegmentedControl+KJCustom.m */,
+				D2524976BC07953F9F887F3C081FF435 /* UISlider+KJTapValue.h */,
+				C2BB48C19452DD5BEE90597A99FEED88 /* UISlider+KJTapValue.m */,
+				046671D9E7A5F49A4EA26A85A06D7154 /* UITextView+KJHyperlink.h */,
+				83E9486E8BF02FF3E36E5F63B86FEAF9 /* UITextView+KJHyperlink.m */,
+				8BAA8468358A68E49FB10747F7701E2C /* UITextView+KJLimitCounter.h */,
+				ED4FED27DFA5B00BF634FEEC48AFD638 /* UITextView+KJLimitCounter.m */,
+				3F651DAD959597EA8F64F060AF5C8BA3 /* UITextView+KJPlaceHolder.h */,
+				EF6A2CC38AD1A9249BF6017082F75291 /* UITextView+KJPlaceHolder.m */,
+				72F3C5D1A4F68C0C34778C41D946F775 /* UIView+KJAppointView.h */,
+				8C9B58685A1EBA04F54C946A022F22FC /* UIView+KJAppointView.m */,
+				B78238BD560DC560D5B41F9889EDF076 /* UIView+KJFrame.h */,
+				D28D9F3C49244A19DC4A1A4EAAC9668C /* UIView+KJFrame.m */,
+				91E518D7BB0B2AB0AF8164E2330F3261 /* UIView+KJGestureBlock.h */,
+				67D78786B8515607D200064A92B9800F /* UIView+KJGestureBlock.m */,
+				A91E6279CD57D3B39B52D4FE0F697526 /* UIView+KJGradient.h */,
+				75F275C71435F726A7726EC06E9C5681 /* UIView+KJGradient.m */,
+				32B89BB2FAED0E12329A591AEAC4FEC0 /* UIView+KJRectCorner.h */,
+				C70F895F47E73D24311080F8924A7C88 /* UIView+KJRectCorner.m */,
+				AA7DFE56AFB0FFAB0C5BA49DF9D5EF9A /* UIView+KJXib.h */,
+				C36E31FE3DF9EAD961B616C3E2E23E61 /* UIView+KJXib.m */,
+				EBA248CFF1CE9168FB8F80D14D23A31E /* UIViewController+KJFullScreen.h */,
+				F8BEFB75D0F6DEA16B0678938CAD5EE3 /* UIViewController+KJFullScreen.m */,
+			);
+			name = Kit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3022F441BBFE0AA280C6FDE40ADBCA5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CEA6F0770954848113DDBFE82D932D6 /* Pods-KJBaseHandlerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AFBDFD8BAA066D139471A43318A0AC9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D6ACDC39EEEA2C29D093AAB1C339450 /* _KJINLINE.h in Headers */,
+				B41F939214291F4574ABC55ECF1C2AEA /* _KJMacros.h in Headers */,
+				F263A84F059A48A217B4DDF9CC3F08B7 /* CALayer+KJReflection.h in Headers */,
+				6CA58C2374EE418E2071C2DB23AAF82E /* KJColorSlider.h in Headers */,
+				923DFA909D158145AE79905CB762311E /* KJExtensionHandler-umbrella.h in Headers */,
+				246354C6C0CB9BC62C4019AAF95DD404 /* KJExtensionHeader.h in Headers */,
+				FAA457F9D33B56BE77454147AACC6F97 /* KJShadowLayer.h in Headers */,
+				17526C6E749A70BFC88F673315B25EA5 /* UIBarButtonItem+KJExtension.h in Headers */,
+				64DC7E7C556D4E49DB479BAA6E0608ED /* UIButton+KJBlock.h in Headers */,
+				090164A825042264E67029C3F92A4574 /* UIButton+KJButtonContentLayout.h in Headers */,
+				039D1A90A491657796F411EC2A047347 /* UIButton+KJCountDown.h in Headers */,
+				E382DC27158EC54C1C49DC4B803FAA66 /* UIButton+KJCreate.h in Headers */,
+				8E9AD9A6C6F262ABB8DBB76EA7BE0D85 /* UIButton+KJEmitter.h in Headers */,
+				08281879615BD8531A8D4C40BF36557F /* UIButton+KJEnlargeTouchArea.h in Headers */,
+				0EC9F567F4A91633DDC449CD38DB236C /* UIButton+KJIndicator.h in Headers */,
+				D3FB9C31998E2539578931A101217E55 /* UICollectionView+KJTouch.h in Headers */,
+				F02B1C5A50DF998425CFB77376825834 /* UIColor+KJExtension.h in Headers */,
+				4A7EC01EA20C7D8D2B1DAAA4078A01B4 /* UIColor+KJExtension2.h in Headers */,
+				CA8817A2901C0F7E712917EAA799D39F /* UIImage+KJAccelerate.h in Headers */,
+				7E648C2403DFD2CDFC4737792869F7EE /* UIImage+KJCapture.h in Headers */,
+				CC42F0A3863E8AA8D10E0739D79DB4E4 /* UIImage+KJCompress.h in Headers */,
+				BE3B2614B5905033C4C4CF663018380C /* UIImage+KJCoreImage.h in Headers */,
+				9723848E98D54AF5DDBEBCE4DEED9DFC /* UIImage+KJFilter.h in Headers */,
+				11901C6093D3021FBB079DF2EB18F2AF /* UIImage+KJFloodFill.h in Headers */,
+				5E3A2F4C41FE0391DBC64A66F7C410F4 /* UIImage+KJMask.h in Headers */,
+				82DEF76AA9599E3439DD50294C1C9215 /* UIImage+KJPhotoshop.h in Headers */,
+				F0DB429BC9C5759B2882FDA65A119635 /* UIImage+KJReflection.h in Headers */,
+				E9FFE0DEAC6BC06C3F106338213A0F21 /* UIImage+KJRemoteSize.h in Headers */,
+				BF78C05BDD635EE39CB38C60518FCA5B /* UIImage+KJScale.h in Headers */,
+				4DABCFCEC45E8B7EB26E73B39E0DCB0C /* UILabel+KJAttributedString.h in Headers */,
+				074A46EF9AC260538D359B1F5C49907A /* UILabel+KJCreate.h in Headers */,
+				EA5FEF306AD724399E5F2F513CF585EA /* UILabel+KJExtension.h in Headers */,
+				4AD67719314DFF949FF125AEC9643784 /* UINavigationBar+KJExtension.h in Headers */,
+				471333DFBE32EFA30E9A586CA2C138F4 /* UIScrollView+KJGestureConflict.h in Headers */,
+				716CD73B9E46DA4410AD460A61B7AC5B /* UISegmentedControl+KJCustom.h in Headers */,
+				A12994E83641390EDBE51BBA8F0EF53F /* UISlider+KJTapValue.h in Headers */,
+				31797DA22C2E42D40EEABEA7B01E305D /* UITextView+KJHyperlink.h in Headers */,
+				B9DA971CC5E345DDDFE4C16738E348E6 /* UITextView+KJLimitCounter.h in Headers */,
+				5396BE4EEBCEF759C8B5CDB9F0A669A1 /* UITextView+KJPlaceHolder.h in Headers */,
+				F8C48FA97FD5C2D57E9202295008911D /* UIView+KJAppointView.h in Headers */,
+				A3A56A54B85F8F4A21A74689B5EDFA55 /* UIView+KJFrame.h in Headers */,
+				3F38073DDE97E8CE84CCB5A84E0D4244 /* UIView+KJGestureBlock.h in Headers */,
+				F13F0FBDDD9DBA65CC8EE6E471199882 /* UIView+KJGradient.h in Headers */,
+				3830AD1796BE53394463AAE308414442 /* UIView+KJRectCorner.h in Headers */,
+				AB1BE557D4F35F1C51D329C7F3D4813C /* UIView+KJXib.h in Headers */,
+				E0F81F7F9B4DB83E04F3C08CCFA9CEB4 /* UIViewController+KJFullScreen.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A606A7C20601B02586077703A10BE951 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3AC298769AD9F2B5D870D54CEB869C5 /* Pods-KJBaseHandler-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D86E45D6DBBE296F0AFAFB4374A0EA6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CCD52ED28BD8626C1CD5AA40C952B3 /* Pods-KJBaseHandler-KJBaseHandlerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D35678AF0A88F0E11C5A31E23A0C97B /* KJExtensionHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B493EF6CB413CAC9F71A7DC7E4650BE6 /* Build configuration list for PBXNativeTarget "KJExtensionHandler" */;
+			buildPhases = (
+				8AFBDFD8BAA066D139471A43318A0AC9 /* Headers */,
+				7FFFB3A43D84117D955BABAAC2B8F5B1 /* Sources */,
+				AC611ABA4DF66588F76ED18C93BC207D /* Frameworks */,
+				D42FAC0D2B1F0FBD912A6871A516B028 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KJExtensionHandler;
+			productName = KJExtensionHandler;
+			productReference = 7F8E8A412328EBF9DF4350524E43C578 /* KJExtensionHandler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8334827E8D0FAFE51700A4CCF762FE18 /* Pods-KJBaseHandlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6D24A1E9828A5FAFC886ACD0DD029B /* Build configuration list for PBXNativeTarget "Pods-KJBaseHandlerTests" */;
+			buildPhases = (
+				3022F441BBFE0AA280C6FDE40ADBCA5F /* Headers */,
+				20C0FCADBD66B62B66F47AB9BBA687AC /* Sources */,
+				6597531AFF4E7E36105CFDEFE1D51192 /* Frameworks */,
+				A60900F3702DD7EB8F4C663E5FD91CF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4351E5366BD56C6287D29596C5EC7BE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-KJBaseHandlerTests";
+			productName = "Pods-KJBaseHandlerTests";
+			productReference = 807827C7ED3D4B2BAF4444B34E0242EE /* Pods_KJBaseHandlerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		92DA45F0FF7B9978E628000D88A0230C /* Pods-KJBaseHandler-KJBaseHandlerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBA1401D2D19A4078307BC2E3F059A20 /* Build configuration list for PBXNativeTarget "Pods-KJBaseHandler-KJBaseHandlerUITests" */;
+			buildPhases = (
+				D86E45D6DBBE296F0AFAFB4374A0EA6D /* Headers */,
+				0EF990E85D0244D9BF2572EF50F47BEF /* Sources */,
+				F81BBD84504D2D9B8E3803A86EDE8EC0 /* Frameworks */,
+				56020002946B6CCDE69F44D20DEA11C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01618A85A665187C793F3F9B0043B90C /* PBXTargetDependency */,
+			);
+			name = "Pods-KJBaseHandler-KJBaseHandlerUITests";
+			productName = "Pods-KJBaseHandler-KJBaseHandlerUITests";
+			productReference = BCB514426E5CEF5A9B180279ED28C179 /* Pods_KJBaseHandler_KJBaseHandlerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E63FEA1ED8BD74F840A0F707718FEBC3 /* Pods-KJBaseHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D64C6DF03C0BFF8AD0DE89A5B2ADEB36 /* Build configuration list for PBXNativeTarget "Pods-KJBaseHandler" */;
+			buildPhases = (
+				A606A7C20601B02586077703A10BE951 /* Headers */,
+				050A2A106E3067E3AC435D12AFA554F3 /* Sources */,
+				C074B7C7F64A4FA5404B8C0D781CB568 /* Frameworks */,
+				7F2CDBEACE482595DE796D618C955D9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CA859B43917A9C270E44E46E8C06908 /* PBXTargetDependency */,
+			);
+			name = "Pods-KJBaseHandler";
+			productName = "Pods-KJBaseHandler";
+			productReference = 8D9585AEBF34A300DE3756FABA3C1110 /* Pods_KJBaseHandler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1200;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 57A7F5C3B263753D11BB73F091745850 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D35678AF0A88F0E11C5A31E23A0C97B /* KJExtensionHandler */,
+				E63FEA1ED8BD74F840A0F707718FEBC3 /* Pods-KJBaseHandler */,
+				92DA45F0FF7B9978E628000D88A0230C /* Pods-KJBaseHandler-KJBaseHandlerUITests */,
+				8334827E8D0FAFE51700A4CCF762FE18 /* Pods-KJBaseHandlerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56020002946B6CCDE69F44D20DEA11C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F2CDBEACE482595DE796D618C955D9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60900F3702DD7EB8F4C663E5FD91CF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42FAC0D2B1F0FBD912A6871A516B028 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F134BB0181B6CB3610A62BD152C14A4 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050A2A106E3067E3AC435D12AFA554F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40922C2B063217D4BCB66DA80F77B485 /* Pods-KJBaseHandler-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EF990E85D0244D9BF2572EF50F47BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A69DB6745884251E37F36DE30CE303 /* Pods-KJBaseHandler-KJBaseHandlerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C0FCADBD66B62B66F47AB9BBA687AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFC85A92A7051693005EDBBF4CEC70E /* Pods-KJBaseHandlerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FFFB3A43D84117D955BABAAC2B8F5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F458BE945FCBB0FF10ADB01244CB3901 /* CALayer+KJReflection.m in Sources */,
+				F4D65549A3C8346A9B6FA2F398528034 /* KJColorSlider.m in Sources */,
+				BA4987A7EB598C0793FD0DB51069001A /* KJExtensionHandler-dummy.m in Sources */,
+				3A55AF2EEC48A22FCBC5395F77D43CFF /* KJShadowLayer.m in Sources */,
+				5CE812C53F15AC80D6662CEB188B9C96 /* UIBarButtonItem+KJExtension.m in Sources */,
+				3AB13D2ED640807AB8B28B391C1273D3 /* UIButton+KJBlock.m in Sources */,
+				791E9D08E23607B178DFBBE3B6DEF6CD /* UIButton+KJButtonContentLayout.m in Sources */,
+				6EEF7087028DA90FD610084EA666CEC1 /* UIButton+KJCountDown.m in Sources */,
+				8B100543AFFA02B89BC85F8516BBCC72 /* UIButton+KJCreate.m in Sources */,
+				09CFD5CCF51BFE399EA166DB8A5BEE84 /* UIButton+KJEmitter.m in Sources */,
+				1018CF78487B12DD96E1A2DCCD8F9DFC /* UIButton+KJEnlargeTouchArea.m in Sources */,
+				22AD3D077C85967C332A1C95A5A3F8DA /* UIButton+KJIndicator.m in Sources */,
+				30789866ABE564C4002CDBCAD94D7861 /* UICollectionView+KJTouch.m in Sources */,
+				92231A535913B6254B1ADAA27EA277FD /* UIColor+KJExtension.m in Sources */,
+				949A299DD4051251118705267D36ED0B /* UIColor+KJExtension2.m in Sources */,
+				23C2D48058C13D31C309117150F3FDAB /* UIImage+KJAccelerate.m in Sources */,
+				55ED66BEF6991BAFD198419FA02E1FF5 /* UIImage+KJCapture.m in Sources */,
+				CE4E2488FB4137A52C43B6C711E0A43B /* UIImage+KJCompress.m in Sources */,
+				6C02344D346AB72664915D311D42E49C /* UIImage+KJCoreImage.m in Sources */,
+				D4B0499A78FB9AC738B925995D3798A3 /* UIImage+KJFilter.m in Sources */,
+				3DF8DF241326FA4AEA4020165C38F8AC /* UIImage+KJFloodFill.m in Sources */,
+				3330D53ED8BB1F07F84E30DA7BCC06A6 /* UIImage+KJMask.m in Sources */,
+				39882C3E0C1237A1B4799BC1DF4FFBF1 /* UIImage+KJPhotoshop.m in Sources */,
+				A3A7E61E4D44FFEA0008A1C9152DD2D3 /* UIImage+KJReflection.m in Sources */,
+				0589A88FB73421B8C11400784BD9295E /* UIImage+KJRemoteSize.m in Sources */,
+				F760CFF794FC289F820D20E30D91491B /* UIImage+KJScale.m in Sources */,
+				66CD0D57928A286076CFC3ADD4757C78 /* UILabel+KJAttributedString.m in Sources */,
+				08405A68BBF6DC0797FED2CC615162D3 /* UILabel+KJCreate.m in Sources */,
+				2D9E125C7A5308F6C8E484B9CD2F31C2 /* UILabel+KJExtension.m in Sources */,
+				6BD257A890CCD135AA2CA3AC172D275F /* UINavigationBar+KJExtension.m in Sources */,
+				5DF2AC98F454EDA3E9A00A279B21E34C /* UIScrollView+KJGestureConflict.m in Sources */,
+				4EAF7F846EA011FE3BD0E74604EB2C40 /* UISegmentedControl+KJCustom.m in Sources */,
+				386F471EAC311B3B31D80FF605E7A8A0 /* UISlider+KJTapValue.m in Sources */,
+				DB3D5B1A30BB472C9B92EDBBD127E075 /* UITextView+KJHyperlink.m in Sources */,
+				89CC5FBA81BD9C266F9D5A7E02F92A8B /* UITextView+KJLimitCounter.m in Sources */,
+				70553EC50CC361EE6EE664826A1A4356 /* UITextView+KJPlaceHolder.m in Sources */,
+				3B3F426CFA0B786A1721B2255695F617 /* UIView+KJAppointView.m in Sources */,
+				3699E1B9C4D2D972C9B463CBEB41AF92 /* UIView+KJFrame.m in Sources */,
+				97CD9DF5CD3E3A9F62DA7AA32BE15155 /* UIView+KJGestureBlock.m in Sources */,
+				5A9548B89C6F0EC81A2731919CA320BC /* UIView+KJGradient.m in Sources */,
+				B6057C70D0935F59CE3DCFCE1DE44B1A /* UIView+KJRectCorner.m in Sources */,
+				CC1DFB3DF47B7C882AD428325B8BC65A /* UIView+KJXib.m in Sources */,
+				6FD3ED536869A6C10A6808C7582E5594 /* UIViewController+KJFullScreen.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01618A85A665187C793F3F9B0043B90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KJExtensionHandler;
+			target = 1D35678AF0A88F0E11C5A31E23A0C97B /* KJExtensionHandler */;
+			targetProxy = 69E117A37B8DB481228092FAE7874034 /* PBXContainerItemProxy */;
+		};
+		3CA859B43917A9C270E44E46E8C06908 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KJExtensionHandler;
+			target = 1D35678AF0A88F0E11C5A31E23A0C97B /* KJExtensionHandler */;
+			targetProxy = 1A81416574B4AE9D92E9F082F9C28DDC /* PBXContainerItemProxy */;
+		};
+		4351E5366BD56C6287D29596C5EC7BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-KJBaseHandler";
+			target = E63FEA1ED8BD74F840A0F707718FEBC3 /* Pods-KJBaseHandler */;
+			targetProxy = 44FA754B6F295D9CA1EBF1F05418FC98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BB5A098F6C3319502B756480562318D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A475293D69AA4DFC11C821063A9294D8 /* Pods-KJBaseHandler.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KJBaseHandler/Pods-KJBaseHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KJBaseHandler/Pods-KJBaseHandler.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25748D7C3478700E62B9BD8287F677F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEDA3786057CEFB2D6127E2123BE869 /* KJExtensionHandler.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KJExtensionHandler/KJExtensionHandler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KJExtensionHandler/KJExtensionHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KJExtensionHandler/KJExtensionHandler.modulemap";
+				PRODUCT_MODULE_NAME = KJExtensionHandler;
+				PRODUCT_NAME = KJExtensionHandler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79B3CAE9CFA2AF1FA25D66FF35A7CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5906E7745C945F3A73F9490C676C37A2 /* Pods-KJBaseHandlerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KJBaseHandlerTests/Pods-KJBaseHandlerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KJBaseHandlerTests/Pods-KJBaseHandlerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85EFC00308969C429601E3689B239F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CFF7616203C2DC07FC74FB6A5E65831 /* Pods-KJBaseHandlerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KJBaseHandlerTests/Pods-KJBaseHandlerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KJBaseHandlerTests/Pods-KJBaseHandlerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A3650F6C8AC2EFFA814EA61C37468B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AF1F8D2941B0228930706FA0F2C9BB78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BCC2D2B1333106FA9FF9AD9ADD2CBEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA1C8250465AF7FC64FFD25461E382F /* KJExtensionHandler.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KJExtensionHandler/KJExtensionHandler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KJExtensionHandler/KJExtensionHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KJExtensionHandler/KJExtensionHandler.modulemap";
+				PRODUCT_MODULE_NAME = KJExtensionHandler;
+				PRODUCT_NAME = KJExtensionHandler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E16C00082FED5C94D1091D6954DF4E22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65F335FC9CE31E00C35311A70701C84A /* Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests/Pods-KJBaseHandler-KJBaseHandlerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests/Pods-KJBaseHandler-KJBaseHandlerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2C81913C900E10AB3D23DFE83892C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E291780FEB0C25555EE491DB87974C9 /* Pods-KJBaseHandler.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KJBaseHandler/Pods-KJBaseHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KJBaseHandler/Pods-KJBaseHandler.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F72FFBA73292055AE70D7654859F9EF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2F022EFF5614157D7B2CD432BEDF87B /* Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests/Pods-KJBaseHandler-KJBaseHandlerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests/Pods-KJBaseHandler-KJBaseHandlerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A3650F6C8AC2EFFA814EA61C37468B1 /* Debug */,
+				AF1F8D2941B0228930706FA0F2C9BB78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6D24A1E9828A5FAFC886ACD0DD029B /* Build configuration list for PBXNativeTarget "Pods-KJBaseHandlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85EFC00308969C429601E3689B239F1F /* Debug */,
+				79B3CAE9CFA2AF1FA25D66FF35A7CC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B493EF6CB413CAC9F71A7DC7E4650BE6 /* Build configuration list for PBXNativeTarget "KJExtensionHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCC2D2B1333106FA9FF9AD9ADD2CBEFA /* Debug */,
+				25748D7C3478700E62B9BD8287F677F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBA1401D2D19A4078307BC2E3F059A20 /* Build configuration list for PBXNativeTarget "Pods-KJBaseHandler-KJBaseHandlerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72FFBA73292055AE70D7654859F9EF6 /* Debug */,
+				E16C00082FED5C94D1091D6954DF4E22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D64C6DF03C0BFF8AD0DE89A5B2ADEB36 /* Build configuration list for PBXNativeTarget "Pods-KJBaseHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB5A098F6C3319502B756480562318D /* Debug */,
+				E2C81913C900E10AB3D23DFE83892C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
