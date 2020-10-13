@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F29EBAD24F70B1A0F55F775 /* Pods_KJBaseHandler_KJBaseHandlerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFD5022857AD5A13140B259 /* Pods_KJBaseHandler_KJBaseHandlerUITests.framework */; };
+		68211191253551AD00EA3F3F /* KJVideoEncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821118F253551AD00EA3F3F /* KJVideoEncodeTool.m */; };
+		682111972535522C00EA3F3F /* KJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682111962535522C00EA3F3F /* KJBaseViewController.m */; };
+		6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */; };
 		68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7200251D9867000C89C5 /* AppDelegate.m */; };
 		68AD7204251D9867000C89C5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7203251D9867000C89C5 /* SceneDelegate.m */; };
 		68AD7207251D9867000C89C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7206251D9867000C89C5 /* ViewController.m */; };
@@ -18,6 +21,8 @@
 		68AD721C251D9868000C89C5 /* KJBaseHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD721B251D9868000C89C5 /* KJBaseHandlerTests.m */; };
 		68AD7227251D9868000C89C5 /* KJBaseHandlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7226251D9868000C89C5 /* KJBaseHandlerUITests.m */; };
 		68AD7245251D98FA000C89C5 /* KJRunloopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7244251D98FA000C89C5 /* KJRunloopManager.m */; };
+		68C55DA6252076DC00AD3308 /* KJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C55DA5252076DC00AD3308 /* KJBaseNavigationController.m */; };
+		68C55DAF25207AA100AD3308 /* KJBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C55DAE25207AA100AD3308 /* KJBaseButton.m */; };
 		68CA3939251DD72B00EB99E4 /* KJBase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CA3938251DD72B00EB99E4 /* KJBase.bundle */; };
 		68D66A16251DE38100CA1EB7 /* KJBaseHandler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 68D66A14251DE38100CA1EB7 /* KJBaseHandler.podspec */; };
 		68D66A17251DE38100CA1EB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68D66A15251DE38100CA1EB7 /* README.md */; };
@@ -47,6 +52,12 @@
 		2312602D93CEA735319309B9 /* Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig"; path = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests/Pods-KJBaseHandler-KJBaseHandlerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4043B4FC658FCEB3E969A9BF /* Pods-KJBaseHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJBaseHandlerTests.release.xcconfig"; path = "Target Support Files/Pods-KJBaseHandlerTests/Pods-KJBaseHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5EFF12F4E86548EB1344D5D2 /* Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig"; path = "Target Support Files/Pods-KJBaseHandler-KJBaseHandlerUITests/Pods-KJBaseHandler-KJBaseHandlerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6821118F253551AD00EA3F3F /* KJVideoEncodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJVideoEncodeTool.m; sourceTree = "<group>"; };
+		68211190253551AD00EA3F3F /* KJVideoEncodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJVideoEncodeTool.h; sourceTree = "<group>"; };
+		682111952535522C00EA3F3F /* KJBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseViewController.h; sourceTree = "<group>"; };
+		682111962535522C00EA3F3F /* KJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseViewController.m; sourceTree = "<group>"; };
+		6821119B2535524E00EA3F3F /* KJVideoEncodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJVideoEncodeVC.h; sourceTree = "<group>"; };
+		6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJVideoEncodeVC.m; sourceTree = "<group>"; };
 		68AD71FC251D9867000C89C5 /* KJBaseHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJBaseHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AD71FF251D9867000C89C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68AD7200251D9867000C89C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +78,10 @@
 		68AD7228251D9868000C89C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AD7243251D98FA000C89C5 /* KJRunloopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJRunloopManager.h; sourceTree = "<group>"; };
 		68AD7244251D98FA000C89C5 /* KJRunloopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJRunloopManager.m; sourceTree = "<group>"; };
+		68C55DA4252076DC00AD3308 /* KJBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseNavigationController.h; sourceTree = "<group>"; };
+		68C55DA5252076DC00AD3308 /* KJBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseNavigationController.m; sourceTree = "<group>"; };
+		68C55DAD25207AA100AD3308 /* KJBaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseButton.h; sourceTree = "<group>"; };
+		68C55DAE25207AA100AD3308 /* KJBaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseButton.m; sourceTree = "<group>"; };
 		68CA3938251DD72B00EB99E4 /* KJBase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KJBase.bundle; sourceTree = "<group>"; };
 		68CA393D251DD81000EB99E4 /* KJBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseHeader.h; sourceTree = "<group>"; };
 		68CA393F251DD83F00EB99E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -188,10 +203,21 @@
 		68AD7242251D98FA000C89C5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				68211190253551AD00EA3F3F /* KJVideoEncodeTool.h */,
+				6821118F253551AD00EA3F3F /* KJVideoEncodeTool.m */,
 				68AD7243251D98FA000C89C5 /* KJRunloopManager.h */,
 				68AD7244251D98FA000C89C5 /* KJRunloopManager.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		68C55DA3252076BB00AD3308 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				68C55DA4252076DC00AD3308 /* KJBaseNavigationController.h */,
+				68C55DA5252076DC00AD3308 /* KJBaseNavigationController.m */,
+			);
+			path = UINavigationController;
 			sourceTree = "<group>";
 		};
 		68CA3937251DD6BD00EB99E4 /* Base */ = {
@@ -207,6 +233,8 @@
 		68CA393E251DD81F00EB99E4 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				6821119B2535524E00EA3F3F /* KJVideoEncodeVC.h */,
+				6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -214,6 +242,7 @@
 		68D669F3251DDA8400CA1EB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				68C55DA3252076BB00AD3308 /* UINavigationController */,
 				68D66A1C251DE3E400CA1EB7 /* UIViewController */,
 			);
 			path = ViewController;
@@ -230,6 +259,8 @@
 		68D66A1B251DE3DA00CA1EB7 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
+				68C55DAD25207AA100AD3308 /* KJBaseButton.h */,
+				68C55DAE25207AA100AD3308 /* KJBaseButton.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -237,6 +268,8 @@
 		68D66A1C251DE3E400CA1EB7 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				682111952535522C00EA3F3F /* KJBaseViewController.h */,
+				682111962535522C00EA3F3F /* KJBaseViewController.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -495,7 +528,12 @@
 				68AD7207251D9867000C89C5 /* ViewController.m in Sources */,
 				68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */,
 				68AD7212251D9868000C89C5 /* main.m in Sources */,
+				682111972535522C00EA3F3F /* KJBaseViewController.m in Sources */,
+				6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */,
+				68C55DAF25207AA100AD3308 /* KJBaseButton.m in Sources */,
 				68AD7204251D9867000C89C5 /* SceneDelegate.m in Sources */,
+				68211191253551AD00EA3F3F /* KJVideoEncodeTool.m in Sources */,
+				68C55DA6252076DC00AD3308 /* KJBaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -654,7 +692,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

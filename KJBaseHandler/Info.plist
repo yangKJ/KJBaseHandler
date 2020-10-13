@@ -64,5 +64,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>请点击“好”以允许访问
+
+若不允许，你将无法使用拍照，录制视频，扫一扫等功能</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>请点击“好”以允许访问
+
+若不允许，你将无法使用发送语音信息等功能</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>请点击“好”以允许访问
+        
+        若不允许，你将无法给好友发送照片以及视频内容和上传照片和视频内容</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请点击“好”以允许访问
+
+若不允许，你将无法给好友发送照片以及视频内容和上传照片和视频内容</string>
 </dict>
 </plist>
