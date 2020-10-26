@@ -79,32 +79,32 @@ static KJBadgeViewInfo *_info = nil;
     CGFloat offset = KJBadgeView.info.fixedHeight / 2.f;
     switch (KJBadgeView.info.position) {
         case KJBadgePositionTypeCenterLeft:{
-            self.left = -offset;
+            self.x = -offset;
             self.centerY = self.contentView.centerY;
         }
             break;
         case KJBadgePositionTypeCenterRight:{
-            self.left = self.contentView.width - offset;
+            self.x = self.contentView.width - offset;
             self.centerY = self.contentView.centerY;
         }
             break;
         case KJBadgePositionTypeTopLeft:{
-            self.top = self.left = -offset;
+            self.y = self.x = -offset;
         }
             break;
         case KJBadgePositionTypeTopRight:{
-            self.top = -offset;
-            self.left = self.contentView.width - offset;
+            self.y = -offset;
+            self.x = self.contentView.width - offset;
         }
             break;
         case KJBadgePositionTypeBottomLeft:{
-            self.left = -offset;
-            self.top = self.contentView.height - offset;
+            self.x = -offset;
+            self.y = self.contentView.height - offset;
         }
             break;
         case KJBadgePositionTypeBottomRight:{
-            self.left = self.contentView.width - offset;
-            self.top = self.contentView.height - offset;
+            self.x = self.contentView.width - offset;
+            self.y = self.contentView.height - offset;
         }
             break;
         default:

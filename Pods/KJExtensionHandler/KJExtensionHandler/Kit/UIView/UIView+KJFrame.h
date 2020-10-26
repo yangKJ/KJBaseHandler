@@ -25,12 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)CGFloat centerX;
 /// 中心点y
 @property (nonatomic,assign)CGFloat centerY;
-/// 左边距离
-@property (nonatomic,assign)CGFloat left;
 /// 右边距离
 @property (nonatomic,assign)CGFloat right;
-/// 顶部距离
-@property (nonatomic,assign)CGFloat top;
 /// 底部距离
 @property (nonatomic,assign)CGFloat bottom;
 /// x + width

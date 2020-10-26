@@ -77,28 +77,13 @@
     center.y = centerY;
     self.center = center;
 }
-- (CGFloat)left{
-    return self.frame.origin.x;
-}
-- (void)setLeft:(CGFloat)left{
-    CGRect frame = self.frame;
-    frame.origin.x = left;
-    self.frame = frame;
-}
+
 - (CGFloat)right{
     return self.frame.origin.x + self.frame.size.width;
 }
 - (void)setRight:(CGFloat)right{
     CGRect frame = self.frame;
     frame.origin.x = self.superview.frame.size.width - right - self.frame.size.width;
-    self.frame = frame;
-}
-- (CGFloat)top{
-    return self.frame.origin.y;
-}
-- (void)setTop:(CGFloat)top{
-    CGRect frame = self.frame;
-    frame.origin.y = top;
     self.frame = frame;
 }
 - (CGFloat)bottom{
