@@ -16,16 +16,18 @@
 粒子效果、自定义控件、自定义选中控件
 pod 'KJEmitterView'
 pod 'KJEmitterView/Control' # 自定义控件
-
+ 
 扩展库 - Button图文混排、点击事件封装、扩大点击域、点赞粒子效果，
 手势封装、圆角渐变、倒影、投影、内阴影、内外发光、渐变色滑块等，
-图片加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
+图片压缩加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
 pod 'KJExtensionHandler'
 pod 'KJExtensionHandler/Foundation'
- 
+pod 'KJExtensionHandler/Exception'  # 异常处理
+
 基类库 - 封装整理常用，采用链式处理，提炼独立工具
 pod 'KJBaseHandler'
 pod 'KJBaseHandler/Tool' # 工具相关
+pod 'KJBaseHandler/Router' # 路由相关
 
 播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
 视频可以边下边播，把播放器播放过的数据流缓存到本地，下次直接从缓冲读取播放
@@ -58,11 +60,17 @@ pod 'KJWorkbox/CommonBox'
 ```
 pod 'KJBaseHandler'
 pod 'KJBaseHandler/Tool'
+pod 'KJBaseHandler/Router'
 ```
 
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 0.0.2
+1. 新增工具类 pod 'KJBaseHandler/Tool' # 工具相关
+2. 新增路由 pod 'KJBaseHandler/Router' # 路由相关
+3. 新增小红点控件 KJBadgeView
+
 #### Add 0.0.1
 1. 整理基类
 

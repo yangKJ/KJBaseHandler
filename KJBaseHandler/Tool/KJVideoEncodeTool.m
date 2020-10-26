@@ -32,17 +32,19 @@
     switch (videoType) {
         case KJVideoFileTypeMov:return AVFileTypeQuickTimeMovie;
         case KJVideoFileTypeMp4:return AVFileTypeMPEG4;
+        case KJVideoFileTypeWav:return AVFileTypeWAVE;
         case KJVideoFileTypeM4v:return AVFileTypeAppleM4V;
         case KJVideoFileTypeM4a:return AVFileTypeAppleM4A;
         case KJVideoFileTypeCaf:return AVFileTypeCoreAudioFormat;
         case KJVideoFileTypeAif:return AVFileTypeAIFF;
         case KJVideoFileTypeMp3:return AVFileTypeMPEGLayer3;
-        case KJVideoFileTypeWav:return AVFileTypeWAVE;
     }
 }
 @end
 @implementation KJVideoEncodeTool
-+ (void)kj_videoConvertEncodeInfo:(KJVideoEncodeInfo*)info Block:(kVideoEncodeBlock)block{
++ (void)kj_videoConvertEncodeInfo:(KJVideoEncodeInfo*(^)(KJVideoEncodeInfo*))infoblock Block:(kVideoEncodeBlock)block{
+    KJVideoEncodeInfo *info = [KJVideoEncodeInfo new];
+    if (infoblock) info = infoblock(info);
     __block NSString *presetName = [KJVideoEncodeInfo getAVAssetExportPresetQuality:info.qualityType];
     __block NSString *videoType  = [KJVideoEncodeInfo getVideoFileType:info.videoType];
     NSString *suffix = KJVideoFileTypeStringMap[info.videoType];

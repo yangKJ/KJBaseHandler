@@ -18,10 +18,12 @@ pod 'KJEmitterView/Control' # 自定义控件
 图片压缩加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
 pod 'KJExtensionHandler'
 pod 'KJExtensionHandler/Foundation'
+pod 'KJExtensionHandler/Exception'  # 异常处理
 
 基类库 - 封装整理常用，采用链式处理，提炼独立工具
 pod 'KJBaseHandler'
 pod 'KJBaseHandler/Tool' # 工具相关
+pod 'KJBaseHandler/Router' # 路由相关
 
 播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
 视频可以边下边播，把播放器播放过的数据流缓存到本地，下次直接从缓冲读取播放
@@ -52,6 +54,26 @@ Github地址：https://github.com/yangKJ
 #ifndef KJBaseHeader_h
 #define KJBaseHeader_h
 
+#pragma mark - view
 #import "KJBaseButton.h"
+
+#pragma mark - viewController
+#import "KJBaseViewController.h"
+#import "KJBaseNavigationController.h"
+
+#pragma mark - ************************************* 工具相关 *****************************************
+//#import "KJDownloadTool.h"/// 网络下载工具
+//#import "KJWebDiscernTool.h"/// 长按识别web当中的二维码工具 - 获取网页图片
+//#import "KJCommonCryptoTool.h"/// 加密解密工具
+//#import "KJVideoEncodeVC.h"/// 视频格式转换工具
+//#import "KJRunloopManager.h"/// Runloop工具 - 解决UI耗时操作
+
+#pragma mark - ************************************* 路由处理 *****************************************
+// 需要引入，请使用 pod 'KJBaseHandler/Router'
+#if __has_include("KJRouter.h")
+#import "KJRouter.h"
+#import "NSURL+KJRouter.h"
+#else
+#endif
 
 #endif /* KJBaseHeader_h */

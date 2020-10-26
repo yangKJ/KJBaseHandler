@@ -8,35 +8,37 @@
 #import "KJBaseButton.h"
 
 @interface KJBaseButton ()
-@property(nonatomic,strong)UIImageView *kj_imageView;
-@property(nonatomic,strong)UILabel *kj_titleLabel;
+@property(nonatomic,strong)UIImageView *kImageView;
+@property(nonatomic,strong)UILabel *kTitleLabel;
 @end
 
 @implementation KJBaseButton
 
 /// 快捷创建按钮
-+ (instancetype)kj_createButtonWithState:(UIControlState)state ExtendParameterBlock:(void(^_Nullable)(KJBaseButton *obj))block{
++ (instancetype)kj_createButtonWithExtendParameterBlock:(void(^_Nullable)(KJBaseButton *obj))block{
     KJBaseButton * button = [KJBaseButton buttonWithType:(UIButtonTypeCustom)];
-    if (block) [button kj_setupButtonWithState:state ExtendParameterBlock:block];
+    if (block) block(button);
+    [button kj_button:button];
     return button;
 }
-/// 设置按钮不同状态
-- (void)kj_setupButtonWithState:(UIControlState)state ExtendParameterBlock:(void(^_Nullable)(KJBaseButton *obj))block{
-    if (block) block(self);
-    
+- (void)kj_button:(KJBaseButton*)button{
+    [button addSubview:self.kImageView];
+    [button addSubview:self.kTitleLabel];
 }
 #pragma mark - lazy
-- (UIImageView*)kj_imageView{
-    if (!_kj_imageView) {
-        _kj_imageView = [UIImageView new];
+- (UIImageView*)kImageView{
+    if (!_kImageView) {
+        _kImageView = [UIImageView new];
+        _kImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
-    return _kj_imageView;
+    return _kImageView;
 }
-- (UILabel*)kj_titleLabel{
-    if (!_kj_titleLabel) {
-        _kj_titleLabel = [UILabel new];
+- (UILabel*)kTitleLabel{
+    if (!_kTitleLabel) {
+        _kTitleLabel = [UILabel new];
+        _kTitleLabel.textAlignment = NSTextAlignmentCenter;
     }
-    return _kj_titleLabel;
+    return _kTitleLabel;
 }
 #pragma mark - ExtendParameterBlock 扩展参数
 - (KJBaseButton *(^)(NSInteger))kViewTag {
@@ -63,4 +65,18 @@
         return self;
     };
 }
+- (KJBaseButton *(^)(KJButtonStateInfo*(^)(KJButtonStateInfo *)))kButtonStateInfo {
+    return ^(KJButtonStateInfo*(^block)(KJButtonStateInfo *)) {
+        if (block) {
+            KJButtonStateInfo *info = [KJButtonStateInfo new];
+            info = block(info);
+            self.kImageView.image = [UIImage imageNamed:info.imageName];
+            self.kTitleLabel.text = info.title;
+        }
+        return self;
+    };
+}
+@end
+@implementation KJButtonStateInfo
+
 @end

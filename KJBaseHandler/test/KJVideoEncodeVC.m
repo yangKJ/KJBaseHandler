@@ -21,9 +21,11 @@
     // Do any additional setup after loading the view.
     
     _weakself;
-    KJBaseButton *button = [KJBaseButton kj_createButtonWithState:(UIControlStateNormal) ExtendParameterBlock:^(KJBaseButton * _Nonnull obj) {
-        obj.kAddView(weakself.view).kFrame(CGRectMake(0, 0, 100, 30)).kBackgroundColor(UIColor.redColor);
-    }];
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button setTitle:@"拍摄视频" forState:(UIControlStateNormal)];
+    [button setTitleColor:UIColor.blueColor forState:(UIControlStateNormal)];
+    button.frame = CGRectMake(0, 0, 100, 30);
+    [self.view addSubview:button];
     button.center = self.view.center;
     [button kj_addAction:^(UIButton * _Nonnull kButton) {
         UIImagePickerController *pickerCon = [[UIImagePickerController alloc]init];
@@ -37,9 +39,11 @@
         [weakself presentViewController:pickerCon animated:YES completion:nil];
     }];
     
-    KJBaseButton *button2 = [KJBaseButton kj_createButtonWithState:(UIControlStateNormal) ExtendParameterBlock:^(KJBaseButton * _Nonnull obj) {
-        obj.kAddView(weakself.view).kFrame(CGRectMake(0, 0, 100, 30)).kBackgroundColor(UIColor.redColor);
-    }];
+    UIButton *button2 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button2 setTitle:@"转换视频" forState:(UIControlStateNormal)];
+    [button2 setTitleColor:UIColor.blueColor forState:(UIControlStateNormal)];
+    button2.frame = CGRectMake(0, 0, 100, 30);
+    [self.view addSubview:button2];
     button2.center = self.view.center;
     button2.centerY += 50;
     [button2 kj_addAction:^(UIButton * _Nonnull kButton) {
@@ -74,16 +78,16 @@
         [formatter setDateFormat:@"yyyyMMddHHmmssSSS"];
         NSDate * NowDate = [NSDate dateWithTimeIntervalSince1970:now];
         NSString * timeStr = [formatter stringFromDate:NowDate];
-        KJVideoEncodeInfo *info = [KJVideoEncodeInfo new];
-        info.URL = URL;
-        info.videoName = timeStr;
-        info.videoPath = path;
-        [KJVideoEncodeTool kj_videoConvertEncodeInfo:info Block:^(NSURL * _Nullable mp4URL, NSError * _Nullable error) {
+        [KJVideoEncodeTool kj_videoConvertEncodeInfo:^KJVideoEncodeInfo * _Nonnull(KJVideoEncodeInfo * _Nonnull info) {
+            info.URL = URL;
+            info.videoName = timeStr;
+            info.videoPath = path;
+            return info;
+        } Block:^(NSURL * _Nullable mp4URL, NSError * _Nullable error) {
             NSLog(@"--%@",mp4URL);
-            //测试使用，保存在手机相册里面
             ALAssetsLibrary *assetLibrary = [[ALAssetsLibrary alloc] init];
             [assetLibrary writeVideoAtPathToSavedPhotosAlbum:mp4URL completionBlock:^(NSURL *assetURL, NSError *error){
-                
+
             }];
         }];
     }

@@ -27,6 +27,12 @@ Pod::Spec.new do |s|
     fun.dependency 'KJBaseHandler/Base'
   end
   
+  s.subspec 'Router' do |ro|
+    ro.source_files = "KJBaseHandler/Router/**/*.{h,m}"
+    ro.public_header_files = 'KJBaseHandler/Router/*.h',"KJBaseHandler/Router/**/*.h"
+    ro.dependency 'KJBaseHandler/Base'
+  end
+  
 end
 
 

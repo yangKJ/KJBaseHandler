@@ -3,7 +3,7 @@
 //  KJRecordVideoDemo
 //
 //  Created by 杨科军 on 2020/10/12.
-//  视频格式转换工具 mov 转 mp4
+//  视频格式转换工具
 
 #import <Foundation/Foundation.h>
 #import <Photos/Photos.h>
@@ -20,22 +20,22 @@ typedef NS_ENUM(NSInteger, KJExportPresetQualityType) {
 typedef NS_ENUM(NSInteger, KJVideoFileType) {
     KJVideoFileTypeMov = 0, /// .mov
     KJVideoFileTypeMp4, /// .mp4
+    KJVideoFileTypeWav,
     KJVideoFileTypeM4v,
     KJVideoFileTypeM4a,
     KJVideoFileTypeCaf,
     KJVideoFileTypeAif,
     KJVideoFileTypeMp3,
-    KJVideoFileTypeWav,
 };
 static NSString * const _Nonnull KJVideoFileTypeStringMap[] = {
     [KJVideoFileTypeMov] = @".mov",
     [KJVideoFileTypeMp4] = @".mp4",
+    [KJVideoFileTypeWav] = @".wav",
     [KJVideoFileTypeM4v] = @".m4v",
     [KJVideoFileTypeM4a] = @".m4a",
     [KJVideoFileTypeCaf] = @".caf",
     [KJVideoFileTypeAif] = @".aif",
     [KJVideoFileTypeMp3] = @".mp3",
-    [KJVideoFileTypeWav] = @".wav",
 };
 typedef void(^kVideoEncodeBlock)(NSURL * _Nullable mp4URL, NSError * _Nullable error);
 NS_ASSUME_NONNULL_BEGIN
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString *videoName;
 @property(nonatomic,strong)NSString *videoPath;
 @property(nonatomic,assign)KJExportPresetQualityType qualityType;
-@property(nonatomic,assign)KJVideoFileType videoType; /// 视频格式，默认.mp4
+@property(nonatomic,assign)KJVideoFileType videoType; /// 视频转换格式，默认.mp4
 /// URL、PHAsset、AVURLAsset互斥三者选其一
 @property(nonatomic,strong)PHAsset *PHAsset;
 @property(nonatomic,strong)NSURL *URL;
@@ -54,8 +54,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString * const)getVideoFileType:(KJVideoFileType)videoType;
 @end
 @interface KJVideoEncodeTool : NSObject
-/// MOV转MP4格式
-+ (void)kj_videoConvertEncodeInfo:(KJVideoEncodeInfo*)info Block:(kVideoEncodeBlock)block;
+/// 视频格式转换处理
++ (void)kj_videoConvertEncodeInfo:(KJVideoEncodeInfo*(^)(KJVideoEncodeInfo*info))infoblock Block:(kVideoEncodeBlock)block;
 @end
 
 NS_ASSUME_NONNULL_END

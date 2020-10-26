@@ -11,6 +11,10 @@
 		68211191253551AD00EA3F3F /* KJVideoEncodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821118F253551AD00EA3F3F /* KJVideoEncodeTool.m */; };
 		682111972535522C00EA3F3F /* KJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682111962535522C00EA3F3F /* KJBaseViewController.m */; };
 		6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */; };
+		68341CA1253E8746000CAAF3 /* KJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68341CA0253E8746000CAAF3 /* KJRouter.m */; };
+		68341CB0253ED2A4000CAAF3 /* NSURL+KJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */; };
+		68434AD3253D32D80012289D /* KJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68434AD2253D32D80012289D /* KJBaseModel.m */; };
+		685EA0AC2546602B00C2C33C /* KJBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685EA0AB2546602B00C2C33C /* KJBadgeView.m */; };
 		68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7200251D9867000C89C5 /* AppDelegate.m */; };
 		68AD7204251D9867000C89C5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7203251D9867000C89C5 /* SceneDelegate.m */; };
 		68AD7207251D9867000C89C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7206251D9867000C89C5 /* ViewController.m */; };
@@ -26,6 +30,9 @@
 		68CA3939251DD72B00EB99E4 /* KJBase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CA3938251DD72B00EB99E4 /* KJBase.bundle */; };
 		68D66A16251DE38100CA1EB7 /* KJBaseHandler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 68D66A14251DE38100CA1EB7 /* KJBaseHandler.podspec */; };
 		68D66A17251DE38100CA1EB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68D66A15251DE38100CA1EB7 /* README.md */; };
+		68F3A85425393D4300BCD817 /* KJCommonCryptoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F3A85325393D4300BCD817 /* KJCommonCryptoTool.m */; };
+		68F3A85D25393EDD00BCD817 /* KJWebDiscernTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F3A85C25393EDD00BCD817 /* KJWebDiscernTool.m */; };
+		68F3A86625393EFD00BCD817 /* KJDownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F3A86525393EFD00BCD817 /* KJDownloadTool.m */; };
 		9F0B492B121BE18F6128FF27 /* Pods_KJBaseHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB395326D2550F7CB59B19D /* Pods_KJBaseHandlerTests.framework */; };
 		C9921069BCA1E75BDCDA5606 /* Pods_KJBaseHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B1D42EABB8319E852530B5 /* Pods_KJBaseHandler.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +65,14 @@
 		682111962535522C00EA3F3F /* KJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseViewController.m; sourceTree = "<group>"; };
 		6821119B2535524E00EA3F3F /* KJVideoEncodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJVideoEncodeVC.h; sourceTree = "<group>"; };
 		6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJVideoEncodeVC.m; sourceTree = "<group>"; };
+		68341C9F253E8746000CAAF3 /* KJRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJRouter.h; sourceTree = "<group>"; };
+		68341CA0253E8746000CAAF3 /* KJRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJRouter.m; sourceTree = "<group>"; };
+		68341CAE253ED2A4000CAAF3 /* NSURL+KJRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+KJRouter.h"; sourceTree = "<group>"; };
+		68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KJRouter.m"; sourceTree = "<group>"; };
+		68434AD1253D32D80012289D /* KJBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseModel.h; sourceTree = "<group>"; };
+		68434AD2253D32D80012289D /* KJBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseModel.m; sourceTree = "<group>"; };
+		685EA0AA2546602B00C2C33C /* KJBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBadgeView.h; sourceTree = "<group>"; };
+		685EA0AB2546602B00C2C33C /* KJBadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBadgeView.m; sourceTree = "<group>"; };
 		68AD71FC251D9867000C89C5 /* KJBaseHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJBaseHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AD71FF251D9867000C89C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68AD7200251D9867000C89C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +102,12 @@
 		68CA393F251DD83F00EB99E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		68D66A14251DE38100CA1EB7 /* KJBaseHandler.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = KJBaseHandler.podspec; sourceTree = SOURCE_ROOT; };
 		68D66A15251DE38100CA1EB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		68F3A85225393D4300BCD817 /* KJCommonCryptoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJCommonCryptoTool.h; sourceTree = "<group>"; };
+		68F3A85325393D4300BCD817 /* KJCommonCryptoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJCommonCryptoTool.m; sourceTree = "<group>"; };
+		68F3A85B25393EDD00BCD817 /* KJWebDiscernTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJWebDiscernTool.h; sourceTree = "<group>"; };
+		68F3A85C25393EDD00BCD817 /* KJWebDiscernTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJWebDiscernTool.m; sourceTree = "<group>"; };
+		68F3A86425393EFD00BCD817 /* KJDownloadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJDownloadTool.h; sourceTree = "<group>"; };
+		68F3A86525393EFD00BCD817 /* KJDownloadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJDownloadTool.m; sourceTree = "<group>"; };
 		91D1D7763CB9C3B954C28CDF /* Pods-KJBaseHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJBaseHandlerTests.debug.xcconfig"; path = "Target Support Files/Pods-KJBaseHandlerTests/Pods-KJBaseHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB395326D2550F7CB59B19D /* Pods_KJBaseHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJBaseHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD94703DB7F97421D9C50A6B /* Pods-KJBaseHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJBaseHandler.release.xcconfig"; path = "Target Support Files/Pods-KJBaseHandler/Pods-KJBaseHandler.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +156,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		68341C9E253E8725000CAAF3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				68341C9F253E8746000CAAF3 /* KJRouter.h */,
+				68341CA0253E8746000CAAF3 /* KJRouter.m */,
+				68341CAE253ED2A4000CAAF3 /* NSURL+KJRouter.h */,
+				68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		68434AD0253D32C20012289D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68434AD1253D32D80012289D /* KJBaseModel.h */,
+				68434AD2253D32D80012289D /* KJBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		685EA0A92546600C00C2C33C /* KJBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				685EA0AA2546602B00C2C33C /* KJBadgeView.h */,
+				685EA0AB2546602B00C2C33C /* KJBadgeView.m */,
+			);
+			path = KJBadgeView;
+			sourceTree = "<group>";
+		};
 		68AD71F3251D9867000C89C5 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				68CA393D251DD81000EB99E4 /* KJBaseHeader.h */,
+				68341C9E253E8725000CAAF3 /* Router */,
 				68CA3937251DD6BD00EB99E4 /* Base */,
 				68AD7242251D98FA000C89C5 /* Tool */,
 				68CA393E251DD81F00EB99E4 /* test */,
@@ -203,6 +254,12 @@
 		68AD7242251D98FA000C89C5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				68F3A86425393EFD00BCD817 /* KJDownloadTool.h */,
+				68F3A86525393EFD00BCD817 /* KJDownloadTool.m */,
+				68F3A85B25393EDD00BCD817 /* KJWebDiscernTool.h */,
+				68F3A85C25393EDD00BCD817 /* KJWebDiscernTool.m */,
+				68F3A85225393D4300BCD817 /* KJCommonCryptoTool.h */,
+				68F3A85325393D4300BCD817 /* KJCommonCryptoTool.m */,
 				68211190253551AD00EA3F3F /* KJVideoEncodeTool.h */,
 				6821118F253551AD00EA3F3F /* KJVideoEncodeTool.m */,
 				68AD7243251D98FA000C89C5 /* KJRunloopManager.h */,
@@ -223,6 +280,7 @@
 		68CA3937251DD6BD00EB99E4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				68434AD0253D32C20012289D /* Model */,
 				68D669F4251DDA9100CA1EB7 /* View */,
 				68D669F3251DDA8400CA1EB7 /* ViewController */,
 				68CA3938251DD72B00EB99E4 /* KJBase.bundle */,
@@ -251,6 +309,7 @@
 		68D669F4251DDA9100CA1EB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				685EA0A92546600C00C2C33C /* KJBadgeView */,
 				68D66A1B251DE3DA00CA1EB7 /* UIButton */,
 			);
 			path = View;
@@ -524,15 +583,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685EA0AC2546602B00C2C33C /* KJBadgeView.m in Sources */,
 				68AD7245251D98FA000C89C5 /* KJRunloopManager.m in Sources */,
 				68AD7207251D9867000C89C5 /* ViewController.m in Sources */,
+				68F3A86625393EFD00BCD817 /* KJDownloadTool.m in Sources */,
+				68F3A85D25393EDD00BCD817 /* KJWebDiscernTool.m in Sources */,
 				68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */,
 				68AD7212251D9868000C89C5 /* main.m in Sources */,
+				68341CB0253ED2A4000CAAF3 /* NSURL+KJRouter.m in Sources */,
 				682111972535522C00EA3F3F /* KJBaseViewController.m in Sources */,
 				6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */,
 				68C55DAF25207AA100AD3308 /* KJBaseButton.m in Sources */,
+				68434AD3253D32D80012289D /* KJBaseModel.m in Sources */,
 				68AD7204251D9867000C89C5 /* SceneDelegate.m in Sources */,
 				68211191253551AD00EA3F3F /* KJVideoEncodeTool.m in Sources */,
+				68F3A85425393D4300BCD817 /* KJCommonCryptoTool.m in Sources */,
+				68341CA1253E8746000CAAF3 /* KJRouter.m in Sources */,
 				68C55DA6252076DC00AD3308 /* KJBaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
