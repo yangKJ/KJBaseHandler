@@ -66,6 +66,11 @@ pod 'KJBaseHandler/Router'
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 0.0.3
+1. 解决路由多次执行的问题
+2. 基类 KJBaseViewController 追加单例模式
+3. 完善小红点控件 KJBadgeView
+
 #### Add 0.0.2
 1. 新增工具类 pod 'KJBaseHandler/Tool' # 工具相关
 2. 新增路由 pod 'KJBaseHandler/Router' # 路由相关

@@ -56,6 +56,7 @@ Github地址：https://github.com/yangKJ
 
 #pragma mark - view
 #import "KJBaseButton.h"
+//#import "KJBadgeView.h"/// 小红点控件
 
 #pragma mark - viewController
 #import "KJBaseViewController.h"

@@ -10,6 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KJBaseViewController : UIViewController
+/// 创建单例
++ (instancetype)kj_shareInstance;
+/// 销毁单例
++ (void)kj_attempDealloc;
 
 @end
 

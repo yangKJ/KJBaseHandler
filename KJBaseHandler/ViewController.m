@@ -30,7 +30,13 @@
             NSString *str = [dic[@"URL"] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             [KJRouter kj_routerRegisterWithURL:[NSURL URLWithString:str] Block:^UIViewController * _Nonnull(NSURL * _Nonnull URL, UIViewController * _Nonnull sourcevc) {
                 NSDictionary *parm = [URL kj_analysisParameterGetQuery];
-                KJBaseViewController *vc = [[NSClassFromString(parm[@"className"]) alloc]init];
+                NSString *name = parm[@"className"];
+                KJBaseViewController *vc;
+                if ([name isEqualToString:@"KJShareInstanceVC"]) {
+                    vc = [NSClassFromString(name) kj_shareInstance];
+                }else{
+                    vc = [NSClassFromString(name) new];
+                }
                 vc.title = parm[@"title"];
                 [weakself.navigationController pushViewController:vc animated:YES];
                 return vc;
@@ -84,6 +90,8 @@
     if (!_temps) {
         _temps = [NSMutableArray array];
         NSMutableArray *temp0 = [NSMutableArray array];
+        [temp0 addObject:@{@"URL":@"https://www.test.com/test?className=KJShareInstanceVC&title=单例模式测试"}];
+        [temp0 addObject:@{@"URL":@"https://www.test.com/test?className=KJBadgeViewVC&title=小红点视图控件"}];
         
         NSMutableArray *temp1 = [NSMutableArray array];
         [temp1 addObject:@{@"URL":@"https://www.test.com/test?className=KJVideoEncodeVC&title=转码处理"}];

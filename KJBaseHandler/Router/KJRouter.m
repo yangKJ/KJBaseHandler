@@ -7,17 +7,10 @@
 
 #import "KJRouter.h"
 @interface KJRouter ()
-@property(nonatomic,strong,class)NSMutableDictionary<NSString *,NSMutableArray *>*routerDict;
+@property(nonatomic,strong)NSMutableDictionary<NSString *,NSMutableArray *>*routerDict;
 @end
 @implementation KJRouter
-static NSMutableDictionary<NSString *,NSMutableArray *> *_routerDict = nil;
-+ (NSMutableDictionary<NSString *,NSMutableArray *>*)routerDict{
-    if (_routerDict == nil) _routerDict = [NSMutableDictionary dictionary];
-    return _routerDict;
-}
-+ (void)setRouterDict:(NSMutableDictionary<NSString *,NSMutableArray *> *)routerDict{
-    _routerDict = routerDict;
-}
+static KJRouter *router = nil;
 NS_INLINE NSString *keyFromURL(NSURL *URL){
     return URL ? [NSString stringWithFormat:@"%@://%@%@",URL.scheme,URL.host,URL.path] : nil;
 }
@@ -25,17 +18,23 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
 + (void)kj_routerRegisterWithURL:(NSURL*)URL Block:(kRouterBlock)block{
     if (![self kj_reasonableURL:URL]) return;
     NSString *key = keyFromURL(URL) ?: @"kDefaultRouterKey";
-    if (self.routerDict[key]) {
-        [self.routerDict[key] addObject:block];
+    @synchronized (self) {
+        router = [[self alloc]init];
+        router.routerDict = [NSMutableDictionary dictionary];
+    }
+    if (router.routerDict[key]) {
+        [router.routerDict[key] addObject:block];
     }else {
-        self.routerDict[key] = [NSMutableArray arrayWithObject:block];
+        router.routerDict[key] = [NSMutableArray arrayWithObject:block];
     }
 }
 /// 移除路由URL
 + (void)kj_routerRemoveWithURL:(NSURL*)URL{
     if (![self kj_reasonableURL:URL]) return;
     NSString *key = keyFromURL(URL) ?: @"kDefaultRouterKey";
-    if (self.routerDict[key]) [self.routerDict removeObjectForKey:key];
+    if (router.routerDict[key]) [router.routerDict removeObjectForKey:key];
+    router.routerDict = nil;
+    router = nil;
 }
 /// 执行跳转处理
 + (void)kj_routerTransferWithURL:(NSURL*)URL Source:(UIViewController*)vc{
@@ -47,15 +46,15 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     NSMutableArray<NSArray*>* keys = [NSMutableArray array];
     NSString *currentKey = keyFromURL(URL);
     if (currentKey) [keys addObject:@[currentKey]];
-    __block UIViewController *govc = nil;
+    __block UIViewController *__vc = nil;
     __weak __typeof(&*self) weakself = self;
     [keys enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSArray *temps = [weakself kj_effectiveWithKeys:obj];
-        govc = [weakself kj_getGoVC:temps URL:URL Source:vc?:[weakself topViewController]];
-        *stop = !!govc;
+        __vc = [weakself kj_getGoVC:temps URL:URL Source:vc?:[weakself topViewController]];
+        *stop = !!__vc;
     }];
-    if (govc == nil) return;
-    if (block) block(govc);
+    if (__vc == nil) return;
+    if (block) block(__vc);
 }
 
 #pragma mark -
@@ -82,22 +81,22 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     if (!keys || ![keys count]) return nil;
     NSMutableArray *temps = [NSMutableArray array];
     for (NSString *key in keys) {
-        if(self.routerDict[key] && [self.routerDict[key] count] > 0) {
-            [temps addObjectsFromArray:self.routerDict[key]];
+        if(router.routerDict[key] && [router.routerDict[key] count] > 0) {
+            [temps addObjectsFromArray:router.routerDict[key]];
         }
     }
     return temps.mutableCopy;
 }
 + (UIViewController*)kj_getGoVC:(NSArray*)blocks URL:(NSURL*)URL Source:(UIViewController*)vc{
     if (!blocks || ![blocks count]) return nil;
-    __block UIViewController *govc = nil;
+    __block UIViewController *__vc = nil;
     [blocks enumerateObjectsUsingBlock:^(kRouterBlock _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj) {
-            govc = obj(URL, vc);
-            if (!govc) *stop = YES;
+            __vc = obj(URL,vc);
+            if (__vc == nil) *stop = YES;
         }
     }];
-    return govc;
+    return __vc;
 }
 + (UIViewController*)topViewController{
     return [self topViewControllerForRootViewController:[UIApplication sharedApplication].delegate.window.rootViewController];

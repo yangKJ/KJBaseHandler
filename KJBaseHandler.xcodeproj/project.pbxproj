@@ -13,6 +13,8 @@
 		6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */; };
 		68341CA1253E8746000CAAF3 /* KJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68341CA0253E8746000CAAF3 /* KJRouter.m */; };
 		68341CB0253ED2A4000CAAF3 /* NSURL+KJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */; };
+		68431B882547FC5600ED7B67 /* KJShareInstanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68431B872547FC5600ED7B67 /* KJShareInstanceVC.m */; };
+		68431B8E25480F6900ED7B67 /* KJBadgeViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68431B8D25480F6900ED7B67 /* KJBadgeViewVC.m */; };
 		68434AD3253D32D80012289D /* KJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68434AD2253D32D80012289D /* KJBaseModel.m */; };
 		685EA0AC2546602B00C2C33C /* KJBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685EA0AB2546602B00C2C33C /* KJBadgeView.m */; };
 		68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7200251D9867000C89C5 /* AppDelegate.m */; };
@@ -69,6 +71,10 @@
 		68341CA0253E8746000CAAF3 /* KJRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJRouter.m; sourceTree = "<group>"; };
 		68341CAE253ED2A4000CAAF3 /* NSURL+KJRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+KJRouter.h"; sourceTree = "<group>"; };
 		68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KJRouter.m"; sourceTree = "<group>"; };
+		68431B862547FC5600ED7B67 /* KJShareInstanceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJShareInstanceVC.h; sourceTree = "<group>"; };
+		68431B872547FC5600ED7B67 /* KJShareInstanceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJShareInstanceVC.m; sourceTree = "<group>"; };
+		68431B8C25480F6900ED7B67 /* KJBadgeViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBadgeViewVC.h; sourceTree = "<group>"; };
+		68431B8D25480F6900ED7B67 /* KJBadgeViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBadgeViewVC.m; sourceTree = "<group>"; };
 		68434AD1253D32D80012289D /* KJBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseModel.h; sourceTree = "<group>"; };
 		68434AD2253D32D80012289D /* KJBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseModel.m; sourceTree = "<group>"; };
 		685EA0AA2546602B00C2C33C /* KJBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBadgeView.h; sourceTree = "<group>"; };
@@ -293,6 +299,10 @@
 			children = (
 				6821119B2535524E00EA3F3F /* KJVideoEncodeVC.h */,
 				6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */,
+				68431B862547FC5600ED7B67 /* KJShareInstanceVC.h */,
+				68431B872547FC5600ED7B67 /* KJShareInstanceVC.m */,
+				68431B8C25480F6900ED7B67 /* KJBadgeViewVC.h */,
+				68431B8D25480F6900ED7B67 /* KJBadgeViewVC.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -585,6 +595,7 @@
 			files = (
 				685EA0AC2546602B00C2C33C /* KJBadgeView.m in Sources */,
 				68AD7245251D98FA000C89C5 /* KJRunloopManager.m in Sources */,
+				68431B882547FC5600ED7B67 /* KJShareInstanceVC.m in Sources */,
 				68AD7207251D9867000C89C5 /* ViewController.m in Sources */,
 				68F3A86625393EFD00BCD817 /* KJDownloadTool.m in Sources */,
 				68F3A85D25393EDD00BCD817 /* KJWebDiscernTool.m in Sources */,
@@ -600,6 +611,7 @@
 				68F3A85425393D4300BCD817 /* KJCommonCryptoTool.m in Sources */,
 				68341CA1253E8746000CAAF3 /* KJRouter.m in Sources */,
 				68C55DA6252076DC00AD3308 /* KJBaseNavigationController.m in Sources */,
+				68431B8E25480F6900ED7B67 /* KJBadgeViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
