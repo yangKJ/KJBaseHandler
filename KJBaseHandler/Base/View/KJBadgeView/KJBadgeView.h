@@ -3,18 +3,20 @@
 //  KJBaseHandler
 //
 //  Created by 杨科军 on 2020/10/26.
+//  https://github.com/yangKJ/KJBaseHandler
 //  小红点视图控件
 
 #import <UIKit/UIKit.h>
 #import <KJExtensionHandler/KJExtensionHeader.h>
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, KJBadgePositionType) {
-    KJBadgePositionTypeCenterLeft = 0,
-    KJBadgePositionTypeCenterRight,
-    KJBadgePositionTypeTopLeft,
+    KJBadgePositionTypeTopLeft = 0,
     KJBadgePositionTypeTopRight,
     KJBadgePositionTypeBottomLeft,
     KJBadgePositionTypeBottomRight,
+    KJBadgePositionTypeCenterLeft,
+    KJBadgePositionTypeCenterRight,
+    KJBadgePositionTypeCenter,
 };
 @interface KJBadgeViewInfo : NSObject
 /// bedge值
@@ -37,7 +39,7 @@ typedef NS_ENUM(NSUInteger, KJBadgePositionType) {
 @property(nonatomic,strong)UIColor *badgeColor;
 @end
 
-@interface KJBadgeView : UIView
+@interface KJBadgeView : UIControl
 /// 初始化
 + (instancetype)kj_createBadgeView:(UIView*)contentView InfoBlock:(KJBadgeViewInfo*(^)(KJBadgeViewInfo *info))block;
 /// 设置BadgeValue

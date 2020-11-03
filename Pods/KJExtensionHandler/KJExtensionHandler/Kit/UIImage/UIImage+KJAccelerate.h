@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2020/7/24.
 //  Copyright © 2020 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJExtensionHandler
 //  Accelerate 框架的图片处理
 //  介绍文档：http://www.invasivecode.com/weblog/ios-image-processing-with-the-accelerate/
 //  官网文档地址：https://developer.apple.com/library/archive/releasenotes/General/iOS10APIDiffs/Objective-C/Accelerate.html
@@ -19,6 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage*)kj_rotateInRadians:(CGFloat)radians;
 
 #pragma mark - 模糊处理
+
+- (UIImage*)kj_blurImageSoft;
+- (UIImage*)kj_blurImageLight;
+- (UIImage*)kj_blurImageExtraLight;
+- (UIImage*)kj_blurImageDark;
+/// 指定颜色线性模糊
+- (UIImage*)kj_blurImageWithTintColor:(UIColor*)color;
 /// 线性模糊（保留透明区域）范围 0 ~ 1
 - (UIImage*)kj_linearBlurryImageBlur:(CGFloat)blur;
 /// 模糊处理（可设置模糊半径，模糊颜色，模糊蒙板）
@@ -55,6 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage*)kj_gaussianImage;
 /// 边缘检测
 - (UIImage*)kj_marginImage;
+/// 边缘检测
+- (UIImage*)kj_edgeDetection;
 
 @end
 

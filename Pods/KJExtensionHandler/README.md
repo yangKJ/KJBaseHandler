@@ -4,6 +4,8 @@
 <img src="https://img.zcool.cn/community/0161da5541af81000001a64bc753a4.jpg@1280w_1l_2o_100sh.jpg" width="666" hspace="1px">
 </p>
 
+##### 上传到Cocoapods `pod trunk push KJExtensionHandler.podspec --allow-warnings`
+
 * 这个工程提供开发中用到的类目，方便开发
 * 这里有我经常用到的扩展，方便好用开发
 * 整理好用的自定义控件，部分数据来源于网络 
@@ -52,20 +54,21 @@
 *
 *⭐️⭐️⭐️ ----- 本人其他库 ----- ⭐️⭐️⭐️
 *
-粒子效果、自定义控件Switch、自定义选中控件
+粒子效果、自定义控件、自定义选中控件
 pod 'KJEmitterView'
 pod 'KJEmitterView/Control' # 自定义控件
  
-Kit扩展属性
-Button图文混排、点击事件封装、扩大点击域、点赞粒子效果，
+扩展库 - Button图文混排、点击事件封装、扩大点击域、点赞粒子效果，
 手势封装、圆角渐变、倒影、投影、内阴影、内外发光、渐变色滑块等，
-图片加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
+图片压缩加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
 pod 'KJExtensionHandler'
 pod 'KJExtensionHandler/Foundation'
+pod 'KJExtensionHandler/Exception'  # 异常处理
 
 基类库 - 封装整理常用，采用链式处理，提炼独立工具
 pod 'KJBaseHandler'
 pod 'KJBaseHandler/Tool' # 工具相关
+pod 'KJBaseHandler/Router' # 路由相关
 
 播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
 视频可以边下边播，把播放器播放过的数据流缓存到本地，下次直接从缓冲读取播放
@@ -92,17 +95,32 @@ pod 'KJWorkbox/CommonBox'
 ```
 
 ##### Issue
-如果您在使用中有好的需求及建议，或者遇到什么bug，欢迎随时issue，我会及时的回复，有空也会不断优化更新这些库
+如果您在使用中有好的需求及建议或者遇到BUG，欢迎随时留言，有空也会不断处理优化更新这些库
 
 #### <a id="Cocoapods安装"></a>Cocoapods安装
 ```
 pod 'KJExtensionHandler'
-pod 'KJExtensionHandler/Function'
+pod 'KJExtensionHandler/Foundation'
+pod 'KJExtensionHandler/Exception'
 ```
 
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 0.0.4
+1. 新增 UIView+Toast 快捷显示
+2. 新增 UIResponder+KJChain 响应链处理
+3. 新增 NSObject+KJKVO 键值监听简单封装
+
+#### Add 0.0.3
+1. 新增 UIResponder+KJAdapt 简单的比例适配
+2. 新增 NSArray+KJPredicate 谓词数组处理
+3. 新增 NSString+KJPredicate 谓词字符串处理
+
+#### Add 0.0.2
+1. 新增Exception异常处理
+2. UITextView 增加是否开启方法交换委托处理
+
 #### Add 0.0.1
 1. 从原先的KJEmitterView库中分离出来
 
@@ -122,4 +140,3 @@ pod 'KJExtensionHandler/Function'
 [![谢谢老板](https://upload-images.jianshu.io/upload_images/1933747-879572df848f758a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)](https://github.com/yangKJ/KJPlayerDemo)
 
 #### 救救孩子吧，谢谢各位老板～～～～
-

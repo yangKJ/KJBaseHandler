@@ -3,7 +3,7 @@
 //  KJRecordVideoDemo
 //
 //  Created by 杨科军 on 2020/10/12.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJVideoEncodeTool.h"
 @implementation KJVideoEncodeInfo
@@ -52,7 +52,7 @@
         info.videoName = [info.videoName stringByAppendingString:suffix];
     }
     if (info.URL == nil && info.PHAsset == nil && info.AVURLAsset == nil) {
-        NSError *error = [self kj_setErrorCode:10008 DescriptionKey:@"Lack of material"];
+        NSError *error = [self kj_setErrorCode:10008 DescriptionKey:@"The source data is nil"];
         block(nil, error);
     }else if (info.URL) {
         AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:info.URL options:nil];

@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2019/11/22.
 //  Copyright © 2019 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJBaseHandler
 //  网络下载工具
 
 #import <Foundation/Foundation.h>
@@ -22,7 +23,7 @@ typedef void (^KJLoadDataBlock)(NSData * _Nullable data, NSError * _Nullable err
 typedef void (^_Nullable KJLoadProgressBlock)(unsigned long long totalLength,unsigned long long currentLength);
 
 @interface KJDownloadTool : NSObject
-/// 下载进度 - 未使用缓存机制的数据下载时刻使用
+/// 下载进度，未使用缓存机制的数据下载时刻使用
 @property (nonatomic,copy,class) KJLoadProgressBlock progressblock;
 /// 下载数据，未使用缓存机制
 + (NSData*)kj_downloadDataWithURL:(NSString*)url;

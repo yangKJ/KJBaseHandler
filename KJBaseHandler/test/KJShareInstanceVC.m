@@ -20,7 +20,7 @@
     self.view.backgroundColor = kRandomColor();
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button.frame = CGRectMake(0, 0, 100, 40);
+    button.frame = CGRectMake(0, 0, 100, 50);
     button.center = self.view.center;
     button.borderColor = UIColor.whiteColor;
     button.borderWidth = 1;

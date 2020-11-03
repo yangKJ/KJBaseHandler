@@ -20,21 +20,21 @@
     UIView *view = [UIView new];
     view.frame = CGRectMake(0, 0, 100, 50);
     view.center = self.view.center;
-    view.centerY -= 20;
-    view.backgroundColor = UIColor.yellowColor;
+    view.centerY -= 80;
+    view.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:view];
     
     __block NSInteger index = 7;
     __block KJBadgeView *badgeView = [KJBadgeView kj_createBadgeView:view InfoBlock:^KJBadgeViewInfo * _Nonnull(KJBadgeViewInfo * _Nonnull info) {
         info.badgeValue = index;
-        info.positionType = KJBadgePositionTypeTopLeft;
+        info.positionType = KJBadgePositionTypeTopRight;
         return info;
     }];
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(0, 0, 100, 40);
     button.center = self.view.center;
-    button.centerY += 50;
+    button.y = view.bottom + 20;
     button.borderColor = UIColor.blueColor;
     button.borderWidth = 1;
     [self.view addSubview:button];
@@ -49,7 +49,7 @@
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
         button.frame = CGRectMake(0, 0, 100, 40);
         button.center = self.view.center;
-        button.centerY += 100;
+        button.y = view.bottom + 80;
         button.borderColor = UIColor.blueColor;
         button.borderWidth = 1;
         [self.view addSubview:button];
@@ -61,12 +61,11 @@
             [badgeView kj_setBadgeValue:index Animated:YES];
         }];
     }
-    
     {
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
         button.frame = CGRectMake(0, 0, 100, 40);
         button.center = self.view.center;
-        button.centerY += 150;
+        button.y = view.bottom + 140;
         button.borderColor = UIColor.blueColor;
         button.borderWidth = 1;
         [self.view addSubview:button];
@@ -75,7 +74,7 @@
         [button setTitleColor:UIColor.blueColor forState:(UIControlStateNormal)];
         [button kj_addAction:^(UIButton * _Nonnull kButton) {
             index = 0;
-            [badgeView kj_setBadgeValue:index Animated:YES];
+            [badgeView kj_setBadgeValue:index Animated:NO];
         }];
     }
 }

@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2019/10/11.
 //  Copyright © 2019 杨科军. All rights reserved.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJWebDiscernTool.h"
 
@@ -43,8 +43,7 @@ static KJWebDiscernTool *kj_tool = nil;
 }
 
 - (void)kj_configWithWKWebView:(WKWebView*)webView WKNavigationDelegate:(BOOL)delegate{
-    self.saveWebView = webView; /// 保存webView
-    /// 是否使用协议
+    self.saveWebView = webView;
     if (delegate) self.saveWebView.navigationDelegate = self;
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     longPress.minimumPressDuration = 1;
@@ -55,9 +54,7 @@ static KJWebDiscernTool *kj_tool = nil;
     if (sender.state != UIGestureRecognizerStateBegan) return;
     CGPoint touchPoint = [sender locationInView:self.saveWebView];
     __weak typeof(self) weakself = self;
-    // 获取长按位置对应的图片url的JS代码
     NSString *imgJS = [NSString stringWithFormat:@"document.elementFromPoint(%f,%f).src", touchPoint.x, touchPoint.y];
-    // 执行对应的JS代码 获取url
     [self.saveWebView evaluateJavaScript:imgJS completionHandler:^(id _Nullable imgUrl, NSError * _Nullable error) {
         if (imgUrl) {
             NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]];
@@ -75,7 +72,7 @@ static KJWebDiscernTool *kj_tool = nil;
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
     /// 禁止弹出菜单
     [self.saveWebView evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout = 'none';" completionHandler:nil];
-    // 禁止选中 - 禁止用户复制粘贴
+    /// 禁止选中 - 禁止用户复制粘贴
     [self.saveWebView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect = 'none';" completionHandler:nil];
 }
 

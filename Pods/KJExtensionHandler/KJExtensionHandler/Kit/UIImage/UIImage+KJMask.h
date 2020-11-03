@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2020/7/25.
 //  Copyright © 2020 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJExtensionHandler
 //  蒙版处理
 
 #import <UIKit/UIKit.h>
@@ -22,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage*)kj_maskImage:(UIImage*)maskImage;
 /// 图片透明区域点击穿透处理
 - (bool)kj_transparentWithPoint:(CGPoint)point;
+/// 文字转图片
++ (UIImage*)kj_imageFromText:(NSArray*)contents ContentWidth:(CGFloat)width Font:(UIFont*)font TextColor:(UIColor*)textColor BgColor:(UIColor*_Nullable)bgColor;
 @end
 
 NS_ASSUME_NONNULL_END

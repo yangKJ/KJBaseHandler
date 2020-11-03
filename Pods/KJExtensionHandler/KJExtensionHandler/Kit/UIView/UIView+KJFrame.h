@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2018/7/12.
 //  Copyright © 2018年 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJExtensionHandler
 //  一套轻量级布局
 
 #import <UIKit/UIKit.h>
@@ -25,8 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)CGFloat centerX;
 /// 中心点y
 @property (nonatomic,assign)CGFloat centerY;
+/// 左边距离
+@property (nonatomic,assign)CGFloat left;
 /// 右边距离
 @property (nonatomic,assign)CGFloat right;
+/// 顶部距离
+@property (nonatomic,assign)CGFloat top;
 /// 底部距离
 @property (nonatomic,assign)CGFloat bottom;
 /// x + width
@@ -39,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)CGFloat masonry_y;
 @property (nonatomic,assign)CGFloat masonry_width;
 @property (nonatomic,assign)CGFloat masonry_height;
+
+/// 寻找子视图
+- (UIView*)kj_FindSubviewRecursively:(BOOL(^)(UIView *subview, BOOL * stop))recurse;
 
 @end
 NS_ASSUME_NONNULL_END

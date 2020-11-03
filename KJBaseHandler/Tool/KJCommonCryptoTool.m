@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2020/1/17.
 //  Copyright © 2020 杨科军. All rights reserved.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJCommonCryptoTool.h"
 
@@ -226,7 +226,6 @@
     // 分配缓冲区
     keyBuffer = malloc(keyBufferSize * sizeof(uint8_t));
     memset((void *)keyBuffer, 0x0, keyBufferSize);
-    
     // 使用私钥解密
     sanityCheck = SecKeyDecrypt(privateKey,
                                 kSecPaddingPKCS1,
@@ -244,7 +243,7 @@
 
 #pragma mark - 32位 小写
 +(NSString*)MD5ForLower32Bate:(NSString*)string{
-    const char* input = [string UTF8String];//要进行UTF8的转码
+    const char* input = [string UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(input, (CC_LONG)strlen(input), result);
     NSMutableString *digest = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
@@ -256,7 +255,6 @@
 
 #pragma mark - 32位 大写
 + (NSString*)MD5ForUpper32Bate:(NSString*)string{
-    //要进行UTF8的转码
     const char* input = [string UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(input, (CC_LONG)strlen(input), result);
@@ -292,7 +290,6 @@
     return [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 }
 + (NSString *)encodeBase64:(NSString *)string{
-    //先将string转换成data
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSData *base64Data = [data base64EncodedDataWithOptions:0];
     return [[NSString alloc]initWithData:base64Data encoding:NSUTF8StringEncoding];
@@ -300,7 +297,7 @@
 
 #pragma mark - 快速接口
 /// 生成key
-+ (NSString*)kj_createKey {
++ (NSString*)kj_createKey{
     NSUInteger size = 16;
     char data[size];
     for (int x=0;x<size;x++) {
@@ -314,17 +311,8 @@
     return [[NSString alloc] initWithBytes:data length:size encoding:NSUTF8StringEncoding];
 }
 /// 生成token
-+ (NSString*)kj_createToken {
++ (NSString*)kj_createToken{
     return [[NSUUID UUID].UUIDString stringByReplacingOccurrencesOfString:@"-" withString:@""];
-}
-/// 过滤空格、回车、换行
-+ (NSString*)kj_filtrationString:(NSString*)string{
-    NSString *filtrationString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    filtrationString = [filtrationString stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-    filtrationString = [filtrationString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    filtrationString = [filtrationString stringByReplacingOccurrencesOfString:@"\t" withString:@""];
-    filtrationString = [filtrationString stringByReplacingOccurrencesOfString:@" " withString:@""];
-    return filtrationString;
 }
 /// MD5加密32位大写
 + (NSString*)kj_MD5:(NSString*)string{

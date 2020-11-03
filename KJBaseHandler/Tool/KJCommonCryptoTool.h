@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2020/1/17.
 //  Copyright © 2020 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJBaseHandler
 //  加密解密工具
 
 #import <Foundation/Foundation.h>
@@ -15,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)kj_createKey;
 /// 生成token
 + (NSString*)kj_createToken;
-/// 过滤空格、回车、换行
-+ (NSString*)kj_filtrationString:(NSString*)string;
 /// MD5 加密 32位大写
 + (NSString*)kj_MD5:(NSString*)string;
 /// 两次 MD5 加密 32位大写
@@ -31,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)kj_DESDecrypt:(NSString*)string key:(NSString*)key;
 /// AES 加密
 + (NSString*)kj_AESEncrypt:(NSString*)string key:(NSString*)key;
-/// AES  解密
+/// AES 解密
 + (NSString*)kj_AESDecrypt:(NSString*)string key:(NSString*)key;
 
 #pragma mark - DES 加密/解密

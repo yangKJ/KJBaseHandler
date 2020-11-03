@@ -3,6 +3,7 @@
 //  KJRecordVideoDemo
 //
 //  Created by 杨科军 on 2020/10/12.
+//  https://github.com/yangKJ/KJBaseHandler
 //  视频格式转换工具
 
 #import <Foundation/Foundation.h>

@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2019/6/5.
 //  Copyright © 2019 杨科军. All rights reserved.
-//
+//  https://github.com/yangKJ/KJExtensionHandler
 
 #ifndef _KJMacros_h
 #define _KJMacros_h
@@ -39,7 +39,7 @@
 // block相关宏
 #define kBlockSafeRun(block, ...) block ? block(__VA_ARGS__) : nil
 // 版本判定 大于等于某个版本
-#define kSystemVersion(version) ([[[UIDevice currentDevice] systemVersion] compare:@#version options:NSNumericSearch] != NSOrderedAscending)
+#define kCurrentSystemVersion(version) ([[[UIDevice currentDevice] systemVersion] compare:@#version options:NSNumericSearch] != NSOrderedAscending)
 // 获取时间间隔宏
 #define kTimeTick CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
 #define kTimeTock NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start);

@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2018/7/12.
 //  Copyright © 2018年 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJExtensionHandler
 //  圆角扩展 - 边框
 
 #import <UIKit/UIKit.h>
@@ -26,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)bool kj_borderLeft;
 /// Right边框
 @property(nonatomic,assign)bool kj_borderRight;
+
+/// 移动阴影效果
+- (void)kj_movingShadow;
 
 @end
 NS_ASSUME_NONNULL_END

@@ -3,7 +3,7 @@
 //  KJBaseHandler
 //
 //  Created by 杨科军 on 2020/10/20.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJRouter.h"
 @interface KJRouter ()
@@ -37,10 +37,10 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     router = nil;
 }
 /// 执行跳转处理
-+ (void)kj_routerTransferWithURL:(NSURL*)URL Source:(UIViewController*)vc{
-    [self kj_routerTransferWithURL:URL Source:vc Completion:nil];
++ (void)kj_routerTransferWithURL:(NSURL*)URL SourceViewController:(UIViewController*)vc{
+    [self kj_routerTransferWithURL:URL SourceViewController:vc Completion:nil];
 }
-+ (void)kj_routerTransferWithURL:(NSURL*)URL Source:(UIViewController*)vc Completion:(void(^_Nullable)(UIViewController *govc))block{
++ (void)kj_routerTransferWithURL:(NSURL*)URL SourceViewController:(UIViewController*)vc Completion:(void(^_Nullable)(UIViewController *govc))block{
     if (![self kj_reasonableURL:URL]) return;
     if (![NSThread isMainThread]) return;
     NSMutableArray<NSArray*>* keys = [NSMutableArray array];
@@ -50,7 +50,7 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     __weak __typeof(&*self) weakself = self;
     [keys enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSArray *temps = [weakself kj_effectiveWithKeys:obj];
-        __vc = [weakself kj_getGoVC:temps URL:URL Source:vc?:[weakself topViewController]];
+        __vc = [weakself kj_getTargetViewControllerWith:temps URL:URL SourceViewController:vc?:[weakself topViewController]];
         *stop = !!__vc;
     }];
     if (__vc == nil) return;
@@ -87,7 +87,7 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     }
     return temps.mutableCopy;
 }
-+ (UIViewController*)kj_getGoVC:(NSArray*)blocks URL:(NSURL*)URL Source:(UIViewController*)vc{
++ (UIViewController*)kj_getTargetViewControllerWith:(NSArray*)blocks URL:(NSURL*)URL SourceViewController:(UIViewController*)vc{
     if (!blocks || ![blocks count]) return nil;
     __block UIViewController *__vc = nil;
     [blocks enumerateObjectsUsingBlock:^(kRouterBlock _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

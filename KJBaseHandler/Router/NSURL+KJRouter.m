@@ -3,13 +3,7 @@
 //  KJBaseHandler
 //
 //  Created by 杨科军 on 2020/10/20.
-//
-//NSURL *URL = [NSURL URLWithString:@"https://www.test.com/test?className=KJVideoEncodeVC&title=title"];
-//URL.query              // className=KJVideoEncodeVC&title=title
-//URL.scheme             // https
-//URL.host               // www.test.com
-//URL.path               // /test
-//URL.absoluteString     // https://www.test.com/test?className=KJVideoEncodeVC&title=title
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "NSURL+KJRouter.h"
 
@@ -23,5 +17,12 @@
     }];
     return parm;
 }
+
+//NSURL *URL = [NSURL URLWithString:@"https://www.test.com/test?className=KJVideoEncodeVC&title=title"];
+//URL.query              // className=KJVideoEncodeVC&title=title
+//URL.scheme             // https
+//URL.host               // www.test.com
+//URL.path               // /test
+//URL.absoluteString     // https://www.test.com/test?className=KJVideoEncodeVC&title=title
 
 @end

@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name     = "KJBaseHandler"
-  s.version  = "0.0.2"
+  s.version  = "0.0.3"
   s.summary  = "77 KJBaseHandler"
   s.homepage = "https://github.com/yangKJ/KJBaseHandler"
   s.license  = "MIT"
   s.license  = {:type => "MIT", :file => "LICENSE"}
   s.license  = "Copyright (c) 2020 yangkejun"
-  s.author   = { "77" => "393103982@qq.com" }
+  s.author   = { "77" => "ykj310@126.com" }
   s.platform = :ios
   s.source   = {:git => "https://github.com/yangKJ/KJBaseHandler.git",:tag => "#{s.version}"}
   s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     ro.dependency 'KJBaseHandler/Base'
   end
 
-  s.dependency 'KJExtensionHandler'
+  s.dependency 'KJExtensionHandler','ZXNavigationBar'
   
 end
 

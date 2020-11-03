@@ -66,6 +66,10 @@ pod 'KJBaseHandler/Router'
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 0.0.4
+1. KJLoopProgressView 新增圆环形进度条
+2. KJSegmentView 新增菜单选择控件
+
 #### Add 0.0.3
 1. 解决路由多次执行的问题
 2. 基类 KJBaseViewController 追加单例模式
@@ -81,6 +85,7 @@ pod 'KJBaseHandler/Router'
 
 备注：部分资料来源于网络～  就不一一指出道谢，整理起来方便自己和大家使用
 ```
+
 #### <a id="效果图"></a>效果图
 <p align="left">
 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590984664032&di=f75bbfdf1c76e20749fd40be9c784738&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181208%2F2e9d5c7277094ace8e7385e018ccc2d4.jpeg" width="666" hspace="1px">

@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2020/7/24.
 //  Copyright © 2020 杨科军. All rights reserved.
-//
+//  https://github.com/yangKJ/KJExtensionHandler
 
 #import "UIImage+KJAccelerate.h"
 
@@ -36,6 +36,35 @@
 }
 
 #pragma mark - 模糊处理
+- (UIImage*)kj_blurImageSoft{
+    return [self kj_blurImageWithTintColor:[UIColor colorWithWhite:0.84 alpha:0.36]];
+}
+- (UIImage*)kj_blurImageLight{
+    return [self kj_blurImageWithTintColor:[UIColor colorWithWhite:1.0 alpha:0.3]];
+}
+- (UIImage*)kj_blurImageExtraLight{
+    return [self kj_blurImageWithTintColor:[UIColor colorWithWhite:0.97 alpha:0.82]];
+}
+- (UIImage*)kj_blurImageDark{
+    return [self kj_blurImageWithTintColor:[UIColor colorWithWhite:0.11 alpha:0.73]];
+}
+- (UIImage*)kj_blurImageWithTintColor:(UIColor*)color{
+    const CGFloat alpha = 0.6;
+    UIColor *effectColor = color;
+    size_t componentCount = CGColorGetNumberOfComponents(color.CGColor);
+    if (componentCount == 2) {
+        CGFloat b;
+        if ([color getWhite:&b alpha:NULL]) {
+            effectColor = [UIColor colorWithWhite:b alpha:alpha];
+        }
+    }else {
+        CGFloat r, g, b;
+        if ([color getRed:&r green:&g blue:&b alpha:NULL]) {
+            effectColor = [UIColor colorWithRed:r green:g blue:b alpha:alpha];
+        }
+    }
+    return [self kj_blurImageWithRadius:20 Color:color MaskImage:nil];
+}
 /// 模糊处理保留透明区域，范围0 ~ 1
 - (UIImage*)kj_linearBlurryImageBlur:(CGFloat)blur{
     blur = MAX(MIN(blur,1),0);
@@ -172,6 +201,7 @@
     // Add in color tint.
     if (color) {
         CGContextSaveGState(outputContext);
+        CGContextSetBlendMode(outputContext, kCGBlendModeNormal);
         CGContextSetFillColorWithColor(outputContext, color.CGColor);
         CGContextFillRect(outputContext, imageRect);
         CGContextRestoreGState(outputContext);
@@ -330,8 +360,7 @@
     void * outt = malloc(n);
     vImage_Buffer src  = {data, h, w, bytes};
     vImage_Buffer dest = {outt, h, w, bytes};
-    unsigned char bgColor[4] = {0, 0, 0, 0};
-    vImageConvolve_ARGB8888(&src,&dest,NULL,0,0,kernel,3,3,1,bgColor,kvImageCopyInPlace);
+    vImageConvolve_ARGB8888(&src,&dest,NULL,0,0,kernel,3,3,1,backgroundColorBlack,kvImageCopyInPlace);
     memcpy(data, outt, n);
     free(outt);
     CGImageRef imageRef = CGBitmapContextCreateImage(context);
@@ -366,7 +395,11 @@
 - (UIImage*)kj_marginImage{
     return [self kj_convolutionImageWithKernel:margin_kernel];
 }
+- (UIImage*)kj_edgeDetection{
+    return [self kj_convolutionImageWithKernel:edgedetect_kernel];
+}
 #pragma mark - 函数矩阵
+static uint8_t backgroundColorBlack[4] = {0,0,0,0};
 /// 高斯矩阵
 static int16_t gaussian_kernel[9] = {
     1, 2, 1,
@@ -379,10 +412,16 @@ static int16_t margin_kernel[9] = {
      0,  0,  0,
      1,  1,  1
 };
+/// 边缘检测矩阵
+static int16_t edgedetect_kernel[9] = {
+    -1, -1, -1,
+    -1,  8, -1,
+    -1, -1, -1
+};
 /// 锐化矩阵
 static int16_t sharpen_kernel[9] = {
     -1, -1, -1,
-    -1, 9, -1,
+    -1,  9, -1,
     -1, -1, -1
 };
 /// 浮雕矩阵

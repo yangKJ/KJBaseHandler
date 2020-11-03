@@ -3,7 +3,7 @@
 //  KJBaseHandler
 //
 //  Created by 杨科军 on 2020/9/25.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 /*
 *********************************************************************************
 *
@@ -57,6 +57,8 @@ Github地址：https://github.com/yangKJ
 #pragma mark - view
 #import "KJBaseButton.h"
 //#import "KJBadgeView.h"/// 小红点控件
+//#import "KJSegmentView.h" /// 选择菜单控件
+//#import "KJLoopProgressView.h"/// 圆环形进度条
 
 #pragma mark - viewController
 #import "KJBaseViewController.h"
@@ -71,10 +73,13 @@ Github地址：https://github.com/yangKJ
 
 #pragma mark - ************************************* 路由处理 *****************************************
 // 需要引入，请使用 pod 'KJBaseHandler/Router'
-#if __has_include("KJRouter.h")
+#if __has_include(<KJBaseHandler/KJRouter.h>)
+#import <KJBaseHandler/KJRouter.h>
+#elif __has_include("KJRouter.h")
 #import "KJRouter.h"
-#import "NSURL+KJRouter.h"
 #else
+@import KJRouter;
 #endif
+
 
 #endif /* KJBaseHeader_h */

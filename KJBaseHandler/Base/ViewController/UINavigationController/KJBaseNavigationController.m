@@ -3,7 +3,7 @@
 //  KJBaseHandler
 //
 //  Created by 杨科军 on 2020/9/27.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJBaseNavigationController.h"
 
@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 @end

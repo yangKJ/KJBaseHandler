@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2019/11/22.
 //  Copyright © 2019 杨科军. All rights reserved.
-//
+//  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJDownloadTool.h"
 #import <objc/runtime.h>
@@ -12,23 +12,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** 网络下载相关 */
+/// 网络下载相关
 @interface KJDownloader : NSObject<NSURLSessionDownloadDelegate>//,NSURLConnectionDataDelegate>
 //@property (nonatomic,strong) NSURL *url;
 @property (nonatomic,strong) NSURLSession *session;
 @property (nonatomic,strong) NSURLSessionDownloadTask *task;
 @property (nonatomic,assign) unsigned long long totalLength;
 @property (nonatomic,assign) unsigned long long currentLength;
-@property (nonatomic,copy) KJLoadProgressBlock progressBlock;
-@property (nonatomic,copy) KJLoadDataBlock  dataBlock;
-
+@property (nonatomic,copy,readwrite) KJLoadProgressBlock progressBlock;
+@property (nonatomic,copy,readwrite) KJLoadDataBlock  dataBlock;
 /// 下载数据
 - (void)kj_startDownloadImageWithURL:(NSURL*)url Progress:(KJLoadProgressBlock)progress Complete:(KJLoadDataBlock)complete;
-
-//typedef void(^KJFileLength)(long long length);
-//@property (nonatomic, copy) KJFileLength block;
-///// 通过url获得网络的文件的大小 返回byte
-//- (void)getUrlFileLength:(NSString *)url ResultBlock:(KJFileLength)block;
 
 @end
 
@@ -36,10 +30,12 @@ NS_ASSUME_NONNULL_END
 
 @implementation KJDownloader
 
-- (void)kj_startDownloadImageWithURL:(NSURL*)url Progress:(KJLoadProgressBlock)progress Complete:(KJLoadDataBlock)complete {
+- (void)kj_startDownloadImageWithURL:(NSURL*)url Progress:(KJLoadProgressBlock)progress Complete:(KJLoadDataBlock)complete{
     if (url == nil) {
-        NSError *error = [NSError errorWithDomain:@"ykj.com" code:101 userInfo:@{@"errorMessage":@"URL不正确"}];
-        !complete ?: complete(nil,error);
+        if (complete) {
+            NSError *error = [NSError errorWithDomain:@"Domain" code:101 userInfo:@{@"message":@"URL不正确"}];
+            complete(nil,error);
+        }
         return;
     }
     self.progressBlock = progress;
@@ -115,7 +111,6 @@ NS_ASSUME_NONNULL_END
 @end
 
 @interface KJDownloadTool ()
-//@property (nonatomic,strong) KJDownloader *downloader;
 @property (nonatomic,strong) NSMutableDictionary *faileDict; /// 失败数据临时缓存
 @property (nonatomic,copy,class) KJLoadImageBlock xxblock;
 @end
@@ -146,12 +141,11 @@ static KJLoadProgressBlock _xxxblock = nil;
         _xxxblock = [xxxblock copy];
     }
 }
-
 /// 下载数据
 + (NSData*)kj_downloadDataWithURL:(NSString*)url{
     @synchronized (self) {
         if (_tool == nil) {
-            _tool = [[KJDownloadTool alloc]init];
+            _tool = [[self alloc]init];
         }
     }
     NSData *data = [_tool xxxWithURL:[NSURL URLWithString:url]];
@@ -159,22 +153,19 @@ static KJLoadProgressBlock _xxxblock = nil;
 }
 /// 递归拿到Data
 - (NSData*)xxxWithURL:(NSURL*)url{
-    /// 判断失败次数
     if ([self kj_failNumsForRequest:[NSURLRequest requestWithURL:url]] >= kMaxLoadNum) {
 //        [self kj_cancelRequest];
         return nil;
     }
-    
     NSData *data = [self kj_getDataWithURL:url];
     return data?:[self xxxWithURL:url];
 }
-
 /// Block 同步执行
 - (NSData*)kj_getDataWithURL:(NSURL*)url{
 //    __weak typeof(self) weakself = self;
     __block NSData *__data = nil;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_semaphore_t sem = dispatch_semaphore_create(0);//创建信号量初始值为0  0:表示无限等待
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     dispatch_group_async(dispatch_group_create(), queue, ^{
 //        [weakself kj_cancelRequest];
         KJDownloader *downloader = [[KJDownloader alloc] init];
@@ -185,13 +176,12 @@ static KJLoadProgressBlock _xxxblock = nil;
         } Complete:^(NSData *data, NSError *error) {
             if (error) [self kj_cacheFailRequest:theRequest];
             __data = data;
-            dispatch_semaphore_signal(sem); //发送信号量 信号量+1
+            dispatch_semaphore_signal(sem);
         }];
     });
-    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);//阻塞等待 信号量-1
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
     return __data;
 }
-
 
 #pragma mark - 下载图片相关
 + (void)kj_loadImageWithURL:(NSString*)url Complete:(KJLoadImageBlock)block{
@@ -224,17 +214,14 @@ static KJLoadProgressBlock _xxxblock = nil;
 #pragma mark - 内部方法
 - (UIImage*)kj_getImageWithRequest:(NSURLRequest*)request HaveProgress:(BOOL)haveProgress{
     UIImage *cachedImage = getCacheImage(request);
-    if (cachedImage) {
-        return cachedImage;
-    }
-    /// 判断失败次数
+    if (cachedImage) return cachedImage;
     if ([self kj_failNumsForRequest:request] >= kMaxLoadNum) {
         return nil;
     }
     __weak typeof(self) weakself = self;
     __block NSData *__data = nil;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_semaphore_t sem = dispatch_semaphore_create(0);//创建信号量初始值为0  0:表示无限等待
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     dispatch_group_async(dispatch_group_create(), queue, ^{
         KJDownloader *downloader = [[KJDownloader alloc] init];
         NSURLRequest *theRequest = [NSURLRequest requestWithURL:request.URL];
@@ -245,10 +232,10 @@ static KJLoadProgressBlock _xxxblock = nil;
         } Complete:^(NSData *data, NSError *error) {
             if (error) [weakself kj_cacheFailRequest:theRequest];
             __data = data;
-            dispatch_semaphore_signal(sem); //发送信号量 信号量+1
+            dispatch_semaphore_signal(sem);
         }];
     });
-    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);//阻塞等待 信号量-1
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
     UIImage *image = [UIImage imageWithData:__data];
     if (image) {
         cacheImage(image,request);
@@ -342,7 +329,6 @@ static KJLoadProgressBlock _xxxblock = nil;
     }
     return _faileDict;
 }
-
 /// 失败次数
 - (NSUInteger)kj_failNumsForRequest:(NSURLRequest*)request {
     NSNumber *failes = [self.faileDict objectForKey:md5KeyForRequest(request)];

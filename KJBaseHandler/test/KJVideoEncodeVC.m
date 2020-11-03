@@ -23,13 +23,13 @@
     _weakself;
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setTitle:@"拍摄视频" forState:(UIControlStateNormal)];
-    [button setTitleColor:UIColor.greenColor forState:(UIControlStateNormal)];
+    [button setTitleColor:UIColor.orangeColor forState:(UIControlStateNormal)];
     button.titleLabel.font = kSystemFontSize(14);
-    button.frame = CGRectMake(0, 0, 100, 30);
+    button.frame = CGRectMake(0, 0, 100, 50);
     [self.view addSubview:button];
     button.center = self.view.center;
-    button.centerY -= 30;
-    button.borderColor = UIColor.greenColor;
+    button.centerY -= 40;
+    button.borderColor = UIColor.orangeColor;
     button.borderWidth = 1;
     [button kj_addAction:^(UIButton * _Nonnull kButton) {
         UIImagePickerController *pickerCon = [[UIImagePickerController alloc]init];
@@ -45,13 +45,13 @@
     
     UIButton *button2 = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button2 setTitle:@"转换视频" forState:(UIControlStateNormal)];
-    [button2 setTitleColor:UIColor.greenColor forState:(UIControlStateNormal)];
+    [button2 setTitleColor:UIColor.orangeColor forState:(UIControlStateNormal)];
     button2.titleLabel.font = kSystemFontSize(14);
-    button2.frame = CGRectMake(0, 0, 100, 30);
+    button2.frame = CGRectMake(0, 0, 100, 50);
     [self.view addSubview:button2];
     button2.center = self.view.center;
     button2.centerY += 30;
-    button2.borderColor = UIColor.greenColor;
+    button2.borderColor = UIColor.orangeColor;
     button2.borderWidth = 1;
     [button2 kj_addAction:^(UIButton * _Nonnull kButton) {
         UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];

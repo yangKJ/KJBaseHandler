@@ -4,7 +4,8 @@
 target 'KJBaseHandler' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'KJExtensionHandler'
+  pod 'KJExtensionHandler' # 扩展库
+  pod 'ZXNavigationBar' # 自定义导航栏
   # Pods for KJBaseHandler
 
   target 'KJBaseHandlerTests' do
