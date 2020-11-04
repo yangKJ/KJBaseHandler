@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sectionTemps = @[@"基类",@"控件类",@"工具类"];
+    self.sectionTemps = @[@"基类",@"控件类",@"工具类",@"三方类"];
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -93,7 +93,6 @@
         _temps = [NSMutableArray array];
         NSMutableArray *temp0 = [NSMutableArray array];
         [temp0 addObject:@{@"URL":@"https://www.test.com/test?className=KJShareInstanceVC&title=单例模式测试"}];
-        [temp0 addObject:@{@"URL":@"https://www.test.com/test?className=KJNavigationBarVC&title=Navigation相关操作"}];
         
         NSMutableArray *temp1 = [NSMutableArray array];
         [temp1 addObject:@{@"URL":@"https://www.test.com/test?className=KJBadgeViewVC&title=小红点视图控件"}];
@@ -104,9 +103,13 @@
         NSMutableArray *temp2 = [NSMutableArray array];
         [temp2 addObject:@{@"URL":@"https://www.test.com/test?className=KJVideoEncodeVC&title=转码处理"}];
         
+        NSMutableArray *temp3 = [NSMutableArray array];
+        [temp3 addObject:@{@"URL":@"https://www.test.com/test?className=KJNavigationBarVC&title=Navigation相关操作"}];
+        
         [_temps addObject:temp0];
         [_temps addObject:temp1];
         [_temps addObject:temp2];
+        [_temps addObject:temp3];
     }
     return _temps;
 }

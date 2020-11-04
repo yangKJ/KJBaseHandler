@@ -22,7 +22,7 @@
 		6848FF5B2550F76500BF67DB /* KJProgressViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6848FF5A2550F76500BF67DB /* KJProgressViewVC.m */; };
 		6848FF7525512AC300BF67DB /* KJLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6848FF7425512AC300BF67DB /* KJLineView.m */; };
 		685EA0AC2546602B00C2C33C /* KJBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685EA0AB2546602B00C2C33C /* KJBadgeView.m */; };
-		689B94B4254A8CA000E97DEF /* KJNavigationBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B94B2254A8CA000E97DEF /* KJNavigationBarVC.m */; };
+		685F37312552B4B8001575DE /* KJNavigationBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F37302552B4B8001575DE /* KJNavigationBarVC.m */; };
 		689B94C3254A90A700E97DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689B94C1254A90A700E97DEF /* Main.storyboard */; };
 		689EDB9B2548FEFA00E518E3 /* KJBaseButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 689EDB9A2548FEFA00E518E3 /* KJBaseButtonVC.m */; };
 		68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AD7200251D9867000C89C5 /* AppDelegate.m */; };
@@ -96,8 +96,8 @@
 		6848FF7425512AC300BF67DB /* KJLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJLineView.m; sourceTree = "<group>"; };
 		685EA0AA2546602B00C2C33C /* KJBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBadgeView.h; sourceTree = "<group>"; };
 		685EA0AB2546602B00C2C33C /* KJBadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBadgeView.m; sourceTree = "<group>"; };
-		689B94B1254A8CA000E97DEF /* KJNavigationBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJNavigationBarVC.h; sourceTree = "<group>"; };
-		689B94B2254A8CA000E97DEF /* KJNavigationBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJNavigationBarVC.m; sourceTree = "<group>"; };
+		685F372F2552B4B8001575DE /* KJNavigationBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJNavigationBarVC.h; sourceTree = "<group>"; };
+		685F37302552B4B8001575DE /* KJNavigationBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJNavigationBarVC.m; sourceTree = "<group>"; };
 		689B94C2254A90A700E97DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		689EDB992548FEFA00E518E3 /* KJBaseButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBaseButtonVC.h; sourceTree = "<group>"; };
 		689EDB9A2548FEFA00E518E3 /* KJBaseButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJBaseButtonVC.m; sourceTree = "<group>"; };
@@ -239,6 +239,15 @@
 			path = KJBadgeView;
 			sourceTree = "<group>";
 		};
+		685F37352552B53A001575DE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				685F372F2552B4B8001575DE /* KJNavigationBarVC.h */,
+				685F37302552B4B8001575DE /* KJNavigationBarVC.m */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		68AD71F3251D9867000C89C5 = {
 			isa = PBXGroup;
 			children = (
@@ -269,10 +278,11 @@
 				68CA3937251DD6BD00EB99E4 /* Base */,
 				68AD7242251D98FA000C89C5 /* Tool */,
 				68CA393E251DD81F00EB99E4 /* test */,
-				68AD7202251D9867000C89C5 /* SceneDelegate.h */,
-				68AD7203251D9867000C89C5 /* SceneDelegate.m */,
+				685F37352552B53A001575DE /* New Group */,
 				68AD71FF251D9867000C89C5 /* AppDelegate.h */,
 				68AD7200251D9867000C89C5 /* AppDelegate.m */,
+				68AD7202251D9867000C89C5 /* SceneDelegate.h */,
+				68AD7203251D9867000C89C5 /* SceneDelegate.m */,
 				68CA393F251DD83F00EB99E4 /* PrefixHeader.pch */,
 				68AD7205251D9867000C89C5 /* ViewController.h */,
 				68AD7206251D9867000C89C5 /* ViewController.m */,
@@ -353,8 +363,6 @@
 				68431B8D25480F6900ED7B67 /* KJBadgeViewVC.m */,
 				689EDB992548FEFA00E518E3 /* KJBaseButtonVC.h */,
 				689EDB9A2548FEFA00E518E3 /* KJBaseButtonVC.m */,
-				689B94B1254A8CA000E97DEF /* KJNavigationBarVC.h */,
-				689B94B2254A8CA000E97DEF /* KJNavigationBarVC.m */,
 				68189247254AA526009EA6C7 /* KJSegmentViewVC.h */,
 				68189248254AA526009EA6C7 /* KJSegmentViewVC.m */,
 				6848FF592550F76500BF67DB /* KJProgressViewVC.h */,
@@ -673,11 +681,11 @@
 				68211191253551AD00EA3F3F /* KJVideoEncodeTool.m in Sources */,
 				68F3A85425393D4300BCD817 /* KJCommonCryptoTool.m in Sources */,
 				68341CA1253E8746000CAAF3 /* KJRouter.m in Sources */,
+				685F37312552B4B8001575DE /* KJNavigationBarVC.m in Sources */,
 				6848FF5B2550F76500BF67DB /* KJProgressViewVC.m in Sources */,
 				68189240254AA12D009EA6C7 /* KJSegmentView.m in Sources */,
 				68C55DA6252076DC00AD3308 /* KJBaseNavigationController.m in Sources */,
 				68431B8E25480F6900ED7B67 /* KJBadgeViewVC.m in Sources */,
-				689B94B4254A8CA000E97DEF /* KJNavigationBarVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

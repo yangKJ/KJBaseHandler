@@ -6,10 +6,13 @@
 //  https://github.com/yangKJ/KJBaseHandler
 
 #import <UIKit/UIKit.h>
-#import "ZXNavigationBarController.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJBaseNavigationController : ZXNavigationBarController
+@interface KJBaseNavigationController : UINavigationController
+
+/// 返回指定的控制器
+- (NSArray*)popToViewControllerWithClassName:(NSString*)className animated:(BOOL)animated;
 
 @end
 

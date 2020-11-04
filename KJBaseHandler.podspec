@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     ro.dependency 'KJBaseHandler/Base'
   end
 
-  s.dependency 'KJExtensionHandler','ZXNavigationBar'
+  s.dependency 'KJExtensionHandler'
   
 end
 

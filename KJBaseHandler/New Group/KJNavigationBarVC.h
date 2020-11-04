@@ -4,13 +4,13 @@
 //
 //  Created by 李兆祥 on 2020/3/10.
 //  Copyright © 2020 ZXLee. All rights reserved.
-//
+//  来源作者：https://github.com/SmileZXLee/ZXNavigationBar
 
-#import "KJBaseNavigationController.h"
+#import "ZXNavigationBarController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJNavigationBarVC : KJBaseNavigationController
+@interface KJNavigationBarVC : ZXNavigationBarController
 
 @end
 
