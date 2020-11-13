@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, KJBaseButtonState) {
 @property(nonatomic,assign)bool fixed;/// 固定图片和文本大小，默认yes
 @property(nonatomic,assign)CGSize imageMaxSize;/// 图片最大尺寸，默认按钮的三分之一
 @property(nonatomic,assign)CGSize labelMaxSize;/// 文本最大尺寸
+
 @end
 
 @interface KJBaseButton : UIControl

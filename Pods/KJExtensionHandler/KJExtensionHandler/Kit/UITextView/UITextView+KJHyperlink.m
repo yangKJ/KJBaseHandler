@@ -28,18 +28,11 @@
 - (void)setURLTemps:(NSArray*)URLTemps{
     objc_setAssociatedObject(self, @selector(URLTemps), URLTemps, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
-/**识别点击TextView里面的超链接网址地址
- 备注事项：
- 1、里面实现了委托UITextViewDelegate，外界再用会失效
- 2、需要在调用此方法之前设置text内容 self.textView.text = @"xxxx";
- 3、关闭了text的编辑功能
- 4、默认URL地址颜色为蓝色
- */
+/// 识别超链接
 - (NSArray*)kj_clickTextViewURLCustom:(URLCustom)custom URLHyperlink:(KJTextViewURLHyperlinkBlock)block{
     self.xxblock  = block;
     self.delegate = self;
-    self.editable = NO; /// 关闭编辑
+    self.editable = NO;
     UIColor *color = custom.color?:UIColor.blueColor;
     UIFont  *font = custom.font?:self.font;
     NSString *str = self.text;
@@ -48,35 +41,28 @@
     NSMutableAttributedString *abs = [[NSMutableAttributedString alloc]initWithString:str];
     [abs beginEditing];
     self.linkTextAttributes = @{}; /// 解决设置NSLinkAttributeName字体颜色无效的处理
-    //字体大小
     [abs addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0,str.length)];
     for (int i=0; i<array.count; i++) {
         NSValue *customValue = array[i];
         struct kURLBody value;
         [customValue getValue:&value];
         [temp addObject:[NSString stringWithCString:value.charURLString encoding:NSUTF8StringEncoding]];
-        [abs addAttribute:NSLinkAttributeName value:[NSString stringWithFormat:@"%d",i] range:value.range];//点击传值
-        [abs addAttribute:NSForegroundColorAttributeName value:color range:value.range];//字体颜色
-        [abs addAttribute:NSFontAttributeName value:font range:value.range];//字体大小
+        [abs addAttribute:NSLinkAttributeName value:[NSString stringWithFormat:@"%d",i] range:value.range];
+        [abs addAttribute:NSForegroundColorAttributeName value:color range:value.range];
+        [abs addAttribute:NSFontAttributeName value:font range:value.range];
     }
     self.URLTemps = temp.copy;
     array = temp = nil;
     self.attributedText = abs;
     return self.URLTemps;
 }
-
-// 定义网址结构体类型
-struct kURLBody {
-    char *charURLString;
-    NSRange range;
-};
+/// 定义网址结构体类型
+struct kURLBody{char *charURLString; NSRange range;};
 /// IOS 正则表达式匹配文本中URL位置并获取URL所在位置
 static inline NSArray * getURLWithText(NSString *string) {
     NSError *error;
     NSString *regulaStr = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regulaStr
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regulaStr options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *array = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
     NSMutableArray *temp = [NSMutableArray array];
     for (NSTextCheckingResult *match in array) {
@@ -90,9 +76,10 @@ static inline NSArray * getURLWithText(NSString *string) {
 
 #pragma mark - UITextViewDelegate
 - (BOOL)textView:(UITextView*)textView shouldInteractWithURL:(NSURL*)URL inRange:(NSRange)characterRange {
-    NSInteger i = [URL.absoluteString integerValue];
-    NSString *url = self.URLTemps[i];
-    !self.xxblock?:self.xxblock(url);
+    if (self.xxblock) {
+        NSInteger i = [URL.absoluteString integerValue];
+        self.xxblock(self.URLTemps[i]);
+    }
     return YES;
 }
 

@@ -29,6 +29,24 @@
 - (BOOL)showKeyWindow{
     return [self kj_isShowingOnKeyWindow];
 }
+/// 判断是否有子视图在滚动
+- (BOOL)kj_anySubViewScrolling{
+    if ([self isKindOfClass:[UIScrollView class]]) {
+        UIScrollView *scrollView = (UIScrollView*)self;
+        if (scrollView.dragging || scrollView.decelerating) {
+            return YES;
+        }
+    }
+    for (UIView *subview in self.subviews) {
+        if ([subview kj_anySubViewScrolling]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+- (BOOL)anySubViewScrolling{
+    return [self kj_anySubViewScrolling];
+}
 /// 当前的控制器
 - (UIViewController*)kj_currentViewController{
     UIResponder *responder = self.nextResponder;
@@ -73,8 +91,18 @@
 }
 
 /// Xib中显示的属性
+@dynamic viewImage;
 @dynamic borderColor,borderWidth,cornerRadius;
 @dynamic shadowColor,shadowRadius,shadowOffset,shadowOpacity;
+- (void)setViewImage:(UIImage*)viewImage{
+    if (viewImage) {
+        CALayer *topLayer = [[CALayer alloc]init];
+        [topLayer setBounds:self.bounds];
+        [topLayer setPosition:CGPointMake(self.bounds.size.width*.5, self.bounds.size.height*.5)];
+        [topLayer setContents:(id)viewImage.CGImage];
+        [self.layer addSublayer:topLayer];
+    }
+}
 - (void)setBorderColor:(UIColor*)borderColor {
     [self.layer setBorderColor:borderColor.CGColor];
 }
@@ -83,13 +111,17 @@
     [self.layer setBorderWidth:borderWidth];
 }
 - (void)setCornerRadius:(CGFloat)cornerRadius {
+    if (cornerRadius <= 0) return;
     [self.layer setCornerRadius:cornerRadius];
-    self.layer.masksToBounds = cornerRadius > 0;
+    self.layer.masksToBounds = YES;
+    /// 设置光栅化，可以使离屏渲染的结果缓存到内存中存为位图，使用的时候直接使用缓存，节省了一直离屏渲染损耗的性能
+    self.layer.shouldRasterize = YES;
 }
 - (void)setShadowColor:(UIColor*)shadowColor{
     [self.layer setShadowColor:shadowColor.CGColor];
 }
 - (void)setShadowRadius:(CGFloat)shadowRadius{
+    if (shadowRadius <= 0) return;
     [self.layer setShadowRadius:shadowRadius];
 }
 - (void)setShadowOpacity:(CGFloat)shadowOpacity{

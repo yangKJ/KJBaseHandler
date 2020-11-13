@@ -1,7 +1,7 @@
 PODS:
-  - KJExtensionHandler (0.0.4):
-    - KJExtensionHandler/Kit (= 0.0.4)
-  - KJExtensionHandler/Kit (0.0.4)
+  - KJExtensionHandler (0.0.6):
+    - KJExtensionHandler/Kit (= 0.0.6)
+  - KJExtensionHandler/Kit (0.0.6)
   - ZXNavigationBar (1.2.6)
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ SPEC REPOS:
     - ZXNavigationBar
 
 SPEC CHECKSUMS:
-  KJExtensionHandler: a21848c5e8d0498d42c9798a9a7db05e97a81de5
+  KJExtensionHandler: 279fdae394d50da93c6b7e36a90307125a89bf86
   ZXNavigationBar: 48bf98f27750fa1678dc7a210d85658575333bdd
 
 PODFILE CHECKSUM: ad50503f900877478f304b1dc1eb8d054bca13af

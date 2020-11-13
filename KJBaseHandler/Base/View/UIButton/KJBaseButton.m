@@ -46,7 +46,7 @@
     _isSelected = isSelected;
     if (isSelected) {
         if (self.selectedInfo) [self kj_setCurrentInfo:self.selectedInfo];
-    }else{
+    }else {
         if (self.normalInfo) [self kj_setCurrentInfo:self.normalInfo];
     }
 }
@@ -66,9 +66,7 @@
 - (void)kj_button:(KJBaseButton*)button{
     [button addSubview:self.imageView];
     [button addSubview:self.label];
-    if (self.normalInfo) {
-        [self kj_setCurrentInfo:self.normalInfo];
-    }
+    if (self.normalInfo) [self kj_setCurrentInfo:self.normalInfo];
     _weakself;
     [self kj_AddTapGestureRecognizerBlock:^(UIView * _Nonnull view, UIGestureRecognizer * _Nonnull gesture) {
         if (weakself.actionblock) {
@@ -122,7 +120,7 @@
 #pragma clang diagnostic pop
     }
     switch (info.buttonStyle) {
-        case     KJBaseButtonLayoutStyleCenterImageLeft:{
+        case KJBaseButtonLayoutStyleCenterImageLeft:{
             self.label.textAlignment = NSTextAlignmentLeft;
             self.imageView.frame = CGRectMake(0, 0, imageWidth, imageHeight);
             self.label.frame = CGRectMake(0, 0, labelWidth, labelHeight);

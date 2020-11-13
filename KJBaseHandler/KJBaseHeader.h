@@ -78,7 +78,6 @@ Github地址：https://github.com/yangKJ
 #elif __has_include("KJRouter.h")
 #import "KJRouter.h"
 #else
-@import KJRouter;
 #endif
 
 

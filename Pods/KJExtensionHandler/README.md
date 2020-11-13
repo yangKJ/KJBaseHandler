@@ -1,5 +1,4 @@
 # KJExtensionHandler
-<!--![coverImage]()-->
 <p align="left">
 <img src="https://img.zcool.cn/community/0161da5541af81000001a64bc753a4.jpg@1280w_1l_2o_100sh.jpg" width="666" hspace="1px">
 </p>
@@ -63,7 +62,7 @@ pod 'KJEmitterView/Control' # 自定义控件
 图片压缩加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
 pod 'KJExtensionHandler'
 pod 'KJExtensionHandler/Foundation'
-pod 'KJExtensionHandler/Exception'  # 异常处理
+pod 'KJExtensionHandler/Exception' # 异常处理
 
 基类库 - 封装整理常用，采用链式处理，提炼独立工具
 pod 'KJBaseHandler'
@@ -72,8 +71,8 @@ pod 'KJBaseHandler/Router' # 路由相关
 
 播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
 视频可以边下边播，把播放器播放过的数据流缓存到本地，下次直接从缓冲读取播放
-pod 'KJPlayer'  # 播放器功能区
-pod 'KJPlayer/KJPlayerView'  # 自带展示界面
+pod 'KJPlayer' # 播放器功能区
+pod 'KJPlayer/KJPlayerView' # 自带展示界面
 
 轮播图 - 支持缩放 多种pagecontrol 支持继承自定义样式 自带网络加载和缓存
 pod 'KJBannerView'  # 轮播图，网络图片加载 支持网络GIF和网络图片和本地图片混合轮播
@@ -94,9 +93,6 @@ pod 'KJWorkbox/CommonBox'
 */
 ```
 
-##### Issue
-如果您在使用中有好的需求及建议或者遇到BUG，欢迎随时留言，有空也会不断处理优化更新这些库
-
 #### <a id="Cocoapods安装"></a>Cocoapods安装
 ```
 pod 'KJExtensionHandler'
@@ -107,6 +103,24 @@ pod 'KJExtensionHandler/Exception'
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 0.0.6
+1. 新增 UITabBar+KJBadge 小红点处理
+2. 新增 _KJGCD 处理线程相关
+3. 重写指示器按钮 UIButton+KJIndicator 
+4. 重写点赞粒子效果 kj_buttonSetEmitterImage:OpenEmitter:
+5. 重写 UINavigationItem+KJExtension 采用链式处理
+6. 新增 UITextView+KJBackout 撤销输入
+7. UILabel+KJExtension 新增文本显示位置属性 kTextAlignmentType
+
+#### Add 0.0.5
+1. UIView+KJXib 新增判断是否有子视图在滚动 anySubViewScrolling
+2. UIView+KJFrame 新增移除所有子视图 kj_removeAllSubviews
+3. 新增 NSString+KJChinese 汉字相关操作
+4. UIView+KJRectCorner 修改局部边框处理
+5. UIView+KJXib 新增设置图片属性 viewImage
+6. 新增 UIImage+KJGIF 动态图显示gif
+7. 新增 UIImage+KJJoint 拼接图片相关操作
+
 #### Add 0.0.4
 1. 新增 UIView+Toast 快捷显示
 2. 新增 UIResponder+KJChain 响应链处理
@@ -124,7 +138,7 @@ pod 'KJExtensionHandler/Exception'
 #### Add 0.0.1
 1. 从原先的KJEmitterView库中分离出来
 
-备注：部分资料来源于网络～  就不一一指出道谢，整理起来方便自己和大家使用
+备注：部分资料来源于网络～ 就不一一指出道谢，整理起来方便自己和大家使用
 ```
 #### <a id="效果图"></a>效果图
 <p align="left">
@@ -133,7 +147,7 @@ pod 'KJExtensionHandler/Exception'
 
 #### <a id="打赏作者"></a>打赏作者
 * 如果你觉得有帮助，还请为我Star
-* 如果在使用过程中遇到Bug，希望你能Issues，我会及时修复
+* 如果在使用过程中遇到什么问题，希望你能Issues，我会及时修复
 * 大家有什么需要添加的功能，也可以给我留言，有空我将补充完善
 * 谢谢大家的支持 - -！
 

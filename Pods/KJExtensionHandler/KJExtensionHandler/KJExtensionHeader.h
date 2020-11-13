@@ -4,6 +4,7 @@
 //
 //  Created by 杨科军 on 2018/11/26.
 //  Copyright © 2018 杨科军. All rights reserved.
+//  https://github.com/yangKJ/KJExtensionHandler
 //  从原先的KJEmitterView库当中分离出来的扩展工具库
 /*
 *********************************************************************************
@@ -57,16 +58,18 @@ Github地址：https://github.com/yangKJ
 
 #import "_KJMacros.h" /// 宏
 #import "_KJINLINE.h" /// 简单的常用函数
+#import "_KJGCD.h"
 
 #import "UIButton+KJBlock.h" /// 点击事件ButtonBlock
-#import "UIButton+KJEnlargeTouchArea.h" /// 改变UIButton的响应区域
+#import "UIButton+KJEnlarge.h" /// 改变UIButton的响应区域
 #import "UIButton+KJButtonContentLayout.h"  /// 图文混排
 #import "UIButton+KJCreate.h" /// 快速创建按钮
 //#import "UIButton+KJIndicator.h" /// 指示器
 //#import "UIButton+KJEmitter.h" /// 按钮粒子效果
 //#import "UIButton+KJCountDown.h" /// 倒计时
 
-#import "UILabel+KJCreate.h" /// 快速创建文本
+#import "UILabel+KJCreate.h" // 快速创建文本
+#import "UILabel+KJExtension.h" // 文本尺寸
 //#import "UILabel+KJAttributedString.h" // 富文本
 
 #import "UIView+KJXib.h"   /// Xib
@@ -80,11 +83,12 @@ Github地址：https://github.com/yangKJ
 //#import "CALayer+KJReflection.h" // 倒影处理
 
 //#import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
-//#import "UIBarButtonItem+KJExtension.h" // 设置BarButtonItem
+#import "UINavigationItem+KJExtension.h" // 链式设置NavigationItem
 
 //#import "UITextView+KJPlaceHolder.h"  // 输入框扩展
 //#import "UITextView+KJLimitCounter.h" // 限制字数
 //#import "UITextView+KJHyperlink.h" // 超链接处理
+//#import "UITextView+KJBackout.h" // 撤销输入
 
 #import "UIColor+KJExtension.h"/// 颜色相关扩展
 #import "UIColor+KJExtension2.h"
@@ -92,13 +96,15 @@ Github地址：https://github.com/yangKJ
 #import "UIImage+KJScale.h" /// 图片尺寸处理相关
 #import "UIImage+KJCompress.h" /// 图片压缩处理
 #import "UIImage+KJMask.h" /// 蒙版处理
+#import "UIImage+KJJoint.h" /// 图片拼接处理
 #import "UIImage+KJCapture.h" /// 截图和裁剪处理
 #import "UIImage+KJCoreImage.h"  /// CoreImage 框架图片效果处理
-#import "UIImage+KJAccelerate.h" /// Accelerate 框架的图片处理
+#import "UIImage+KJAccelerate.h" /// Accelerate  框架的图片处理
 #import "UIImage+KJPhotoshop.h"
 //#import "UIImage+KJFloodFill.h" /// 图片泛洪算法
-//#import "UIImage+KJFilter.h"    /// 处理图片滤镜，渲染相关
-//#import "UIImage+KJRemoteSize.h" /// 获取网络图片尺寸
+//#import "UIImage+KJFilter.h" /// 处理图片滤镜，渲染相关
+//#import "UIImage+KJURLSize.h" /// 获取网络图片尺寸
+//#import "UIImage+KJGIF.h" /// 动态图相关gif
 
 #import "UIViewController+KJFullScreen.h" /// 充满全屏处理
 
@@ -111,24 +117,23 @@ Github地址：https://github.com/yangKJ
 //#import "KJColorSlider.h" /// 渐变色滑块
 
 #import "UIResponder+KJAdapt.h" /// 简单的比例适配
+#import "UIResponder+KJChain.h" /// 响应链
 
 //************************************* Foundation 相关扩展 *****************************************
 // 需要引入，请使用 pod 'KJExtensionHandler/Foundation'
-#if __has_include("NSObject+KJSignal.h")
-#import "NSObject+KJSignal.h" /// 信号方式解耦工具
-//#import "NSString+KJPredicate.h"
-//#import "NSArray+KJPredicate.h" /// 谓词工具
-//#import "NSArray+ElementDeal.h" /// 对数组元素的处理 包括排序、查找、去重等等
-//#import "NSObject+KJMath.h" /// 数学方程式
-//#import "NSObject+KJGeometry.h" /// 几何方程式
-#import "NSObject+KJKVO.h"/// 键值监听封装
+#if __has_include(<KJExtensionHandler/KJFoundartionHeader.h>)
+#import <KJExtensionHandler/KJFoundartionHeader.h>
+#elif __has_include("KJFoundartionHeader.h")
+#import "KJFoundartionHeader.h"
 #else
 #endif
 
 //************************************* Exception 异常处理 *****************************************
 // 需要引入，请使用 pod 'KJExtensionHandler/Exception'
-#if __has_include("KJExceptionTool.h")
-#import "KJExceptionTool.h" /// 异常捕获处理
+#if __has_include(<KJExtensionHandler/KJExceptionTool.h>)
+#import <KJExtensionHandler/KJExceptionTool.h>
+#elif __has_include("KJExceptionTool.h")
+#import "KJExceptionTool.h"
 #else
 #endif
 
