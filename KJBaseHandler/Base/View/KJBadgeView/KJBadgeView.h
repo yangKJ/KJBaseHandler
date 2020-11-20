@@ -18,6 +18,10 @@ typedef NS_ENUM(NSUInteger, KJBadgePositionType) {
     KJBadgePositionTypeCenterRight,
     KJBadgePositionTypeCenter,
 };
+typedef NS_ENUM(NSUInteger, AdhesivePlateStatus) {
+    AdhesivePlateStickers,//粘上
+    AdhesivePlateSeparate//分离
+};
 @interface KJBadgeViewInfo : NSObject
 /// bedge值
 @property(nonatomic,assign)NSInteger badgeValue;
@@ -44,6 +48,8 @@ typedef NS_ENUM(NSUInteger, KJBadgePositionType) {
 + (instancetype)kj_createBadgeView:(UIView*)contentView InfoBlock:(KJBadgeViewInfo*(^)(KJBadgeViewInfo *info))block;
 /// 设置BadgeValue
 - (void)kj_setBadgeValue:(NSInteger)value Animated:(BOOL)animated;
+/// 设置拖拽粘附效果，返回yes执行爆炸动画   （暂时还有点问题）
+//- (void)kj_attachWithSeparateBlock:(BOOL(^)(UIView *view))separateBlock;
 
 @end
 

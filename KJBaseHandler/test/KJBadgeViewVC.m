@@ -31,6 +31,10 @@
         return info;
     }];
     
+//    [badgeView kj_attachWithSeparateBlock:^BOOL(UIView * _Nonnull view) {
+//        return YES;
+//    }];
+    
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(0, 0, 100, 40);
     button.center = self.view.center;

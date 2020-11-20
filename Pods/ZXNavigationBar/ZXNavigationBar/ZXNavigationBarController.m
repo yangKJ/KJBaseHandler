@@ -47,7 +47,7 @@ static ZXNavStatusBarStyle defaultNavStatusBarStyle = ZXNavStatusBarStyleDefault
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(CGFLOAT_MIN * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.view bringSubviewToFront:navBar];
     });
-    self.zx_navTitleView = navBar.zx_titleView;
+    _zx_navTitleView = navBar.zx_titleView;
     self.zx_navTitleLabel = navBar.zx_titleLabel;
     self.zx_navLeftBtn = navBar.zx_leftBtn;
     self.zx_navSubLeftBtn = navBar.zx_subLeftBtn;
@@ -363,9 +363,9 @@ static ZXNavStatusBarStyle defaultNavStatusBarStyle = ZXNavStatusBarStyleDefault
 - (void)setZx_isEnableSafeArea:(BOOL)zx_isEnableSafeArea{
     if(@available(iOS 11.0, *)) {
         if(_zx_isEnableSafeArea != zx_isEnableSafeArea){
+            _zx_isEnableSafeArea = zx_isEnableSafeArea;
             if(zx_isEnableSafeArea){
-                CGFloat safeAreaHeight = ZXAppStatusBarHeight;
-                [self adjustNavContainerOffset:([self getCurrentNavHeight] - safeAreaHeight)];
+                [self adjustNavContainerOffset:[self getCurrentNavHeight]];
                 
             }else{
                 [self adjustNavContainerOffset:[self getCurrentNavHeight]];

@@ -11,6 +11,7 @@
 #endif
 
 #import "KJExtensionHeader.h"
+#import "CALayer+KJExtension.h"
 #import "CALayer+KJReflection.h"
 #import "KJShadowLayer.h"
 #import "_KJGCD.h"
