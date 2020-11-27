@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJBaseModel : NSObject<NSCoding, NSCopying>
+@interface KJBaseModel : NSObject<NSCoding,NSCopying>
 /// 关键字排除
 @property(nonatomic,strong)NSString *kid;// 对应id
 @property(nonatomic,strong)NSString *kdescription;// 对应description

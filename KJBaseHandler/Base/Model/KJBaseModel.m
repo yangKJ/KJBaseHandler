@@ -8,7 +8,6 @@
 #import "KJBaseModel.h"
 #import <objc/runtime.h>
 @implementation KJBaseModel
-/// 描述信息
 - (NSString*)description{
     return [NSString stringWithFormat:@"%@",[self kj_getDictionary:self]];
 }
@@ -24,24 +23,24 @@
     Ivar *ivars = class_copyIvarList([self class], &count);
     for (int i = 0; i < count; i++) {
         Ivar ivar = ivars[i];
-        const char* name = ivar_getName(ivar);
-        NSString* strName = [NSString stringWithUTF8String:name];
-        id value = [self valueForKey:strName];
-        [aCoder encodeObject:value forKey:strName];
+        const char * name = ivar_getName(ivar);
+        NSString * key = [NSString stringWithUTF8String:name];
+        id value = [self valueForKey:key];
+        [aCoder encodeObject:value forKey:key];
     }
     free(ivars);
 }
 /// 解档
 - (id)initWithCoder:(NSCoder*)aDecoder{
-    if (self = [super init]){
+    if (self == [super init]){
         unsigned int count;
         Ivar *ivars = class_copyIvarList([self class], &count);
         for (int i = 0; i < count; i++){
             Ivar ivar = ivars[i];
-            const char *name = ivar_getName(ivar);
-            NSString *strName = [NSString stringWithUTF8String:name];
-            id value = [aDecoder decodeObjectForKey:strName];
-            [self setValue:value forKey:strName];
+            const char * name = ivar_getName(ivar);
+            NSString * key = [NSString stringWithUTF8String:name];
+            id value = [aDecoder decodeObjectForKey:key];
+            [self setValue:value forKey:key];
         }
         free(ivars);
     }
@@ -56,9 +55,8 @@
     if ([[tempDict allKeys] containsObject:@"id"]){
         [obj setKid:tempDict[@"id"] ?: @""];
         [tempDict removeObjectForKey:@"id"];
-    }
-    if ([[tempDict allKeys] containsObject:@"description"]){
-        [obj setKid:tempDict[@"description"] ?: @""];
+    }else if ([[tempDict allKeys] containsObject:@"description"]){
+        [obj setKdescription:tempDict[@"description"] ?: @""];
         [tempDict removeObjectForKey:@"description"];
     }
     [obj setValuesForKeysWithDictionary:tempDict.mutableCopy];
@@ -67,16 +65,16 @@
 #pragma mark - privately method
 /// 转换成相对应的属性
 - (id)kj_transformObject:(id)obj{
-    if([obj isKindOfClass:[NSString class]] || [obj isKindOfClass:[NSNumber class]] || [obj isKindOfClass:[NSNull class]]){
+    if ([obj isKindOfClass:[NSString class]] || [obj isKindOfClass:[NSNumber class]] || [obj isKindOfClass:[NSNull class]]){
         return obj;
-    }else if([obj isKindOfClass:[NSArray class]]){
+    }else if ([obj isKindOfClass:[NSArray class]]){
         NSArray *temps = obj;
         NSMutableArray *array = [NSMutableArray arrayWithCapacity:temps.count];
         for(int i = 0;i < temps.count; i++){
             [array setObject:[self kj_transformObject:[temps objectAtIndex:i]] atIndexedSubscript:i];
         }
         return array;
-    }else if([obj isKindOfClass:[NSDictionary class]]){
+    }else if ([obj isKindOfClass:[NSDictionary class]]){
         NSDictionary *objdic = obj;
         NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:[objdic count]];
         for(NSString *key in objdic.allKeys){
@@ -95,7 +93,7 @@
         objc_property_t prop = props[i];
         NSString *propName = [NSString stringWithUTF8String:property_getName(prop)];
         id value = [obj valueForKey:propName];
-        if(value == nil){
+        if (value == nil){
             value = [NSNull null];
         }else{
             value = [self kj_transformObject:value];
@@ -104,4 +102,5 @@
     }
     return dic;
 }
+
 @end
