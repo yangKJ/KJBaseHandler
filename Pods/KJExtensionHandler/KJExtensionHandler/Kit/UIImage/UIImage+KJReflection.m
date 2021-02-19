@@ -10,7 +10,7 @@
 
 #ifndef UIImageReflectionMethods
 #define UIImageReflectionMethods
-CGImageRef CreateGradientImage (int pixelsWide, int pixelsHigh, CGFloat endPoint) {
+CGImageRef kReflectionCreateGradientImage (int pixelsWide, int pixelsHigh, CGFloat endPoint) {
     CGImageRef theCGImage = NULL;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
     CGContextRef gradientBitmapContext = CGBitmapContextCreate(NULL, pixelsWide, pixelsHigh, 8, 0, colorSpace, kCGImageAlphaNone);
@@ -35,8 +35,7 @@ CGImageRef CreateGradientImage (int pixelsWide, int pixelsHigh, CGFloat endPoint
     CGContextRelease(gradientBitmapContext);
     return theCGImage;
 }
-  
-static CGContextRef MyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
+static CGContextRef kReflectionMyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef bitmapContext = CGBitmapContextCreate(NULL,
                                                        pixelsWide,
@@ -55,8 +54,8 @@ static CGContextRef MyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
     int height = self.size.height;
     UIImage * fromImage = self;
     pcnt = 1.0 / pcnt;
-    CGContextRef mainViewContentContext = MyCreateBitmapContext(fromImage.size.width, height);
-    CGImageRef gradientMaskImage = CreateGradientImage(1, height, -(height * pcnt));
+    CGContextRef mainViewContentContext = kReflectionMyCreateBitmapContext(fromImage.size.width, height);
+    CGImageRef gradientMaskImage = kReflectionCreateGradientImage(1, height, -(height * pcnt));
     CGContextClipToMask(mainViewContentContext, CGRectMake(0.0, 0.0, fromImage.size.width, height), gradientMaskImage);
     CGImageRelease(gradientMaskImage);
     CGContextDrawImage(mainViewContentContext, CGRectMake(0, 0, fromImage.size.width, fromImage.size.height), [fromImage CGImage]);
@@ -67,12 +66,12 @@ static CGContextRef MyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
     return theImage;
 }
 
-- (UIImage*)reflectionWithHeight:(int)height {
+- (UIImage*)reflectionWithHeight:(int)height{
     if (height == -1) height = [self size].height;
     if (height == 0) return nil;
     UIImage * fromImage = self;
-    CGContextRef mainViewContentContext = MyCreateBitmapContext(fromImage.size.width, fromImage.size.height);
-    CGImageRef gradientMaskImage = CreateGradientImage(1, height, height);
+    CGContextRef mainViewContentContext = kReflectionMyCreateBitmapContext(fromImage.size.width, fromImage.size.height);
+    CGImageRef gradientMaskImage = kReflectionCreateGradientImage(1, height, height);
     CGContextClipToMask(mainViewContentContext, CGRectMake(0.0, 0.0, fromImage.size.width, height), gradientMaskImage);
     CGImageRelease(gradientMaskImage);
     CGContextTranslateCTM(mainViewContentContext, 0.0, fromImage.size.height);
@@ -85,12 +84,12 @@ static CGContextRef MyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
     return theImage;
 }
   
-- (UIImage*)reflectionWithAlpha:(float)pcnt {
+- (UIImage*)reflectionWithAlpha:(float)alpha{
     int height = self.size.height;
     UIImage * fromImage = self;
-    pcnt = 1.0 / pcnt;
-    CGContextRef mainViewContentContext = MyCreateBitmapContext(fromImage.size.width, height);
-    CGImageRef gradientMaskImage = CreateGradientImage(1, height, height * pcnt);
+    alpha = 1.0 / alpha;
+    CGContextRef mainViewContentContext = kReflectionMyCreateBitmapContext(fromImage.size.width, height);
+    CGImageRef gradientMaskImage = kReflectionCreateGradientImage(1, height, height * alpha);
     CGContextClipToMask(mainViewContentContext, CGRectMake(0.0, 0.0, fromImage.size.width, height), gradientMaskImage);
     CGImageRelease(gradientMaskImage);
     CGContextTranslateCTM(mainViewContentContext, 0.0, height);

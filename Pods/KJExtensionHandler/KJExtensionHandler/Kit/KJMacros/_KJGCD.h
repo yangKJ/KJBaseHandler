@@ -76,6 +76,10 @@ NS_INLINE void kGCD_after(int64_t delayInSeconds, dispatch_block_t block) {
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(time, queue, block);
 }
+NS_INLINE void kGCD_after_main(int64_t delayInSeconds, dispatch_block_t block) {
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(time, dispatch_get_main_queue(), block);
+}
 /// 主线程当中延时执行
 NS_INLINE void kGCD_main_after(int64_t delayInSeconds, dispatch_block_t block) {
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));

@@ -22,17 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 #pragma mark - 简单函数
-NS_INLINE void kUncaughtExceptionHandler(NSException *exception) {
-    NSLog(@"**************** 崩溃日志收集器 ****************");
-    NSLog(@"%@",exception);
-    NSLog(@"%@",exception.callStackReturnAddresses);
-    NSLog(@"%@",exception.callStackSymbols);
-    NSLog(@"*********************************************");
-}
-/// 简单崩溃日志收集，AppDelegate里注册函数
-NS_INLINE void kUncaughtException(void){
-    NSSetUncaughtExceptionHandler(&kUncaughtExceptionHandler);
-}
 /// 强制让App直接退出（非闪退，非崩溃）
 NS_INLINE void kExitApplication(NSTimeInterval duration,void(^block)(void)) {
     [UIView animateWithDuration:duration animations:block completion:^(BOOL finished) {
@@ -49,7 +38,7 @@ NS_INLINE void kMethodSwizzling(Class clazz, SEL original, SEL swizzled) {
     Method swmethod = class_getInstanceMethod(clazz, swizzled);
     if (class_addMethod(clazz, original, method_getImplementation(swmethod), method_getTypeEncoding(swmethod))) {
         class_replaceMethod(clazz, swizzled, method_getImplementation(method), method_getTypeEncoding(method));
-    }else {
+    }else{
         method_exchangeImplementations(method, swmethod);
     }
 }
@@ -94,12 +83,12 @@ NS_INLINE id kLoadNibWithName(NSString *name, id owner){
 NS_INLINE id kLoadNib(NSString *name){
     return [UINib nibWithNibName:name bundle:[NSBundle mainBundle]];
 }
-/// 校正ScrollView在iOS11上的偏移问题
+/// 校正ScrollView的偏移问题
 NS_INLINE void kAdjustsScrollViewInsetNever(UIViewController *viewController, __kindof UIScrollView *tableView) {
 #if __IPHONE_11_0
     if (@available(iOS 11.0, *)) {
         tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }else {
+    }else{
         viewController.automaticallyAdjustsScrollViewInsets = false;
     }
 #else

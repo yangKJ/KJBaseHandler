@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage*)kj_circleImage;
 /// 图片透明区域点击穿透处理
 - (bool)kj_transparentWithPoint:(CGPoint)point;
+/// 文字转图片
++ (UIImage*)kj_textBecomeImageWithText:(NSString*)text Size:(CGSize)size BackgroundColor:(UIColor*)color TextAttributes:(NSDictionary*)attributes;
 
 @end
 

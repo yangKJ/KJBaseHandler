@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) UIColor *borderColor;
 /// 回调处理时间，默认为0
 @property(nonatomic,assign) float timeSpan;
+/// 当前进度，用于外界kvo
+@property(nonatomic,assign,readonly) CGFloat progress;
 /// 移动回调处理
 @property(nonatomic,readwrite,copy) void(^kValueChangeBlock)(CGFloat progress);
 /// 移动结束回调处理

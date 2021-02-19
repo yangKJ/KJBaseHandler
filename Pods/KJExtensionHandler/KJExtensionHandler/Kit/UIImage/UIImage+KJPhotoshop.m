@@ -17,7 +17,7 @@
     CGContextDrawImage(context, CGRectMake(0,0,1,1), self.CGImage);
     CGColorSpaceRelease(colorSpace);
     CGContextRelease(context);
-    if(rgba[3] > 0) {
+    if (rgba[3] > 0) {
         CGFloat alpha = ((CGFloat)rgba[3])/255.0;
         CGFloat mu = alpha/255.0;
         return [UIColor colorWithRed:((CGFloat)rgba[0])*mu green:((CGFloat)rgba[1])*mu blue:((CGFloat)rgba[2])*mu alpha:alpha];
@@ -59,7 +59,6 @@
 }
 /// 获得灰度图
 - (UIImage*)kj_getGrayImage{
-    //根据设备的屏幕缩放比例调整生成图片的尺寸，避免在图片变糊
     CGFloat scale = [UIScreen mainScreen].scale;
     CGFloat w = self.size.width * scale;
     CGFloat h = self.size.height * scale;

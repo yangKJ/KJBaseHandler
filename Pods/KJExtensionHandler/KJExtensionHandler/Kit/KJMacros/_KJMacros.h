@@ -20,17 +20,17 @@
 
 #pragma mark ********** 2.自定义高效率的 NSLog ************
 #ifdef DEBUG // 输出日志 (格式: [编译时间] [文件名] [方法名] [行号] [输出内容])
-#define NSLog(FORMAT, ...) fprintf(stderr,"------- 😎 给我点赞 😎 -------\n编译时间:%s\n文件名:%s\n方法名:%s\n行号:%d\n打印信息:%s\n\n", __TIME__,[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__func__,__LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+#define NSLog(FORMAT, ...) fprintf(stderr,"------- 🎈 给我点赞 🎈 -------\n编译时间:%s\n文件名:%s\n方法名:%s\n行号:%d\n打印信息:%s\n\n", __TIME__,[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__func__,__LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 #else
 #define NSLog(FORMAT, ...) nil
 #endif
 
 #define kNSSTRING_NOT_NIL(value)  value ? value : @""
-#define kNSARRAY_NOT_NIL(value)  value ? value : @[]
+#define kNSARRAY_NOT_NIL(value)   value ? value : @[]
 #define kNSDICTIONARY_NOT_NIL(value)  value ? value : @{}
 #define kNSSTRING_VALUE_OPTIONAL(value)  [value isKindOfClass:[NSString class] ] ? value : nil
-#define kINT_TO_STRING(intValue) [NSString stringWithFormat:@"%ld", (long)intValue]
-#define kDELEGATE_HAS_METHOD(method) self.delegate&&[self.delegate respondsToSelector:@selector(method)]
+#define kINT_TO_STRING(intValue)  [NSString stringWithFormat:@"%ld", (long)intValue]
+#define kDELEGATE_HAS_METHOD(method)  self.delegate&&[self.delegate respondsToSelector:@selector(method)]
 #define kDELEGATE_WITH_NAME_HAS_METHOD(delegateName,method) self.delegateName&&[self.delegateName respondsToSelector:@selector(method)]
 #define kTN_DEPRECATED(message) __attribute((deprecated(message)))
 
@@ -39,7 +39,7 @@
 // block相关宏
 #define kBlockSafeRun(block, ...) block ? block(__VA_ARGS__) : nil
 // 版本判定 大于等于某个版本
-#define kCurrentSystemVersion(version) ([[[UIDevice currentDevice] systemVersion] compare:@#version options:NSNumericSearch] != NSOrderedAscending)
+#define kCurrentSystemVersion(version) ([[[UIDevice currentDevice] systemVersion] compare:@#version options:NSNumericSearch]!=NSOrderedAscending)
 // 获取时间间隔宏
 #define kTimeTick CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
 #define kTimeTock NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start);
@@ -79,7 +79,7 @@
 #endif
 
 #pragma mark ********** 5.iPhoneX系列尺寸布局   *********
-// 判断是否为iPhone X 系列 这样写消除了在Xcode10上的警告
+// 判断是否为iPhone X 系列
 #define iPhoneX \
 ({BOOL isPhoneX = NO;\
 if (@available(iOS 13.0, *)) {\
@@ -96,7 +96,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define kNAVIGATION_HEIGHT (44.f)
 // (navigationBar + statusBar) height
 #define kSTATUSBAR_NAVIGATION_HEIGHT (iPhoneX ? 88.0f : 64.f)
-// 没有tabar 距 底边高度
+// tabar距底边高度
 #define kBOTTOM_SPACE_HEIGHT (iPhoneX ? 34.0f : 0.0f)
 // 屏幕尺寸
 #define kScreenSize ([UIScreen mainScreen].bounds.size)
@@ -118,7 +118,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define kISiPhoneXX (kISiPhone && kScreenMaxLength >  811.0)
 
 /// 支持横屏可以用下面的宏
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当前Xcode支持iOS8及以上
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
 #define kLandscapeScreenW    ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)
 #define kLandscapeScreenH    ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)
 #define kLandscapeScreenSize ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)
@@ -128,7 +128,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define kLandscapeScreenSize [UIScreen mainScreen].bounds.size
 #endif
 
-#pragma mark ********** 6.颜色和图片相关   *********
+#pragma mark ********** 6.颜色和图片相关  *********
 #define UIColorFromHEXA(hex,a)    [UIColor colorWithRed:((hex&0xFF0000)>>16)/255.0f green:((hex&0xFF00)>>8)/255.0f blue:(hex&0xFF)/255.0f alpha:a]
 #define UIColorFromRGBA(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 #define UIColorHexFromRGB(hex)    UIColorFromHEXA(hex,1.0)
@@ -170,7 +170,7 @@ objc_setAssociatedObject(self, @selector(propertyGetter), valueObj, OBJC_ASSOCIA
 // 带自动提示的keypath宏(源自Reactive Cocoa) 要添加@符号，就是为了能预编译出TARGET中所有的KEYPATH属性
 #define kKeypath2(OBJ, PATH) (((void)(NO && ((void)OBJ.PATH, NO)), #PATH))
 
-/** 单例宏 单例的目的 : 希望对象只创建一个实例，并且提供一个全局的访问点
+/* 单例宏 单例的目的 : 希望对象只创建一个实例，并且提供一个全局的访问点
  使用方法:
  .h文件
  kSingletonImplementation_H(类名)
@@ -180,7 +180,7 @@ objc_setAssociatedObject(self, @selector(propertyGetter), valueObj, OBJC_ASSOCIA
  
  调用方法
  类名 *vc = [类名 shared类名];
- */
+*/
 // 1. 解决.h文件
 #define kSingletonImplementation_H(className) \
 + (instancetype)shared##className;
@@ -236,7 +236,7 @@ return instance; \
 
 #pragma mark ********** 8.系统默认字体设置和自选字体设置    *********
 #define kSystemFontSize(fontsize)  [UIFont systemFontOfSize:(fontsize)]
-#define kSystemBlodFontSize(fontsize)   [UIFont boldSystemFontOfSize:(fontsize)] /// 粗体
+#define kSystemBlodFontSize(fontsize)   [UIFont boldSystemFontOfSize:(fontsize)]
 #define kSystemItalicFontSize(fontsize) [UIFont italicSystemFontOfSize:(fontsize)]
 
 #pragma mark ********** 9.NSUserDefaults相关    *********

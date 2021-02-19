@@ -40,11 +40,11 @@
     float maxRatio = maxWidth/maxHeight;
     if (imgHeight <= maxHeight && imgWidth <= maxWidth) return self;
     if (imgHeight > maxHeight || imgWidth > maxWidth) {
-        if(imgRatio < maxRatio) {
+        if (imgRatio < maxRatio) {
             imgRatio = maxHeight / imgHeight;
             imgWidth = imgRatio * imgWidth;
             imgHeight = maxHeight;
-        }else if(imgRatio > maxRatio) {
+        }else if (imgRatio > maxRatio) {
             imgRatio = maxWidth / imgWidth;
             imgHeight = imgRatio * imgHeight;
             imgWidth = maxWidth;

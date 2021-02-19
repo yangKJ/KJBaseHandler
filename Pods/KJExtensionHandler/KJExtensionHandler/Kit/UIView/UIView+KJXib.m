@@ -92,8 +92,6 @@
 
 /// Xib中显示的属性
 @dynamic viewImage;
-@dynamic borderColor,borderWidth,cornerRadius;
-@dynamic shadowColor,shadowRadius,shadowOffset,shadowOpacity;
 - (void)setViewImage:(UIImage*)viewImage{
     if (viewImage) {
         CALayer *topLayer = [[CALayer alloc]init];
@@ -103,6 +101,8 @@
         [self.layer addSublayer:topLayer];
     }
 }
+
+@dynamic borderColor,borderWidth,cornerRadius;
 - (void)setBorderColor:(UIColor*)borderColor {
     [self.layer setBorderColor:borderColor.CGColor];
 }
@@ -117,12 +117,19 @@
     /// 设置光栅化，可以使离屏渲染的结果缓存到内存中存为位图，使用的时候直接使用缓存，节省了一直离屏渲染损耗的性能
     self.layer.shouldRasterize = YES;
 }
+
+@dynamic shadowColor,shadowRadius,shadowWidth,shadowOffset,shadowOpacity;
 - (void)setShadowColor:(UIColor*)shadowColor{
     [self.layer setShadowColor:shadowColor.CGColor];
 }
 - (void)setShadowRadius:(CGFloat)shadowRadius{
     if (shadowRadius <= 0) return;
-    [self.layer setShadowRadius:shadowRadius];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:shadowRadius];
+    [self.layer setShadowPath:path.CGPath];
+}
+- (void)setShadowWidth:(CGFloat)shadowWidth{
+    if (shadowWidth <= 0) return;
+    [self.layer setShadowRadius:shadowWidth];
 }
 - (void)setShadowOpacity:(CGFloat)shadowOpacity{
     [self.layer setShadowOpacity:shadowOpacity];

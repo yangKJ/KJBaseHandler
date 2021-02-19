@@ -15,16 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取网络图片尺寸
 + (CGSize)kj_imageGetSizeWithURL:(NSURL*)URL;
 
-//UITableViewCell里面浏览的时候卡顿解决方案：
-//在拿到需要请求的url数组的时候，就将每个链接的尺寸顺便就给获取出来，然后本地化存储该图片的尺寸，然后再到UITableViewCell里面根据链接直接在本地取到图片的尺寸
-//if (![[NSUserDefaults standardUserDefaults] objectForKey:url]) {
-//    CGSize imageSize = [UIImage getImageSizeWithURL:url];
-//    CGFloat imgH = 0;
-//    if (imageSize.height > 0) {
-//        imgH = imageSize.height * (SCREEN_WIDTH - 2 * _spaceX) / imageSize.width;
-//    }
-//    [[NSUserDefaults standardUserDefaults] setObject:@(imgH) forKey:url];
-//}
+/// 异步等待获取网络图片大小
++ (CGSize)kj_imageAsyncGetSizeWithURL:(NSURL*)URL;
 
 @end
 

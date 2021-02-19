@@ -14,7 +14,6 @@
 		682111972535522C00EA3F3F /* KJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682111962535522C00EA3F3F /* KJBaseViewController.m */; };
 		6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */; };
 		68341CA1253E8746000CAAF3 /* KJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68341CA0253E8746000CAAF3 /* KJRouter.m */; };
-		68341CB0253ED2A4000CAAF3 /* NSURL+KJRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */; };
 		68431B882547FC5600ED7B67 /* KJShareInstanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68431B872547FC5600ED7B67 /* KJShareInstanceVC.m */; };
 		68431B8E25480F6900ED7B67 /* KJBadgeViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68431B8D25480F6900ED7B67 /* KJBadgeViewVC.m */; };
 		68434AD3253D32D80012289D /* KJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68434AD2253D32D80012289D /* KJBaseModel.m */; };
@@ -80,8 +79,6 @@
 		6821119C2535524E00EA3F3F /* KJVideoEncodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJVideoEncodeVC.m; sourceTree = "<group>"; };
 		68341C9F253E8746000CAAF3 /* KJRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJRouter.h; sourceTree = "<group>"; };
 		68341CA0253E8746000CAAF3 /* KJRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJRouter.m; sourceTree = "<group>"; };
-		68341CAE253ED2A4000CAAF3 /* NSURL+KJRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+KJRouter.h"; sourceTree = "<group>"; };
-		68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KJRouter.m"; sourceTree = "<group>"; };
 		68431B862547FC5600ED7B67 /* KJShareInstanceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJShareInstanceVC.h; sourceTree = "<group>"; };
 		68431B872547FC5600ED7B67 /* KJShareInstanceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJShareInstanceVC.m; sourceTree = "<group>"; };
 		68431B8C25480F6900ED7B67 /* KJBadgeViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJBadgeViewVC.h; sourceTree = "<group>"; };
@@ -197,8 +194,6 @@
 			children = (
 				68341C9F253E8746000CAAF3 /* KJRouter.h */,
 				68341CA0253E8746000CAAF3 /* KJRouter.m */,
-				68341CAE253ED2A4000CAAF3 /* NSURL+KJRouter.h */,
-				68341CAF253ED2A4000CAAF3 /* NSURL+KJRouter.m */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -670,7 +665,6 @@
 				68F3A85D25393EDD00BCD817 /* KJWebDiscernTool.m in Sources */,
 				68AD7201251D9867000C89C5 /* AppDelegate.m in Sources */,
 				68AD7212251D9868000C89C5 /* main.m in Sources */,
-				68341CB0253ED2A4000CAAF3 /* NSURL+KJRouter.m in Sources */,
 				682111972535522C00EA3F3F /* KJBaseViewController.m in Sources */,
 				6821119D2535524E00EA3F3F /* KJVideoEncodeVC.m in Sources */,
 				68C55DAF25207AA100AD3308 /* KJBaseButton.m in Sources */,

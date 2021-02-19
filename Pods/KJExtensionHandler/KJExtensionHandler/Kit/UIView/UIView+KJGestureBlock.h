@@ -20,7 +20,6 @@ typedef NS_ENUM(NSUInteger, KJGestureType) {
     KJGestureTypeRotate,    // 旋转
     KJGestureTypePinch,     // 缩放
 };
-/// 枚举映射字符串
 static NSString * const _Nonnull KJGestureTypeStringMap[] = {
     [KJGestureTypeTap]       = @"UITapGestureRecognizer",
     [KJGestureTypeDouble]    = @"UITapGestureRecognizer",
@@ -32,15 +31,16 @@ static NSString * const _Nonnull KJGestureTypeStringMap[] = {
 };
 
 @interface UIView (KJGestureBlock)
-/*
- [self.view kj_AddGestureRecognizer:KJGestureTypeTap block:^(UIView *view, UIGestureRecognizer *gesture) {
-     // example
+/// 单击手势
+- (UIGestureRecognizer*)kj_AddTapGestureRecognizerBlock:(KJGestureRecognizerBlock)block;
+/// 手势处理
+- (UIGestureRecognizer*)kj_AddGestureRecognizer:(KJGestureType)type block:(KJGestureRecognizerBlock)block;
+
+/* 示例
+ [self.view kj_AddGestureRecognizer:KJGestureTypeDouble block:^(UIView *view, UIGestureRecognizer *gesture) {
      [view removeGestureRecognizer:gesture];
  }];
  */
-- (UIGestureRecognizer*)kj_AddGestureRecognizer:(KJGestureType)type block:(KJGestureRecognizerBlock)block;
-/// 单击手势
-- (UIGestureRecognizer*)kj_AddTapGestureRecognizerBlock:(KJGestureRecognizerBlock)block;
 
 @end
 

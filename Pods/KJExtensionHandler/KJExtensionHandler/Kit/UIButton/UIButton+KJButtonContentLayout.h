@@ -24,11 +24,20 @@ typedef NS_ENUM(NSInteger, KJButtonContentLayoutStyle) {
 IB_DESIGNABLE /// Xib 动态刷新
 @interface UIButton (KJButtonContentLayout)
 /// 图文样式
-@property(nonatomic,assign) IBInspectable KJButtonContentLayoutStyle kj_ButtonContentLayoutType;
-/// 图文间距
-@property(nonatomic,assign) IBInspectable CGFloat kj_Padding;
+@property(nonatomic,assign)IBInspectable NSInteger layoutType;
+/// 图文间距，默认为0px
+@property(nonatomic,assign)IBInspectable CGFloat padding;
 /// 图文边界的间距，默认为5px
-@property(nonatomic,assign) IBInspectable CGFloat kj_PaddingInset;
+@property(nonatomic,assign)IBInspectable CGFloat periphery;
+
+
+//*************************** 暂时保留，兼容旧版 *******************************
+/// 图文样式
+@property(nonatomic,assign) KJButtonContentLayoutStyle kj_ButtonContentLayoutType DEPRECATED_MSG_ATTRIBUTE("Please use layoutType");
+/// 图文间距
+@property(nonatomic,assign) CGFloat kj_Padding DEPRECATED_MSG_ATTRIBUTE("Please use padding");
+/// 图文边界的间距，默认为5px
+@property(nonatomic,assign) CGFloat kj_PaddingInset DEPRECATED_MSG_ATTRIBUTE("Please use periphery");
 
 @end
 

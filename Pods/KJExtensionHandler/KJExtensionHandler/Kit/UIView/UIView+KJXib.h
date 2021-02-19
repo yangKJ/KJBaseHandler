@@ -41,10 +41,11 @@ IB_DESIGNABLE // 动态刷新 在类名前加上此宏定义，初始化布置�
 @property(nonatomic,assign)IBInspectable CGFloat cornerRadius;
 
 /// 阴影，备注View默认颜色ClearColor时阴影不会生效
-@property(nonatomic,strong)IBInspectable UIColor *shadowColor;// 阴影颜色
-@property(nonatomic,assign)IBInspectable CGFloat shadowRadius;// 阴影的圆角
-@property(nonatomic,assign)IBInspectable CGFloat shadowOpacity;// 阴影透明度，默认0
-@property(nonatomic,assign)IBInspectable CGSize shadowOffset;// 阴影偏移量
+@property(nonatomic,strong)IBInspectable UIColor *shadowColor;//设置阴影颜色
+@property(nonatomic,assign)IBInspectable CGFloat shadowRadius;//设置阴影的圆角
+@property(nonatomic,assign)IBInspectable CGFloat shadowWidth;//设置阴影的宽度
+@property(nonatomic,assign)IBInspectable CGFloat shadowOpacity;//设置阴影透明度，默认0
+@property(nonatomic,assign)IBInspectable CGSize shadowOffset;//设置阴影偏移量
 
 @end
 

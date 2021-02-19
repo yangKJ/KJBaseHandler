@@ -7,8 +7,12 @@
 //  路由 - 基于URL实现控制器转场的框架
 
 #import <Foundation/Foundation.h>
-#import "NSURL+KJRouter.h"
 NS_ASSUME_NONNULL_BEGIN
+/// 解析参数
+@interface NSURL (KJRouter)
+/// 解析获取参数
+- (NSDictionary*)kj_analysisParameterGetQuery;
+@end
 typedef UIViewController * _Nonnull (^kRouterBlock)(NSURL *URL, UIViewController *sourcevc);
 @interface KJRouter : NSObject
 /// 注册路由URL

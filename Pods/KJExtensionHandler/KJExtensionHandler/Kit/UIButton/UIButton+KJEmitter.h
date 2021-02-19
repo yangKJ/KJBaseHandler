@@ -12,8 +12,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (KJEmitter)
+/// 是否开启粒子效果
+@property(nonatomic,assign)BOOL openEmitter;
+/// 粒子，备注 name 属性不要更改
+@property(nonatomic,strong,readonly)CAEmitterCell *emitterCell;
 /// 设置粒子效果
-- (void)kj_buttonSetEmitterImage:(UIImage*_Nullable)image OpenEmitter:(bool)open;
+- (void)kj_buttonSetEmitterImage:(UIImage*_Nullable)image OpenEmitter:(BOOL)open;
 
 @end
 

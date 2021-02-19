@@ -6,6 +6,23 @@
 //  https://github.com/yangKJ/KJBaseHandler
 
 #import "KJRouter.h"
+@implementation NSURL (KJRouter)
+/// 解析获取参数
+- (NSDictionary*)kj_analysisParameterGetQuery{
+    NSMutableDictionary *parm = [NSMutableDictionary dictionary];
+    NSURLComponents *URLComponents = [[NSURLComponents alloc] initWithString:self.absoluteString];
+    [URLComponents.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [parm setObject:obj.value forKey:obj.name];
+    }];
+    return parm;
+}
+//NSURL *URL = [NSURL URLWithString:@"https://www.test.com/test?className=KJVideoEncodeVC&title=title"];
+//URL.query              // className=KJVideoEncodeVC&title=title
+//URL.scheme             // https
+//URL.host               // www.test.com
+//URL.path               // /test
+//URL.absoluteString     // https://www.test.com/test?className=KJVideoEncodeVC&title=title
+@end
 @interface KJRouter ()
 @property(nonatomic,strong)NSMutableDictionary<NSString *,NSMutableArray *>*routerDict;
 @end
@@ -24,7 +41,7 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     }
     if (router.routerDict[key]) {
         [router.routerDict[key] addObject:block];
-    }else {
+    }else{
         router.routerDict[key] = [NSMutableArray arrayWithObject:block];
     }
 }
@@ -118,4 +135,5 @@ NS_INLINE NSString *keyFromURL(NSURL *URL){
     }
     return nil;
 }
+
 @end

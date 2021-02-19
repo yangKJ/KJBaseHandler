@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage*)kj_captureScreen:(UIView*)view;
 /// 指定位置屏幕截图
 + (UIImage*)kj_captureScreen:(UIView*)view Rect:(CGRect)rect;
+/// 自定义质量的截图，quality质量倍数
++ (UIImage*)kj_captureScreen:(UIView*)view Rect:(CGRect)rect Quality:(NSInteger)quality;
 /// 截取当前屏幕（窗口截图）
 + (UIImage*)kj_captureScreenWindow;
 /// 截取当前屏幕（根据手机方向旋转）

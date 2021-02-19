@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIBezierPath (KJPoints)
 /// 获取所有点
 @property(nonatomic,strong,readonly)NSArray *points;
+/// 获取文字贝塞尔路径
++ (UIBezierPath*)kj_bezierPathWithText:(NSString*)text Font:(UIFont*)font;
 
 @end
 

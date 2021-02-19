@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 typedef void(^KJButtonBlock)(UIButton *kButton);
 @interface UIButton (KJBlock)<KJButtonTimeExchangeMethodProtocol>
-/// button 添加点击事件，默认UIControlEventTouchUpInside方式
+/// 添加点击事件，默认UIControlEventTouchUpInside
 - (void)kj_addAction:(KJButtonBlock)block;
-/// button 添加事件 controlEvents 点击的方式
+/// 添加事件，不支持多枚举形式
 - (void)kj_addAction:(KJButtonBlock)block forControlEvents:(UIControlEvents)controlEvents;
 
 /* ******************这两个属性互斥********************/

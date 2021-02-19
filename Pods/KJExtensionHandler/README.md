@@ -1,13 +1,18 @@
 # KJExtensionHandler
-<p align="left">
-<img src="https://img.zcool.cn/community/0161da5541af81000001a64bc753a4.jpg@1280w_1l_2o_100sh.jpg" width="666" hspace="1px">
-</p>
+# [KJExtensionHandler库简单介绍](https://www.jianshu.com/p/4beb1bd4e1e6)
+#### 本库主要包含三大块：UIKit类、Foundation类、Language 多语言类
+### Category各种工具集合
+- UIButton：图文混排、点击事件封装、扩大点击域、时间间隔限制、倒计时、点击粒子效果等
+- UIView：手势封装、圆角渐变、Xib属性（圆角边框阴影）
+- UITextView：输入框扩展、限制字数、撤销处理、获取文本内部超链接
+- UILabel：富文本，快捷显示文本位置
+- UISlider：渐变色滑杆，滑杆点击值修改
+- UIImage：截图和裁剪、图片压缩、蒙版处理，图片拼接、图片尺寸处理，滤镜渲染、泛洪算法等
+- CALayer：投影，倒影，内发光，外发光，内阴影，外阴影等
+- Language：多语言，支持Xib快捷设置
+- Foundation：数组和字典防崩处理，数组算法处理，谓词相关等等
 
-##### 上传到Cocoapods `pod trunk push KJExtensionHandler.podspec --allow-warnings`
-
-* 这个工程提供开发中用到的类目，方便开发
-* 这里有我经常用到的扩展，方便好用开发
-* 整理好用的自定义控件，部分数据来源于网络 
+#### Foundation我还整理封装了一套异常处理、防崩库 `KJExceptionDemo`
 
 <p align="left">
 <img src="https://upload-images.jianshu.io/upload_images/1933747-5cccc7ddb754fef5.gif?imageMogr2/auto-orient/strip" width="200" hspace="1px">
@@ -27,7 +32,11 @@
 <img src="https://upload-images.jianshu.io/upload_images/1933747-f75249465cc14d81.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="200" hspace="1px">
 </p>
 
-----------------------------------------
+##### 添加本地tag `git tag -a 1.0.0 -m 'release 1.0.0'`
+##### 将tag传到远程   `git push origin --tags`
+##### 不需要联网验证 `pod lib lint --verbose --allow-warnings`
+##### 上传到Cocoapods `pod trunk push KJExtensionHandler.podspec --allow-warnings`
+
 ### 框架整体介绍
 * [作者信息](#作者信息)
 * [作者其他库](#作者其他库)
@@ -38,13 +47,10 @@
 * [目录结构](#目录结构)
 * [打赏作者 &radic;](#打赏作者)
 
-----------------------------------------
-
 #### <a id="作者信息"></a>作者信息
 > Github地址：https://github.com/yangKJ  
 > 简书地址：https://www.jianshu.com/u/c84c00476ab6  
 > 博客地址：https://blog.csdn.net/qq_34534179  
-
 
 #### <a id="作者其他库"></a>作者其他Pod库
 ```
@@ -62,7 +68,7 @@ pod 'KJEmitterView/Control' # 自定义控件
 图片压缩加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
 pod 'KJExtensionHandler'
 pod 'KJExtensionHandler/Foundation'
-pod 'KJExtensionHandler/Exception' # 异常处理
+pod 'KJExtensionHandler/Language' # 多语言模块
 
 基类库 - 封装整理常用，采用链式处理，提炼独立工具
 pod 'KJBaseHandler'
@@ -87,6 +93,9 @@ pod 'KJMenuView' # 菜单控件
 pod 'KJWorkbox' # 系统工具
 pod 'KJWorkbox/CommonBox'
 
+异常处理库 - 包含基本的防崩溃处理（数组，字典，字符串）
+pod 'KJExceptionDemo'
+
 * 如果觉得好用,希望您能Star支持,你的 ⭐️ 是我持续更新的动力!
 *
 *********************************************************************************
@@ -97,12 +106,35 @@ pod 'KJWorkbox/CommonBox'
 ```
 pod 'KJExtensionHandler'
 pod 'KJExtensionHandler/Foundation'
-pod 'KJExtensionHandler/Exception'
+pod 'KJExtensionHandler/Language' # 多语言模块
 ```
 
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 1.0.0
+1. 完善 UIButton+KJBlock 去除多枚举和超出九种情况
+2. 新增 UIDevice+KJSystem 系统相关方法属性
+3. 分离 Exception 异常处理，请使用 pod 'KJExceptionDemo'
+4. 新增 Language 模块 pod 'KJExtensionHandler/Language' # 多语言模块
+
+#### Add 0.0.10
+1. UIImage+KJGIF 新增播放本地动态图 kj_gifLocalityImageWithName:
+2. 提出 KJNodeQueue 栈操作工具
+3. 新增 NSObject+KJSemaphore 轻量级解耦工具
+4. 完善 UIButton+KJBlock 点击事件封装
+
+#### Add 0.0.9
+1. UIImage+KJCompress 新增多种缩放方案
+2. UIImage+KJJoint 新增多种图片拼接
+3. UIButton+KJButtonContentLayout 修改三个属性layoutType、padding、periphery
+
+#### Add 0.0.8
+1. UIImage+KJCapture 截图方法修改，提升截图质量
+2. 新增 UIImageView+KJLetters 头像浏览和文字头像
+3. 新增 UIScrollView+KJEmptyDataSet 空数据展示
+4. 新增 NSObject+KJExtension 动态属性添加
+
 #### Add 0.0.7
 1. 重写 UIView+KJGestureBlock 解决手势共存问题
 2. UIView+KJRectCorner 完善处理

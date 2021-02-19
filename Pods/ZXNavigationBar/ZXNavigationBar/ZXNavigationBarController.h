@@ -32,8 +32,23 @@ typedef void(^foldCompletionBlock) (void);
 typedef void(^__nullable transparentGradientsChangingBlock) (CGFloat alpha);
 typedef void(^transparentGradientsTransparentBlock) (void);
 typedef void(^transparentGradientsOpaqueBlock) (void);
-@interface ZXNavigationBarController : UIViewController
 
+@interface ZXXibTopConstraintModel : NSObject
+/**
+ 与控制器view或safeArea的顶部约束
+ */
+@property(strong, nonatomic)NSLayoutConstraint *constraint;
+/**
+ 与控制器view的顶部约束的原始constant
+ */
+@property(assign, nonatomic)CGFloat orgOffset;
+/**
+ 是否是与safeArea的顶部约束
+ */
+@property(assign, nonatomic)BOOL isToSafeArea;
+@end
+
+@interface ZXNavigationBarController : UIViewController
 /**
  设置左右Button的大小(宽高相等)
  */
@@ -77,7 +92,12 @@ typedef void(^transparentGradientsOpaqueBlock) (void);
 /**
  是否启用了SafeArea，默认为是，若取消了SafeArea，则必须将此项设置为NO(使用Xib加载控制器时生效)
  */
-@property (assign, nonatomic)BOOL zx_isEnableSafeArea;
+@property (assign, nonatomic)BOOL zx_isEnableSafeArea ZXNavigationBarDeprecated("从版本1.3.1起，此属性无效，是否启用了SafeArea交由ZXNavigationBar内部自行判断");
+
+/**
+ 禁止自动设置自定义导航栏与其相关配置，保留原有的系统导航栏（需要设置在[super viewDidLoad]之前）
+ */
+@property (assign, nonatomic)BOOL zx_disableAutoSetCustomNavBar;
 
 /**
  设置导航栏的TintColor，此属性可以将导航栏的title颜色、左右Button的文字和图片颜色修改为TintColor
@@ -195,7 +215,7 @@ typedef void(^transparentGradientsOpaqueBlock) (void);
 @property (assign, nonatomic, readonly)int zx_navFoldingSpeed;
 
 /**
- 是否禁用全屏pop手势，若禁用，则pop触发范围为屏幕宽度的五分之一(导航控制器需为ZXNavigationBarNavigationController或继承于ZXNavigationBarNavigationController)
+ 是否禁用全屏pop手势，若禁用，则pop触发范围为屏幕宽度的十分之一(导航控制器需为ZXNavigationBarNavigationController或继承于ZXNavigationBarNavigationController)
  */
 @property (assign, nonatomic)BOOL zx_disableFullScreenGesture;
 
@@ -205,8 +225,10 @@ typedef void(^transparentGradientsOpaqueBlock) (void);
  注意：因设置全屏返回手势响应范围与禁用全屏pop手势属于同一导航控制器，为避免此属性被其他子控制器修改，以下代码建议写在子控制器的-viewWillAppear或-viewDidAppear中
  */
 @property (assign, nonatomic) CGFloat zx_popGestureCoverRatio;
-
-
+/**
+ 将所有约束为top且secondItem为控制器view或safeArea的子view约束constant设置为原始长度+导航栏高度，默认为NO，若设置为YES，将会遍历控制器view中的所有约束，对性能有一点影响
+ */
+@property (assign, nonatomic) BOOL zx_enableAdjustNavContainerAll;
 /**
  自动将顶部View约束下移导航栏高度时的回调，可拦截并自定义下移距离(xib加载控制器view时生效)
  oldNavOffset:视图在xib中所设置的约束与顶部距离

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (KJGIF)
 
+/// 本地动态图播放
++ (UIImage*)kj_gifLocalityImageWithName:(NSString*)name;
 /// 本地动图
 + (UIImage*)kj_gifImageWithData:(NSData*)data;
 /// 网络动图

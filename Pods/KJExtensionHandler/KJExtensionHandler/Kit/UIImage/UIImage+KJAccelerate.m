@@ -157,7 +157,6 @@
 
         CGFloat inputRadius = radius * [[UIScreen mainScreen] scale];
         NSUInteger radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
-        // force radius to be odd so that the three box-blur methodology works.
         if (radius % 2 != 1) radius += 1;
         vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
         vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, (uint32_t)radius, (uint32_t)radius, 0, kvImageEdgeExtend);
@@ -180,25 +179,17 @@
         effectImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
-
-    // Set up output context.
     UIGraphicsBeginImageContextWithOptions(self.size, NO, [[UIScreen mainScreen] scale]);
     CGContextRef outputContext = UIGraphicsGetCurrentContext();
     CGContextScaleCTM(outputContext, 1.0, -1.0);
     CGContextTranslateCTM(outputContext, 0, -self.size.height);
-
-    // Draw base image.
     CGContextDrawImage(outputContext, imageRect, self.CGImage);
-
-    // Draw effect image.
     if (hasBlur) {
         CGContextSaveGState(outputContext);
         if (maskImage) CGContextClipToMask(outputContext, imageRect, maskImage.CGImage);
         CGContextDrawImage(outputContext, imageRect, effectImage.CGImage);
         CGContextRestoreGState(outputContext);
     }
-
-    // Add in color tint.
     if (color) {
         CGContextSaveGState(outputContext);
         CGContextSetBlendMode(outputContext, kCGBlendModeNormal);
@@ -206,11 +197,8 @@
         CGContextFillRect(outputContext, imageRect);
         CGContextRestoreGState(outputContext);
     }
-
-    // Output image is ready.
     UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-
     return outputImage;
 }
 #pragma mark - 形态操作
@@ -224,7 +212,7 @@
     CGColorSpaceRelease(space);
     if (!bmContext) return nil;
     CGContextDrawImage(bmContext, CGRectMake(0,0,width,height), self.CGImage);
-    UInt8* data = (UInt8*)CGBitmapContextGetData(bmContext);
+    UInt8 * data = (UInt8*)CGBitmapContextGetData(bmContext);
     if (!data){
         CGContextRelease(bmContext);
         return nil;
@@ -249,7 +237,7 @@
     if (!bmContext) return nil;
     CGRect rect = CGRectMake(0, 0, width, height);
     CGContextDrawImage(bmContext, rect, self.CGImage);
-    UInt8* data = (UInt8*)CGBitmapContextGetData(bmContext);
+    UInt8 * data = (UInt8*)CGBitmapContextGetData(bmContext);
     if (!data){
         CGContextRelease(bmContext);
         return nil;
@@ -278,7 +266,7 @@
     if (!bmContext) return nil;
     CGRect rect = CGRectMake(0, 0, width, height);
     CGContextDrawImage(bmContext, rect, self.CGImage);
-    UInt8* data = (UInt8*)CGBitmapContextGetData(bmContext);
+    UInt8 * data = (UInt8*)CGBitmapContextGetData(bmContext);
     if (!data){
         CGContextRelease(bmContext);
         return nil;

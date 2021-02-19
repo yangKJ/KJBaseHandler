@@ -5,39 +5,25 @@
 //  Created by 杨科军 on 2018/7/12.
 //  Copyright © 2018年 杨科军. All rights reserved.
 //  https://github.com/yangKJ/KJExtensionHandler
-//  一套轻量级布局
+//  轻量级布局
 
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 @interface UIView (KJFrame)
-/// x坐标
-@property (nonatomic,assign)CGFloat x;
-/// y坐标
-@property (nonatomic,assign)CGFloat y;
-/// 宽度
-@property (nonatomic,assign)CGFloat width;
-/// 高度
-@property (nonatomic,assign)CGFloat height;
-/// 大小
-@property (nonatomic,assign)CGSize size;
-/// 位置
-@property (nonatomic,assign)CGPoint origin;
-/// 中心点x
-@property (nonatomic,assign)CGFloat centerX;
-/// 中心点y
-@property (nonatomic,assign)CGFloat centerY;
-/// 左边距离
-@property (nonatomic,assign)CGFloat left;
-/// 右边距离
-@property (nonatomic,assign)CGFloat right;
-/// 顶部距离
-@property (nonatomic,assign)CGFloat top;
-/// 底部距离
-@property (nonatomic,assign)CGFloat bottom;
-/// x + width
-@property (nonatomic,assign,readonly)CGFloat maxX;
-/// y + height
-@property (nonatomic,assign,readonly)CGFloat maxY;
+@property (nonatomic,assign)CGSize size;// 大小
+@property (nonatomic,assign)CGPoint origin;// 位置
+@property (nonatomic,assign)CGFloat x;// x坐标
+@property (nonatomic,assign)CGFloat y;// y坐标
+@property (nonatomic,assign)CGFloat width;// 宽度
+@property (nonatomic,assign)CGFloat height;// 高度
+@property (nonatomic,assign)CGFloat centerX;// 中心点x
+@property (nonatomic,assign)CGFloat centerY;// 中心点y
+@property (nonatomic,assign)CGFloat left;// 左边距离
+@property (nonatomic,assign)CGFloat right;// 右边距离
+@property (nonatomic,assign)CGFloat top;// 顶部距离
+@property (nonatomic,assign)CGFloat bottom;// 底部距离
+@property (nonatomic,assign,readonly)CGFloat maxX;// x + width
+@property (nonatomic,assign,readonly)CGFloat maxY;// y + height
 
 /// 使用Masonry布局之后得到尺寸
 @property (nonatomic,assign)CGFloat masonry_x;

@@ -7,23 +7,84 @@
 
 #import "UIDevice+KJSystem.h"
 #import <objc/runtime.h>
-#import "UIView+KJXib.h"
+#import <stdatomic.h>
 @implementation UIDevice (KJSystem)
-+ (void(^)(BOOL success))completeBlock{
-    return objc_getAssociatedObject(self, @selector(completeBlock));
+@dynamic appCurrentVersion,appName;
++ (NSString*)appCurrentVersion{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
-+ (void)setCompleteBlock:(void(^)(BOOL success))completeBlock{
-    objc_setAssociatedObject(self, @selector(completeBlock), completeBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
++ (NSString*)appName{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
 }
+/// 对比版本号
++ (BOOL)kj_comparisonVersion:(NSString*)version{
+    if ([version compare:UIDevice.appCurrentVersion] == NSOrderedDescending) {
+        return YES;
+    }
+    return NO;
+}
+/// 获取AppStore版本号和详情信息
++ (NSString*)kj_getAppStoreVersionWithAppid:(NSString*)appid Details:(void(^)(NSDictionary*))block{
+    __block NSString *appVersion = UIDevice.appCurrentVersion;
+    if (appid == nil) return appVersion;
+    NSString *urlString = [[NSString alloc] initWithFormat:@"http://itunes.apple.com/lookup?id=%@",appid];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_group_async(dispatch_group_create(), queue, ^{
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
+        [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            NSDictionary * json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            NSDictionary * dict = [json[@"results"] firstObject];
+            appVersion = dict[@"version"];
+            if (block) block(dict);
+            dispatch_semaphore_signal(semaphore);
+        }] resume];
+    });
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    return appVersion;
+}
+/// 跳转到指定URL
++ (void)kj_openURL:(id)URL{
+    if (URL == nil) return;
+    if (![URL isKindOfClass:[NSURL class]]) {
+        URL = [NSURL URLWithString:URL];
+    }
+    if ([[UIApplication sharedApplication] canOpenURL:URL]){
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
+        }else{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+            [[UIApplication sharedApplication] openURL:URL];
+#pragma clang diagnostic pop
+        }
+    }else{
+        NSLog(@"can not go！！！！！");
+    }
+}
+/// 调用AppStore
++ (void)kj_skipToAppStoreWithAppid:(NSString*)appid{
+    NSString *urlString = [@"http://itunes.apple.com/" stringByAppendingFormat:@"%@?id=%@",self.appName,appid];
+    [self kj_openURL:urlString];
+}
+/// 调用自带浏览器safari
++ (void)kj_skipToSafari{
+    [self kj_openURL:@"http://www.abt.com"];
+}
+/// 调用自带Mail
++ (void)kj_skipToMail{
+    [self kj_openURL:@"mailto://admin@abt.com"];
+}
+
 /// 保存到相册
+static char kSavePhotosKey;
 + (void)kj_savedPhotosAlbumWithImage:(UIImage*)image Complete:(void(^)(BOOL success))complete{
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
-    self.completeBlock = complete;
+    objc_setAssociatedObject(self, &kSavePhotosKey, complete, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (void)image:(UIImage*)image didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo{
-    if (UIDevice.completeBlock) {
-        UIDevice.completeBlock(error == nil?YES:NO);
-    }
+    void(^block)(BOOL success) = objc_getAssociatedObject(self, &kSavePhotosKey);
+    if (block) block(error==nil?YES:NO);
 }
 /// 系统自带分享
 + (UIActivityViewController*)kj_shareActivityWithItems:(NSArray*)items ViewController:(UIViewController*)vc Complete:(void(^)(BOOL success))complete{
@@ -33,7 +94,7 @@
         __vc.excludedActivityTypes = @[UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypeOpenInIBooks, UIActivityTypeMarkupAsPDF];
     }else if (@available(iOS 9.0, *)) {
         __vc.excludedActivityTypes = @[UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypeOpenInIBooks];
-    }else {
+    }else{
         __vc.excludedActivityTypes = @[UIActivityTypeMessage, UIActivityTypeMail];
     }
     UIActivityViewControllerCompletionWithItemsHandler itemsBlock = ^(UIActivityType _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
@@ -57,16 +118,6 @@
     }completion:^(BOOL finished) {
         if (complete) complete(finished);
     }];
-}
-/// 跳转到设置
-+ (void)kj_{
-    if (UIApplicationOpenSettingsURLString != NULL) {
-        UIApplication *application = [UIApplication sharedApplication];
-        NSURL *URL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
-            [application openURL:URL options:@{} completionHandler:nil];
-        }
-    }
 }
 
 @end

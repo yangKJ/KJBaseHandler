@@ -30,14 +30,13 @@
         if (tintColor) {
             image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
             [button.imageView setTintColor:tintColor];
-        }else {
+        }else{
             image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }
         [button setImage:image forState:UIControlStateNormal];
     }
     if (title) {
         [button setTitle:title forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button setTitleColor:color forState:UIControlStateNormal];
     }
     [button sizeToFit];

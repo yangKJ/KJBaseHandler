@@ -75,7 +75,7 @@ static NSString *kIndicatorLastTitle = nil;
     }
 }
 
-#pragma mark - getter/setter
+#pragma mark - associated
 static bool kSubmitting = false;
 - (bool)submitting{
     return kSubmitting;

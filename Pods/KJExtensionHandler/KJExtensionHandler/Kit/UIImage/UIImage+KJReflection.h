@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 - (UIImage*)reflectionWithHeight:(int)height;
 
-- (UIImage*)reflectionWithAlpha:(float)pcnt;
+- (UIImage*)reflectionWithAlpha:(float)alpha;
 
 - (UIImage*)reflectionRotatedWithAlpha:(float)pcnt;
 

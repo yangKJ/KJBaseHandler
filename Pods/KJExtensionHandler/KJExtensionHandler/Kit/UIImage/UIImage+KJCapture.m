@@ -15,8 +15,16 @@
 }
 /// 指定位置屏幕截图
 + (UIImage*)kj_captureScreen:(UIView*)view Rect:(CGRect)rect{
+    return [self kj_captureScreen:view Rect:rect Quality:UIScreen.mainScreen.scale];
+}
+/// 自定义质量的截图，quality质量倍数
++ (UIImage*)kj_captureScreen:(UIView*)view Rect:(CGRect)rect Quality:(NSInteger)quality{
     return ({
-        UIGraphicsBeginImageContext(view.frame.size);
+        CGSize size = view.bounds.size;
+        size.width  = floorf(size.width  * quality) / quality;
+        size.height = floorf(size.height * quality) / quality;
+        rect = CGRectMake(rect.origin.x*quality, rect.origin.y*quality, rect.size.width*quality, rect.size.height*quality);
+        UIGraphicsBeginImageContextWithOptions(size, NO, quality);
         [view.layer renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -41,7 +49,6 @@
         }
         CGContextRestoreGState(context);
     }
-    
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
@@ -68,7 +75,7 @@
         }else if (orientation == UIInterfaceOrientationLandscapeRight){
             CGContextRotateCTM(context, -M_PI_2);
             CGContextTranslateCTM(context, -imageSize.height, 0);
-        } else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        }else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
             CGContextRotateCTM(context, M_PI);
             CGContextTranslateCTM(context, -imageSize.width, -imageSize.height);
         }
@@ -163,7 +170,7 @@
     }
     
     CGFloat scale = image.scale;
-    CGImageRef newImageRef = CGImageCreateWithImageInRect(cgimage, CGRectMake(left*scale, top*scale, (image.size.width - left - right)*scale, (image.size.height - top - bottom)*scale));
+    CGImageRef newImageRef = CGImageCreateWithImageInRect(cgimage, CGRectMake(left*scale, top*scale, (image.size.width-left-right)*scale, (image.size.height-top-bottom)*scale));
     UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
     CGImageRelease(cgimage);
     CGContextRelease(context);

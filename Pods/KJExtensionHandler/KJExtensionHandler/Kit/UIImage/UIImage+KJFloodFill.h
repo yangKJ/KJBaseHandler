@@ -19,10 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param antialias  是否抗锯齿化
  @return           填充后的图片
  */
-- (UIImage *)kj_FloodFillImageFromStartPoint:(CGPoint)startPoint
-                                    NewColor:(UIColor*)newColor
-                                   Tolerance:(CGFloat)tolerance
-                                UseAntialias:(BOOL)antialias;
+- (UIImage*)kj_FloodFillImageFromStartPoint:(CGPoint)startPoint NewColor:(UIColor*)newColor Tolerance:(CGFloat)tolerance UseAntialias:(BOOL)antialias;
 
 /* 泛洪算法通常有3种实现,四邻域，八邻域和基于扫描线
  * 了解更多泛洪算法可以查看下列链接：https://lodev.org/cgtutor/floodfill.html
